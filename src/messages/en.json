@@ -1,4 +1,12 @@
 {
+  "Menu": {
+    "menu": "Menu",
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "blogs": "Blogs",
+    "contact": "Contact"
+  },
   "HomePage": {
     "title": "hello world",
     "contact": "Contact"

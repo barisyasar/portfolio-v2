@@ -1,4 +1,12 @@
 {
+  "Menu": {
+    "menu": "Menü",
+    "home": "Anasayfa",
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "blogs": "Bloglar",
+    "contact": "İletişim"
+  },
   "HomePage": {
     "title": "Merhaba dünya",
     "contact": "İletişim"

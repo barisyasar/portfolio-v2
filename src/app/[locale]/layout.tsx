@@ -19,9 +19,18 @@ export const metadata: Metadata = {
 };
 
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link, Locale, routing } from "@/i18n/routing";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { AlignJustify } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default async function LocaleLayout({
   children,
@@ -35,6 +44,8 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
 
+  const t = await getTranslations("Menu");
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
@@ -42,28 +53,38 @@ export default async function LocaleLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system">
           <NextIntlClientProvider messages={messages}>
-            <header>
-              <div className="container">
-                <nav>
-                  <ul>
-                    <li>
-                      <Link href="/">Home</Link>
-                    </li>
-                    <li>
-                      <Link href="/about">About</Link>
-                    </li>
-                    <li>
-                      <Link href="/projects">Projects</Link>
-                    </li>
-                    <li>
-                      <Link href="/blogs">Blogs</Link>
-                    </li>
-                    <li>
-                      <Link href="/contact">Contact</Link>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+            <header className="">
+              <nav className="container flex items-center border h-14">
+                <Sheet>
+                  <SheetTrigger>
+                    <Button variant="outline" asChild className="p-1 size-8">
+                      <AlignJustify />
+                    </Button>
+                  </SheetTrigger>
+                  <SheetContent side={"left"}>
+                    <SheetHeader>
+                      <SheetTitle>{t("menu")}</SheetTitle>
+                      <ul className="space-y-2">
+                        <li>
+                          <Link href="/">{t("home")}</Link>
+                        </li>
+                        <li>
+                          <Link href="/about">{t("about")}</Link>
+                        </li>
+                        <li>
+                          <Link href="/projects">{t("projects")}</Link>
+                        </li>
+                        <li>
+                          <Link href="/blogs">{t("blogs")}</Link>
+                        </li>
+                        <li>
+                          <Link href="/contact">{t("contact")}</Link>
+                        </li>
+                      </ul>
+                    </SheetHeader>
+                  </SheetContent>
+                </Sheet>
+              </nav>
             </header>
             {children}
           </NextIntlClientProvider>
