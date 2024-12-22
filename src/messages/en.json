@@ -1,4 +1,13 @@
 {
+  "theme": {
+    "light": "light",
+    "dark": "dark",
+    "system": "system"
+  },
+  "languages": {
+    "tr": "Türkçe",
+    "en": "English"
+  },
   "Menu": {
     "menu": "Menu",
     "home": "Home",

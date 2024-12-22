@@ -31,6 +31,8 @@ import {
 } from "@/components/ui/sheet";
 import { AlignJustify } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ThemeToggle from "@/components/ThemeToggle";
+import LanguageSelect from "@/components/LanguageSelect";
 
 export default async function LocaleLayout({
   children,
@@ -49,22 +51,25 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased light`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="system">
           <NextIntlClientProvider messages={messages}>
             <header className="">
-              <nav className="container flex items-center border h-14">
+              <nav className="container flex items-center justify-between border-b h-14">
+                hey
                 <Sheet>
                   <SheetTrigger>
-                    <Button variant="outline" asChild className="p-1 size-8">
+                    <Button variant="outline" asChild className="p-1 size-10">
                       <AlignJustify />
                     </Button>
                   </SheetTrigger>
-                  <SheetContent side={"left"}>
+                  <SheetContent className="flex flex-col spacey-2">
                     <SheetHeader>
                       <SheetTitle>{t("menu")}</SheetTitle>
-                      <ul className="space-y-2">
+                    </SheetHeader>
+                    <div className="flex-1">
+                      <ul className="flex flex-col gap-2">
                         <li>
                           <Link href="/">{t("home")}</Link>
                         </li>
@@ -81,7 +86,11 @@ export default async function LocaleLayout({
                           <Link href="/contact">{t("contact")}</Link>
                         </li>
                       </ul>
-                    </SheetHeader>
+                    </div>
+                    <div className="flex gap-2">
+                      <ThemeToggle />
+                      <LanguageSelect />
+                    </div>
                   </SheetContent>
                 </Sheet>
               </nav>

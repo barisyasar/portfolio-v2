@@ -1,4 +1,13 @@
 {
+  "theme": {
+    "light": "açık",
+    "dark": "koyu",
+    "system": "sistem"
+  },
+  "languages": {
+    "tr": "Türkçe",
+    "en": "English"
+  },
   "Menu": {
     "menu": "Menü",
     "home": "Anasayfa",
