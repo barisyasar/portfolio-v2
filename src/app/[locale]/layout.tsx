@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "../globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
+  weight: ["300", "400", "500", "700", "900"],
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -19,20 +15,11 @@ export const metadata: Metadata = {
 };
 
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Link, Locale, routing } from "@/i18n/routing";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { AlignJustify } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import ThemeToggle from "@/components/ThemeToggle";
-import LanguageSelect from "@/components/LanguageSelect";
+import { Locale, routing } from "@/i18n/routing";
+import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
+import Header from "@/components/Header";
 
 export default async function LocaleLayout({
   children,
@@ -46,56 +33,22 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
 
-  const t = await getTranslations("Menu");
-
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${roboto.className} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system">
           <NextIntlClientProvider messages={messages}>
-            <header className="">
-              <nav className="container flex items-center justify-between border-b h-14">
-                hey
-                <Sheet>
-                  <SheetTrigger>
-                    <Button variant="outline" asChild className="p-1 size-10">
-                      <AlignJustify />
-                    </Button>
-                  </SheetTrigger>
-                  <SheetContent className="flex flex-col spacey-2">
-                    <SheetHeader>
-                      <SheetTitle>{t("menu")}</SheetTitle>
-                    </SheetHeader>
-                    <div className="flex-1">
-                      <ul className="flex flex-col gap-2">
-                        <li>
-                          <Link href="/">{t("home")}</Link>
-                        </li>
-                        <li>
-                          <Link href="/about">{t("about")}</Link>
-                        </li>
-                        <li>
-                          <Link href="/projects">{t("projects")}</Link>
-                        </li>
-                        <li>
-                          <Link href="/blogs">{t("blogs")}</Link>
-                        </li>
-                        <li>
-                          <Link href="/contact">{t("contact")}</Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="flex gap-2">
-                      <ThemeToggle />
-                      <LanguageSelect />
-                    </div>
-                  </SheetContent>
-                </Sheet>
-              </nav>
-            </header>
+            <Header />
             {children}
+            <AnimatedGridPattern
+              numSquares={30}
+              maxOpacity={0.1}
+              duration={3}
+              repeatDelay={1}
+              className={
+                "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] md:[mask-image:radial-gradient(760px_circle_at_center,white,transparent)] xl:[mask-image:radial-gradient(1000px_circle_at_center,white,transparent)] fixed top-0 left-0 flex h-screen w-full -z-10"
+              }
+            />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

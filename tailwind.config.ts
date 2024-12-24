@@ -10,7 +10,10 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "1rem",
+      padding: {
+        DEFAULT: "0.5rem",
+        md: "1rem",
+      },
       screens: {
         sm: "576px",
         md: "768px",
@@ -20,6 +23,9 @@ export default {
       },
     },
     extend: {
+      backdropBlur: {
+        xs: "3px",
+      },
       screens: {
         xs: "375px",
       },
@@ -69,6 +75,24 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      animation: {
+        meteor: "meteor 5s linear infinite",
+      },
+      keyframes: {
+        meteor: {
+          "0%": {
+            transform: "rotate(215deg) translateX(0)",
+            opacity: "1",
+          },
+          "70%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
       },
     },
   },

@@ -70,3 +70,9 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .link {
+    @apply relative block after:block after:content-[''] after:absolute after:h-[1px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:hover:origin-left after:transition after:duration-300 after:origin-right;
+  }
+}
