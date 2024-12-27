@@ -1,30 +1,8 @@
-import { AlignJustify } from "lucide-react";
 import { Card, CardContent } from "../ui/card";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "../ui/sheet";
-import { Button } from "../ui/button";
 import { Link } from "@/i18n/routing";
 import ThemeToggle from "../ThemeToggle";
 import LanguageSelect from "../LanguageSelect";
 import { getTranslations } from "next-intl/server";
-import MorphingText from "../ui/morphing-text";
-
-const texts = [
-  "Hello",
-  "Morphing",
-  "Text",
-  "Animation",
-  "React",
-  "Component",
-  "Smooth",
-  "Transition",
-  "Engaging",
-];
 
 async function HeaderLg() {
   const t = await getTranslations("Menu");

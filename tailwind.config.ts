@@ -24,7 +24,7 @@ export default {
     },
     extend: {
       backdropBlur: {
-        xs: "3px",
+        xs: "2px",
       },
       screens: {
         xs: "375px",
