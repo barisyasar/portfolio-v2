@@ -17,7 +17,15 @@
     "contact": "Contact"
   },
   "HomePage": {
-    "title": "hello world",
-    "contact": "Contact"
+    "recap": {
+      "A Quick Recap": "A Quick Recap",
+      "summaryText": "With 4 years of software experience and over 2 years of professional work experience, I am a <strong>full-stack developer</strong>. I have professional-level expertise in <strong>JavaScript</strong> and <strong>TypeScript</strong>. Currently, I am developing my projects using <strong>Next</strong> and <strong>Node</strong>.",
+      "learnMore": "Learn more"
+    },
+    "projects": {
+      "Projects": "Highlighted Projects",
+      "text": "As a full-stack developer, I've successfully <strong>developed over 10 projects</strong>, showcasing my expertise across the entire stack. Here are three standout projects",
+      "allProjects": "All projects"
+    }
   }
 }

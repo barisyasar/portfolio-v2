@@ -78,6 +78,7 @@ export default {
       },
       animation: {
         orbit: "orbit calc(var(--duration)*1s) linear infinite",
+        "bounce-horizontal": "bounce-horizontal calc(1s) infinite linear",
       },
       keyframes: {
         orbit: {
@@ -88,6 +89,16 @@ export default {
           "100%": {
             transform:
               "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          },
+        },
+        "bounce-horizontal": {
+          "0%, 100%": {
+            transform: "translateX(-25%)",
+            "animation-timing-function": "cubic-bezier(0.8,0,1,1)",
+          },
+          "50%": {
+            transform: "none",
+            "animation-timing-function": "cubic-bezier(0,0,0.2,1)",
           },
         },
       },

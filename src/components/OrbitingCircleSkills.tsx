@@ -2,7 +2,7 @@ import OrbitingCircles from "./ui/orbiting-circles";
 
 export default function OrbitingCircleSkills() {
   return (
-    <div className="relative flex h-[280px] w-full flex-col items-center justify-center overflow-hidden">
+    <div className="relative flex h-[300px] w-full flex-col items-center justify-center overflow-hidden">
       <span className="pointer-events-none whitespace-pre-wrap text-center text-6xl font-semibold leading-none opacity-20">
         TypeScript
       </span>

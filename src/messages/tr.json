@@ -17,7 +17,15 @@
     "contact": "İletişim"
   },
   "HomePage": {
-    "title": "Merhaba dünya",
-    "contact": "İletişim"
+    "recap": {
+      "A Quick Recap": "Kısa Bir Özet",
+      "summaryText": "4 yıllık yazılım deneyimim ve 2 yılı aşkın profesyonel çalışma geçmişimle bir <strong>full-stack developer</strong> olarak kariyerime devam ediyorum. <strong>JavaScript</strong> ve <strong>TypeScript</strong> konularında derin bir bilgi birikimine sahibim. Şu anda projelerimi <strong>Next.js</strong> ve <strong>Node.js</strong> ile geliştiriyorum.",
+      "learnMore": "Daha fazlası"
+    },
+    "projects": {
+      "Projects": "Öne Çıkarılan Projeler",
+      "text": "Full-stack developer olarak, <strong>10'dan fazla projede baştan sona yer alarak</strong>, hem front-end hem de back-end becerilerimi geliştirme fırsatı buldum. Aşağıda size en sevdiğim üç projeyi bırakıyorum.",
+      "allProjects": "Tüm projeler"
+    }
   }
 }

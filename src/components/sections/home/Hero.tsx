@@ -14,7 +14,7 @@ import { Link } from "@/i18n/routing";
 function Hero() {
   return (
     <Card className="section min-h-[calc(100dvh-66px-2rem)] lg:min-h-[calc(100dvh-66px-3.5rem)] flex flex-col">
-      <div className="flex flex-1 flex-col justify-center">
+      <div className="flex flex-1 flex-col justify-center items-center">
         <div className="max-w-screen-md space-y-3">
           <div className="rounded-full overflow-hidden size-60 xs:size-72 xl:size-96 mx-auto bg-card/[0.5] border p-3">
             <Image
