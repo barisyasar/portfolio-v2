@@ -1,13 +1,13 @@
-import React from "react";
+import OrbitingCircleSkills from "../OrbitingCircleSkills";
 import { Card, CardDescription, CardHeader, CardTitle } from "../ui/card";
 
 function Recap() {
   return (
     <Card
-      className="section section-height scroll-m-2 lg:scroll-m-4 flex items-center"
+      className="section section-height scroll-mt-2 lg:scroll-mt-4"
       id="recap"
     >
-      <div className="max-w-screen-md mx-auto">
+      <div className="max-w-screen-md">
         <CardHeader>
           <CardTitle>
             <h2 className="xs:text-3xl lg:text-4xl">A Quick Recap</h2>
@@ -20,6 +20,7 @@ function Recap() {
             projects using <strong>Next</strong> and <strong>Node</strong>.
           </CardDescription>
         </CardHeader>
+        <OrbitingCircleSkills />
       </div>
     </Card>
   );

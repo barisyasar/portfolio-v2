@@ -77,20 +77,17 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       animation: {
-        meteor: "meteor 5s linear infinite",
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
       },
       keyframes: {
-        meteor: {
+        orbit: {
           "0%": {
-            transform: "rotate(215deg) translateX(0)",
-            opacity: "1",
-          },
-          "70%": {
-            opacity: "1",
+            transform:
+              "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
           },
           "100%": {
-            transform: "rotate(215deg) translateX(-500px)",
-            opacity: "0",
+            transform:
+              "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
           },
         },
       },
