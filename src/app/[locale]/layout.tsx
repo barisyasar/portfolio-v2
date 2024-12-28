@@ -34,7 +34,13 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html
+      lang={locale}
+      suppressHydrationWarning
+      style={{
+        scrollBehavior: "smooth",
+      }}
+    >
       <body className={`${roboto.className} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system">
           <NextIntlClientProvider messages={messages}>

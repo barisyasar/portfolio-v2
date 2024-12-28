@@ -25,6 +25,10 @@ export const routing = defineRouting({
       tr: "/iletisim",
       en: "/contact",
     },
+    "#recap": {
+      tr: "/#recap",
+      en: "/#recap",
+    },
   },
 });
 

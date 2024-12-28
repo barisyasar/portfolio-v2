@@ -75,4 +75,15 @@ body {
   .link {
     @apply relative block after:block after:content-[''] after:absolute after:h-[1px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:hover:origin-left after:transition after:duration-300 after:origin-right;
   }
+
+  .section + .section {
+    @apply mt-2 lg:mt-4;
+  }
+  .section:last-child {
+    @apply mb-2 lg:mb-4;
+  }
+
+  .section-height {
+    @apply min-h-[calc(100dvh-2rem)] lg:min-h-[calc(100dvh-3.5rem)];
+  }
 }

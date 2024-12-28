@@ -27,7 +27,7 @@ export default {
         xs: "2px",
       },
       screens: {
-        xs: "375px",
+        xs: "390px",
       },
       colors: {
         background: "hsl(var(--background))",
