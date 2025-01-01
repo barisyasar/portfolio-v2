@@ -25,7 +25,10 @@
     "projects": {
       "Projects": "Öne Çıkarılan Projeler",
       "text": "Full-stack developer olarak, <strong>10'dan fazla projede baştan sona yer alarak</strong>, hem front-end hem de back-end becerilerimi geliştirme fırsatı buldum. Aşağıda size en sevdiğim üç projeyi bırakıyorum.",
-      "allProjects": "Tüm projeler"
+      "allProjects": "Tüm projeler",
+      "tripyText": "Tripy ile elektrikli bisikletleri paylaşarak kolayca ve keyifle istediğin yere ulaşabilirsin. Hem çevreye duyarlı, hem de pratik bir ulaşım seçeneği.",
+      "enerjeyText": "Enerjey, çok dilli bir kurumsal web sitesidir. Adobe XD tasarımına dayanarak geliştirdiğim bu sitede, müşterinin kurumsal dilini sanatsal bir şekilde aktarmayı hedefledik.",
+      "nanografiText": "Nanografi, dünya çapında kimyasal malzeme satan ve çoklu para birimini destekleyen kapsamlı bir e-ticaret platformudur."
     }
   }
 }

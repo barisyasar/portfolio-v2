@@ -10,8 +10,8 @@ import {
 import { Link } from "@/i18n/routing";
 import { Button } from "../ui/button";
 import { ChevronRight } from "lucide-react";
-import NumberTicker from "../ui/number-ticker";
 import BlurFade from "../ui/blur-fade";
+import Icons from "../Icons";
 
 async function Projects() {
   const t = await getTranslations("HomePage.projects");
@@ -20,11 +20,6 @@ async function Projects() {
       <div className="max-w-screen-md mx-auto space-y-5">
         <CardHeader>
           <CardTitle>
-            {/* <h2 className="xs:text-3xl lg:text-4xl">
-                {t.rich("Projects", {
-                  numberTicker: () => <NumberTicker value={10} delay={1.5} />,
-                })}
-              </h2> */}
             <h2 className="xs:text-3xl lg:text-4xl">{t("Projects")}</h2>
           </CardTitle>
           <CardDescription
@@ -32,36 +27,104 @@ async function Projects() {
             dangerouslySetInnerHTML={{ __html: t.raw("text") }}
           />
         </CardHeader>
-        <CardContent className="grid grid-cols-2 grid-rows-2 gap-3">
+        <CardContent className="grid grid-cols-1 grid-rows-2 gap-3 md:grid-cols-2">
           <BlurFade
             delay={0.25}
             direction="right"
-            className="col-span-1 row-span-2 bg-red-500"
+            className="col-span-1 row-span-2"
           >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat
-            aut iste doloremque impedit porro, veniam harum nisi eos sint
-            quaerat?
+            <Card className="card--5 flex flex-col h-full">
+              <div className="flex items-center justify-between">
+                <CardTitle>
+                  <h3>Nanografi</h3>
+                </CardTitle>
+
+                <Link
+                  href={{
+                    pathname: "/projects/[id]",
+                    params: {
+                      id: 1,
+                    },
+                  }}
+                  className="animate-bounce-horizontal"
+                >
+                  <ChevronRight />
+                </Link>
+              </div>
+              <CardDescription className="xs:text-lg lg:text-xl flex-1">
+                {t("nanografiText")}
+              </CardDescription>
+              <CardFooter className="gap-3">
+                <Icons.react />
+                <Icons.redux />
+                <Icons.express />
+              </CardFooter>
+            </Card>
           </BlurFade>
           <BlurFade
             delay={0.5}
             direction="left"
-            className="col-span-1 row-span-1 bg-green-500"
+            className="col-span-1 row-span-1"
           >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat
-            aut iste doloremque impedit porro, veniam harum nisi eos sint
-            quaerat? Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Modi quasi eveniet esse ducimus beatae. Dolores harum nam dolor
-            aliquam, eveniet, cum laudantium sunt hic, sapiente molestias
-            corporis quia pariatur ipsam?
+            <Card className="card--5 flex-flex-col h-full">
+              <div className="flex items-center justify-between">
+                <CardTitle>
+                  <h3>Enerjey</h3>
+                </CardTitle>
+
+                <Link
+                  href={{
+                    pathname: "/projects/[id]",
+                    params: {
+                      id: 1,
+                    },
+                  }}
+                  className="animate-bounce-horizontal"
+                >
+                  <ChevronRight />
+                </Link>
+              </div>
+              <CardDescription className="xs:text-lg lg:text-xl flex-1">
+                {t("enerjeyText")}
+              </CardDescription>
+              <CardFooter className="gap-3">
+                <Icons.react />
+                <Icons.bootstrap />
+                <Icons.node />
+              </CardFooter>
+            </Card>
           </BlurFade>
           <BlurFade
             delay={0.75}
             direction="up"
-            className="col-span-1 row-span-1 bg-blue-500"
+            className="col-span-1 row-span-1"
           >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat
-            aut iste doloremque impedit porro, veniam harum nisi eos sint
-            quaerat?
+            <Card className="card--5 flex flex-col h-full">
+              <div className="flex items-center justify-between">
+                <CardTitle>
+                  <h3>Tripy</h3>
+                </CardTitle>
+
+                <Link
+                  href={{
+                    pathname: "/projects/[id]",
+                    params: {
+                      id: 1,
+                    },
+                  }}
+                  className="animate-bounce-horizontal"
+                >
+                  <ChevronRight />
+                </Link>
+              </div>
+              <CardDescription className="xs:text-lg lg:text-xl flex-1">
+                {t("tripyText")}
+              </CardDescription>
+              <CardFooter className="gap-3">
+                <Icons.react />
+                <Icons.framerMotion />
+              </CardFooter>
+            </Card>
           </BlurFade>
         </CardContent>
         <CardFooter>

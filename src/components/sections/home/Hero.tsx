@@ -13,10 +13,10 @@ import { Link } from "@/i18n/routing";
 
 function Hero() {
   return (
-    <Card className="section min-h-[calc(100dvh-66px-2rem)] lg:min-h-[calc(100dvh-66px-3.5rem)] flex flex-col">
+    <Card className="section min-h-[calc(100svh-66px-2rem)] lg:min-h-[calc(100svh-66px-3.5rem)] flex flex-col">
       <div className="flex flex-1 flex-col justify-center items-center">
         <div className="max-w-screen-md space-y-3">
-          <div className="rounded-full overflow-hidden size-60 xs:size-72 xl:size-96 mx-auto bg-card/[0.5] border p-3">
+          <div className="rounded-full overflow-hidden size-60 xs:size-72 xl:size-96 mx-auto p-3 card--5">
             <Image
               src={PROFILE_IMG}
               alt="Barış Yaşar"
