@@ -11,12 +11,19 @@ import { Link } from "@/i18n/routing";
 import { Button } from "../ui/button";
 import { ChevronRight } from "lucide-react";
 import BlurFade from "../ui/blur-fade";
-import Icons from "../Icons";
+import {
+  BootstrapIcon,
+  ExpressIcon,
+  FramerMotionIcon,
+  NodeIcon,
+  ReactIcon,
+  ReduxIcon,
+} from "../Icons";
 
 async function Projects() {
   const t = await getTranslations("HomePage.projects");
   return (
-    <Card className="section scroll-mt-2 lg:scroll-mt-4" id="recap">
+    <Card className="section">
       <div className="max-w-screen-md mx-auto space-y-5">
         <CardHeader>
           <CardTitle>
@@ -55,9 +62,9 @@ async function Projects() {
                 {t("nanografiText")}
               </CardDescription>
               <CardFooter className="gap-3">
-                <Icons.react />
-                <Icons.redux />
-                <Icons.express />
+                <ReactIcon />
+                <ReduxIcon />
+                <ExpressIcon />
               </CardFooter>
             </Card>
           </BlurFade>
@@ -88,9 +95,9 @@ async function Projects() {
                 {t("enerjeyText")}
               </CardDescription>
               <CardFooter className="gap-3">
-                <Icons.react />
-                <Icons.bootstrap />
-                <Icons.node />
+                <ReactIcon />
+                <BootstrapIcon />
+                <NodeIcon />
               </CardFooter>
             </Card>
           </BlurFade>
@@ -121,8 +128,8 @@ async function Projects() {
                 {t("tripyText")}
               </CardDescription>
               <CardFooter className="gap-3">
-                <Icons.react />
-                <Icons.framerMotion />
+                <ReactIcon />
+                <FramerMotionIcon />
               </CardFooter>
             </Card>
           </BlurFade>

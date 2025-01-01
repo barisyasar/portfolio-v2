@@ -1,4 +1,4 @@
-import Icons from "./Icons";
+import { ExpressIcon, NextIcon, NodeIcon, ReactIcon } from "./Icons";
 import OrbitingCircles from "./ui/orbiting-circles";
 
 export default function OrbitingCircleSkills() {
@@ -9,16 +9,16 @@ export default function OrbitingCircleSkills() {
       </span>
 
       <OrbitingCircles duration={20} delay={10} radius={70}>
-        <Icons.node className="size-8" />
+        <NodeIcon />
       </OrbitingCircles>
       <OrbitingCircles radius={70} duration={20} delay={20}>
-        <Icons.react className="size-8" />
+        <ReactIcon />
       </OrbitingCircles>
       <OrbitingCircles radius={120} duration={20} delay={10} reverse>
-        <Icons.next className="size-10" />
+        <NextIcon className="size-10" />
       </OrbitingCircles>
       <OrbitingCircles radius={120} duration={20} delay={20} reverse>
-        <Icons.express className="size-10" />
+        <ExpressIcon className="size-10" />
       </OrbitingCircles>
     </div>
   );

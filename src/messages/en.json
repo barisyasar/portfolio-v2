@@ -25,7 +25,10 @@
     "projects": {
       "Projects": "Highlighted Projects",
       "text": "As a full-stack developer, I've successfully <strong>developed over 10 projects</strong>, showcasing my expertise across the entire stack. Here are three standout projects",
-      "allProjects": "All projects"
+      "allProjects": "All projects",
+      "tripyText": "Tripy enhances the bicycle-sharing experience with modern technology. Tripy ensures every ride is both comfortable and enjoyable. Whether commuting or exploring, experience effortless journeys with our shared electric bikes.",
+      "enerjeyText": "Enerjey is a multilingual corporate website. On this site, which I developed based on the Adobe XD design, we aimed to artistically convey the client`s corporate language.",
+      "nanografiText": "Nanografi is a comprehensive e-commerce platform that sells chemical materials worldwide and supports multiple currencies."
     }
   }
 }
