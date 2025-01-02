@@ -1,6 +1,7 @@
+import Contact from "@/components/sections/home/Contact";
 import Hero from "@/components/sections/home/Hero";
-import Projects from "@/components/sections/Projects";
-import Recap from "@/components/sections/Recap";
+import Projects from "@/components/sections/home/Projects";
+import Recap from "@/components/sections/home/Recap";
 
 export default async function Home() {
   return (
@@ -8,6 +9,7 @@ export default async function Home() {
       <Hero />
       <Recap />
       <Projects />
+      <Contact />
     </div>
   );
 }

@@ -11,13 +11,14 @@ import PROFILE_IMG from "@/assets/profile.webp";
 import { ChevronsDown } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
+import SocialMedia from "@/components/SocialMedia";
 
 function Hero() {
   return (
     <Card className="section min-h-[calc(100svh-66px-2rem)] md:min-h-[calc(100svh-66px-3.5rem)] flex flex-col">
       <div className="flex flex-1 flex-col justify-center items-center">
         <div className="max-w-screen-md space-y-3">
-          <div className="rounded-full overflow-hidden size-60 xs:size-72 xl:size-96 mx-auto p-3 card--5">
+          <div className="rounded-full size-60 xs:size-72 xl:size-96 mx-auto p-3 card--5">
             <Image
               src={PROFILE_IMG}
               alt="Barış Yaşar"
@@ -39,13 +40,8 @@ function Hero() {
               Full-Stack Developer
             </CardDescription>
           </CardHeader>
-          <CardContent className="flex items-center justify-center gap-5">
-            <a target="_blank" href="https://www.linkedin.com/in/barisyasar5/">
-              <LinkedinIcon className="size-8 xs:size-10" />
-            </a>
-            <a target="_blank" href="https://github.com/barisyasar">
-              <GithubIcon className="size-8 xs:size-10" />
-            </a>
+          <CardContent>
+            <SocialMedia />
           </CardContent>
           <CardFooter className="justify-center gap-3"></CardFooter>
         </div>

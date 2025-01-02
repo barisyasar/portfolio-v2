@@ -29,6 +29,20 @@
       "tripyText": "Tripy enhances the bicycle-sharing experience with modern technology. Tripy ensures every ride is both comfortable and enjoyable. Whether commuting or exploring, experience effortless journeys with our shared electric bikes.",
       "enerjeyText": "Enerjey is a multilingual corporate website. On this site, which I developed based on the Adobe XD design, we aimed to artistically convey the client`s corporate language.",
       "nanografiText": "Nanografi is a comprehensive e-commerce platform that sells chemical materials worldwide and supports multiple currencies."
+    },
+    "contact": {
+      "title": "Do you like what you've seen so far?",
+      "text": "I'm always excited to connect! Whether you have a project in mind, want to collaborate, or just want to chat about tech, feel free to reach out. Let's explore how we can create something amazing together.",
+      "getInTouchNow": "Get in touch now"
     }
+  },
+  "footer": {
+    "pages": "Pages",
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "blogs": "Blogs",
+    "contact": "Contact",
+    "socialMedia": "Social Media"
   }
 }

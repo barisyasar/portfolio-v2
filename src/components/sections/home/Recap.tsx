@@ -1,14 +1,14 @@
 import { getTranslations } from "next-intl/server";
-import OrbitingCircleSkills from "../OrbitingCircleSkills";
+import OrbitingCircleSkills from "../../OrbitingCircleSkills";
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "../ui/card";
+} from "../../ui/card";
 import { Link } from "@/i18n/routing";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { ChevronRight } from "lucide-react";
 
 async function Recap() {

@@ -6,11 +6,11 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "../ui/card";
+} from "../../ui/card";
 import { Link } from "@/i18n/routing";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { ChevronRight } from "lucide-react";
-import BlurFade from "../ui/blur-fade";
+import BlurFade from "../../ui/blur-fade";
 import {
   BootstrapIcon,
   ExpressIcon,
@@ -18,7 +18,8 @@ import {
   NodeIcon,
   ReactIcon,
   ReduxIcon,
-} from "../Icons";
+  StripeIcon,
+} from "../../Icons";
 
 async function Projects() {
   const t = await getTranslations("HomePage.projects");
@@ -62,7 +63,7 @@ async function Projects() {
                 {t("nanografiText")}
               </CardDescription>
               <CardFooter className="gap-3">
-                <ReactIcon />
+                <StripeIcon />
                 <ReduxIcon />
                 <ExpressIcon />
               </CardFooter>
@@ -73,7 +74,7 @@ async function Projects() {
             direction="left"
             className="col-span-1 row-span-1"
           >
-            <Card className="card--5 flex-flex-col h-full">
+            <Card className="card--5 flex flex-col h-full">
               <div className="flex items-center justify-between">
                 <CardTitle>
                   <h3>Enerjey</h3>

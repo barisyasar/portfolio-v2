@@ -29,6 +29,20 @@
       "tripyText": "Tripy ile elektrikli bisikletleri paylaşarak kolayca ve keyifle istediğin yere ulaşabilirsin. Hem çevreye duyarlı, hem de pratik bir ulaşım seçeneği.",
       "enerjeyText": "Enerjey, çok dilli bir kurumsal web sitesidir. Adobe XD tasarımına dayanarak geliştirdiğim bu sitede, müşterinin kurumsal dilini sanatsal bir şekilde aktarmayı hedefledik.",
       "nanografiText": "Nanografi, dünya çapında kimyasal malzeme satan ve çoklu para birimini destekleyen kapsamlı bir e-ticaret platformudur."
+    },
+    "contact": {
+      "title": "Gördüklerinizi beğendiniz mi?",
+      "text": "Buraya kadar kaydırdıysanız ilginizi az da olsa çekebilmişim demektir. Eğer bu tarz minimal bir websitesi istiyorsanız benimle iletişim kurabilirsiniz.",
+      "getInTouchNow": "İletişime geç"
     }
+  },
+  "footer": {
+    "pages": "Sayfalar",
+    "home": "Anasayfa",
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "blogs": "Bloglar",
+    "contact": "İletişim",
+    "socialMedia": "Sosyal Medya"
   }
 }

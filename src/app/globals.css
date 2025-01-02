@@ -79,10 +79,7 @@ body {
   .section + .section {
     @apply mt-2 md:mt-4;
   }
-  .section:last-child {
-    @apply mb-2 md:mb-4;
-  }
   .card--5 {
-    @apply !bg-card/50 !shadow;
+    @apply !bg-card-foreground/5 !shadow;
   }
 }

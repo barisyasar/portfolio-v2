@@ -60,8 +60,8 @@ export default function AnimatedGridPattern({
               ...sq,
               pos: getPos(),
             }
-          : sq,
-      ),
+          : sq
+      )
     );
   };
 
@@ -99,8 +99,8 @@ export default function AnimatedGridPattern({
       ref={containerRef}
       aria-hidden="true"
       className={cn(
-        "pointer-events-none absolute inset-0 h-full w-full fill-gray-400/30 stroke-gray-400/30",
-        className,
+        "pointer-events-none absolute inset-0 h-full w-full fill-gray-400/40 stroke-gray-400/40",
+        className
       )}
       {...props}
     >

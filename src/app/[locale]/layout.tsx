@@ -20,6 +20,7 @@ import { notFound } from "next/navigation";
 import { Locale, routing } from "@/i18n/routing";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default async function LocaleLayout({
   children,
@@ -47,7 +48,7 @@ export default async function LocaleLayout({
             <Header />
             {children}
             <AnimatedGridPattern
-              numSquares={30}
+              numSquares={35}
               maxOpacity={0.1}
               duration={3}
               repeatDelay={1}
@@ -55,6 +56,7 @@ export default async function LocaleLayout({
                 "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] md:[mask-image:radial-gradient(760px_circle_at_center,white,transparent)] xl:[mask-image:radial-gradient(1000px_circle_at_center,white,transparent)] fixed top-0 left-0 flex h-screen w-full -z-10"
               }
             />
+            <Footer />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
