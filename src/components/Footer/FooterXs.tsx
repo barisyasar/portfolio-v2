@@ -5,9 +5,17 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
 import { Link } from "@/i18n/routing";
 import SocialMedia from "../SocialMedia";
+import ThemeToggle from "../ThemeToggle";
+import LanguageSelect from "../LanguageSelect";
 
 async function FooterXs() {
   const t = await getTranslations("footer");
@@ -52,6 +60,10 @@ async function FooterXs() {
           </AccordionItem>
         </Accordion>
       </CardContent>
+      <CardFooter className="gap-2 justify-center">
+        <ThemeToggle />
+        <LanguageSelect />
+      </CardFooter>
     </Card>
   );
 }
