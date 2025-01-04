@@ -45,7 +45,8 @@
       "description": "As a full-stack developer, I use a lot of libraries and tools. Here are the ones I use most.",
       "all": "All",
       "frontEnd": "Front-End",
-      "backEnd": "Back-End"
+      "backEnd": "Back-End",
+      "other": "Other"
     }
   },
   "footer": {
