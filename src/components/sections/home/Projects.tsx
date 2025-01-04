@@ -42,7 +42,7 @@ async function Projects() {
             className="col-span-1 row-span-2"
           >
             <Card className="card--5 flex flex-col h-full">
-              <div className="flex items-center justify-between">
+              <CardHeader className="flex-row items-center justify-between">
                 <CardTitle>
                   <h3>Nanografi</h3>
                 </CardTitle>
@@ -58,10 +58,10 @@ async function Projects() {
                 >
                   <ChevronRight />
                 </Link>
-              </div>
-              <CardDescription className="xs:text-lg lg:text-xl flex-1">
+              </CardHeader>
+              <CardContent className="xs:text-lg lg:text-xl flex-1">
                 {t("nanografiText")}
-              </CardDescription>
+              </CardContent>
               <CardFooter className="gap-3">
                 <StripeIcon />
                 <ReduxIcon />
@@ -75,7 +75,7 @@ async function Projects() {
             className="col-span-1 row-span-1"
           >
             <Card className="card--5 flex flex-col h-full">
-              <div className="flex items-center justify-between">
+              <CardHeader className="flex-row items-center justify-between">
                 <CardTitle>
                   <h3>Enerjey</h3>
                 </CardTitle>
@@ -91,7 +91,7 @@ async function Projects() {
                 >
                   <ChevronRight />
                 </Link>
-              </div>
+              </CardHeader>
               <CardDescription className="xs:text-lg lg:text-xl flex-1">
                 {t("enerjeyText")}
               </CardDescription>
@@ -108,7 +108,7 @@ async function Projects() {
             className="col-span-1 row-span-1"
           >
             <Card className="card--5 flex flex-col h-full">
-              <div className="flex items-center justify-between">
+              <CardHeader className="flex-row items-center justify-between">
                 <CardTitle>
                   <h3>Tripy</h3>
                 </CardTitle>
@@ -124,7 +124,7 @@ async function Projects() {
                 >
                   <ChevronRight />
                 </Link>
-              </div>
+              </CardHeader>
               <CardDescription className="xs:text-lg lg:text-xl flex-1">
                 {t("tripyText")}
               </CardDescription>

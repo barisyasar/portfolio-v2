@@ -36,6 +36,18 @@
       "getInTouchNow": "Get in touch now"
     }
   },
+  "AboutPage": {
+    "recap": {
+      "summary": "With 4 years of software experience and over 2 years of professional work experience, I am a <strong>full-stack developer</strong>. I have professional-level expertise in <strong>JavaScript</strong> and <strong>TypeScript</strong>. Currently, I am developing my projects using <strong>Next</strong> and <strong>Node</strong>."
+    },
+    "techStack": {
+      "title": "Tech Stack",
+      "description": "As a full-stack developer, I use a lot of libraries and tools. Here are the ones I use most.",
+      "all": "All",
+      "frontEnd": "Front-End",
+      "backEnd": "Back-End"
+    }
+  },
   "footer": {
     "pages": "Pages",
     "home": "Home",

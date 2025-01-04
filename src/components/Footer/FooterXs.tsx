@@ -19,6 +19,7 @@ import LanguageSelect from "../LanguageSelect";
 
 async function FooterXs() {
   const t = await getTranslations("footer");
+
   return (
     <Card className="lg:hidden">
       <CardHeader>

@@ -5,11 +5,11 @@ import Recap from "@/components/sections/home/Recap";
 
 export default async function Home() {
   return (
-    <div className="container">
+    <main className="container">
       <Hero />
       <Recap />
       <Projects />
       <Contact />
-    </div>
+    </main>
   );
 }

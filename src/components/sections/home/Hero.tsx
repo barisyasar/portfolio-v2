@@ -10,7 +10,6 @@ import Image from "next/image";
 import PROFILE_IMG from "@/assets/profile.webp";
 import { ChevronsDown } from "lucide-react";
 import { Link } from "@/i18n/routing";
-import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 import SocialMedia from "@/components/SocialMedia";
 
 function Hero() {
@@ -43,7 +42,6 @@ function Hero() {
           <CardContent>
             <SocialMedia />
           </CardContent>
-          <CardFooter className="justify-center gap-3"></CardFooter>
         </div>
       </div>
       <div className="flex justify-center">
