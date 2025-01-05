@@ -61,5 +61,40 @@
     "blogs": "Bloglar",
     "contact": "İletişim",
     "socialMedia": "Sosyal Medya"
+  },
+  "ContactPage": {
+    "title": "İletişime Geç",
+    "description": "Benimle iletişime geçmekten çekinmeyin! Sorularınız, geri bildirimleriniz veya yardıma ihtiyacınız varsa, size yardımcı olmaktan mutluluk duyarım. Bana bir mesaj gönderin, en kısa sürede size geri döneceğim.",
+    "form": {
+      "name": {
+        "label": "İsim",
+        "placeholder": "İsminiz"
+      },
+      "email": {
+        "label": "E-posta",
+        "placeholder": "ornek@email.com"
+      },
+      "subject": {
+        "label": "Konu",
+        "placeholder": "Mesaj konusu"
+      },
+      "message": {
+        "label": "Mesaj",
+        "placeholder": "Mesajınızı buraya yazın..."
+      },
+      "submit": {
+        "sending": "Gönderiliyor...",
+        "send": "Mesaj Gönder"
+      },
+      "success": "Mesajınız başarıyla gönderildi!",
+      "error": "Mesaj gönderilemedi. Lütfen tekrar deneyin.",
+      "validation": {
+        "name": "İsim en az 2 karakter olmalıdır",
+        "email": "Geçersiz e-posta adresi",
+        "subject": "Konu en az 3 karakter olmalıdır",
+        "message": "Mesaj en az 10 karakter olmalıdır",
+        "recaptcha": "ReCaptcha doğrulaması başarısız"
+      }
+    }
   }
 }

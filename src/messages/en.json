@@ -55,7 +55,38 @@
   },
   "ContactPage": {
     "title": "Get in Touch",
-    "description": "Feel free to reach out! Whether you have questions, feedback, or need assistance, I’m here to help. Send me a message, and I’ll get back to you as soon as possible."
+    "description": "Feel free to reach out! Whether you have questions, feedback, or need assistance, I'm here to help. Send me a message, and I'll get back to you as soon as possible.",
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "your@email.com"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Message subject"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Your message here..."
+      },
+      "submit": {
+        "sending": "Sending...",
+        "send": "Send Message"
+      },
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again.",
+      "validation": {
+        "name": "Name must be at least 2 characters",
+        "email": "Invalid email address",
+        "subject": "Subject must be at least 3 characters",
+        "message": "Message must be at least 10 characters",
+        "recaptcha": "ReCaptcha verification failed"
+      }
+    }
   },
   "footer": {
     "pages": "Pages",

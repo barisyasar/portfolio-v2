@@ -9,12 +9,14 @@ import {
 import { getTranslations } from "next-intl/server";
 import { ReCaptchaProvider } from "next-recaptcha-v3";
 
+// Server Component
 async function Contact() {
   const t = await getTranslations("ContactPage");
 
   return (
     <ReCaptchaProvider
       reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+      lang="eng"
     >
       <main className="container">
         <Card className="section">

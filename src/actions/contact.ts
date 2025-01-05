@@ -1,11 +1,13 @@
 "use server";
 
-import { contactFormSchema } from "@/lib/schemas/contact";
+import { getContactFormSchema } from "@/lib/schemas/contact";
 import { sendEmail } from "@/lib/email";
+import { getTranslations } from "next-intl/server";
 
 export async function submitContact(formData: FormData) {
+  const t = await getTranslations("ContactPage.form");
+
   try {
-    // Get form data
     const data = {
       name: formData.get("name"),
       email: formData.get("email"),
@@ -14,10 +16,8 @@ export async function submitContact(formData: FormData) {
       recaptchaToken: formData.get("recaptchaToken"),
     };
 
-    // Validate the data
-    const validatedData = contactFormSchema.parse(data);
+    const validatedData = getContactFormSchema(t).parse(data);
 
-    // Verify reCAPTCHA
     const recaptchaResponse = await fetch(
       `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${validatedData.recaptchaToken}`,
       { method: "POST" }
@@ -26,7 +26,7 @@ export async function submitContact(formData: FormData) {
     const recaptchaData = await recaptchaResponse.json();
     if (!recaptchaData.success) {
       return {
-        error: "Invalid reCAPTCHA",
+        error: t("validation.recaptcha"),
       };
     }
 
@@ -48,7 +48,7 @@ export async function submitContact(formData: FormData) {
   } catch (error) {
     console.error("Contact form error:", error);
     return {
-      error: "Failed to send message",
+      error: t("error"),
     };
   }
 }
