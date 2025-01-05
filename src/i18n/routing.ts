@@ -24,6 +24,7 @@ export const routing = defineRouting({
       en: "/contact",
     },
     "#recap": "#recap",
+    "#tech-stack": "#tech-stack",
   },
 });
 

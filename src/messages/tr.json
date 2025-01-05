@@ -36,6 +36,23 @@
       "getInTouchNow": "İletişime geç"
     }
   },
+  "AboutPage": {
+    "recap": {
+      "webEnthusiast": "Web Meraklısı",
+      "lifelongLearner": "Araştırmacı",
+      "summary": "<p>Ted Üniversitesi bilgisayar mühendisliği mezunu olarak, kariyerime yazılım alanında odaklanarak yön verdim. Eğitim sürecimde iki uzun dönem staj deneyimi edindim; bunlardan ilki <strong>Altima</strong>, diğeri ise <strong>Osi</strong> şirketinde gerçekleşti. Stajlarımın ardından, <strong>Osi</strong> bünyesinde <strong>full-stack developer</strong> olarak 2 yılı aşkın bir süre görev yaptım ve bu süreçte önemli projelerde yer aldım.</p><p>Şu anda <strong>Oak Technology</strong> şirketinde <strong>frontend developer</strong> olarak çalışıyor ve modern teknolojileri kullanarak kullanıcı odaklı çözümler geliştiriyorum.</p>"
+    },
+    "techStack": {
+      "title": "Tech Stack",
+      "description": "Full-Stack Developer olarak en çok kullandığım kütüphaneleri, araçları vb. aşağıda görebilirsiniz.",
+      "all": "Tümü",
+      "frontEnd": "Front-End",
+      "backEnd": "Back-End",
+      "other": "Diğer",
+      "visitProjects": "Bunları hangi projelerde nasıl kulladığımı görün.",
+      "allProjects": "Tüm projeler"
+    }
+  },
   "footer": {
     "pages": "Sayfalar",
     "home": "Anasayfa",
@@ -44,5 +61,40 @@
     "blogs": "Bloglar",
     "contact": "İletişim",
     "socialMedia": "Sosyal Medya"
+  },
+  "ContactPage": {
+    "title": "İletişime Geç",
+    "description": "Benimle iletişime geçmekten çekinmeyin! Sorularınız, geri bildirimleriniz veya yardıma ihtiyacınız varsa, size yardımcı olmaktan mutluluk duyarım. Bana bir mesaj gönderin, en kısa sürede size geri döneceğim.",
+    "form": {
+      "name": {
+        "label": "İsim",
+        "placeholder": "İsminiz"
+      },
+      "email": {
+        "label": "E-posta",
+        "placeholder": "ornek@email.com"
+      },
+      "subject": {
+        "label": "Konu",
+        "placeholder": "Mesaj konusu"
+      },
+      "message": {
+        "label": "Mesaj",
+        "placeholder": "Mesajınızı buraya yazın..."
+      },
+      "submit": {
+        "sending": "Gönderiliyor...",
+        "send": "Mesaj Gönder"
+      },
+      "success": "Mesajınız başarıyla gönderildi!",
+      "error": "Mesaj gönderilemedi. Lütfen tekrar deneyin.",
+      "validation": {
+        "name": "İsim en az 2 karakter olmalıdır",
+        "email": "Geçersiz e-posta adresi",
+        "subject": "Konu en az 3 karakter olmalıdır",
+        "message": "Mesaj en az 10 karakter olmalıdır",
+        "recaptcha": "ReCaptcha doğrulaması başarısız"
+      }
+    }
   }
 }

@@ -5,6 +5,9 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+.grecaptcha-badge {
+  visibility: hidden;
+}
 
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
@@ -88,10 +91,16 @@ body {
     @apply relative block after:block after:content-[''] after:absolute after:h-[1px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:hover:origin-left after:transition after:duration-300 after:origin-right;
   }
 
+  .section {
+    @apply scroll-mt-2 md:scroll-mt-4;
+  }
   .section + .section {
     @apply mt-2 md:mt-4;
   }
   .card--5 {
     @apply !bg-card-foreground/5 !shadow;
+  }
+  p + p {
+    @apply mt-2;
   }
 }
