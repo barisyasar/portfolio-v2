@@ -91,7 +91,7 @@ export const ALL_TECHS = [
     categories: ["frontend"],
   },
   {
-    name: "React Query",
+    name: "ReactQuery",
     icon: ReactQueryIcon,
     categories: ["frontend"],
   },

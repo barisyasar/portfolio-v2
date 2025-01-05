@@ -38,15 +38,19 @@
   },
   "AboutPage": {
     "recap": {
-      "summary": "With 4 years of software experience and over 2 years of professional work experience, I am a <strong>full-stack developer</strong>. I have professional-level expertise in <strong>JavaScript</strong> and <strong>TypeScript</strong>. Currently, I am developing my projects using <strong>Next</strong> and <strong>Node</strong>."
+      "webEnthusiast": "Web Enthusiast",
+      "lifelongLearner": "Lifelong Learner",
+      "summary": "<p>As a graduate of the Computer Engineering program at <strong>Ted University</strong>, I have focused my career on software development. During my education, I completed two long-term internships; the first was at <strong>Altima</strong>, and the second was at <strong>Osi</strong>. Following my internships, I worked at <strong>Osi</strong> as a <strong>full-stack developer</strong> for over 2 years, contributing to significant projects during that time.</p> <p>Currently, I am working at <strong>Oak Technology</strong> as a <strong>frontend developer</strong>, where I leverage modern technologies to develop user-focused solutions.</p>"
     },
     "techStack": {
       "title": "Tech Stack",
-      "description": "As a full-stack developer, I use a lot of libraries and tools. Here are the ones I use most.",
+      "description": "As a full-stack developer, I use a lot of libraries, tools etc. Here are the ones I use most.",
       "all": "All",
       "frontEnd": "Front-End",
       "backEnd": "Back-End",
-      "other": "Other"
+      "other": "Other",
+      "visitProjects": "Check out my projects where I use these technologies.",
+      "allProjects": "All projects"
     }
   },
   "footer": {

@@ -14,7 +14,7 @@ import { ChevronRight } from "lucide-react";
 async function Recap() {
   const t = await getTranslations("HomePage.recap");
   return (
-    <Card className="section scroll-mt-2 md:scroll-mt-4" id="recap">
+    <Card className="section" id="recap">
       <div className="max-w-screen-md mx-auto grid md:grid-cols-2">
         <OrbitingCircleSkills />
         <div className="md:-order-1 space-y-5">

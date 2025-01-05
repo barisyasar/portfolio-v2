@@ -68,7 +68,7 @@ function TechStackTabList() {
       </div>
 
       {/* Tech Grid */}
-      <div className="min-h-[400px]">
+      <div>
         <div className="grid grid-cols-2 gap-2 [&_svg]:size-12 [&_svg]:mx-auto 2xs:grid-cols-3 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 ">
           <AnimatePresence mode="popLayout">
             {filteredTechs.map((tech, i) =>

@@ -48,10 +48,10 @@ export default async function LocaleLayout({
             <Header />
             {children}
             <AnimatedGridPattern
-              numSquares={35}
+              numSquares={30}
               maxOpacity={0.1}
               duration={3}
-              repeatDelay={1}
+              repeatDelay={2}
               className={
                 "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] md:[mask-image:radial-gradient(760px_circle_at_center,white,transparent)] xl:[mask-image:radial-gradient(1000px_circle_at_center,white,transparent)] fixed top-0 left-0 flex h-screen w-full -z-10"
               }
