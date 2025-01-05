@@ -16,7 +16,7 @@ import LanguageSelect from "../LanguageSelect";
 async function FooterLg() {
   const t = await getTranslations("footer");
   return (
-    <Card className="hidden lg:block">
+    <Card className="hidden md:block">
       <CardHeader>
         <div className="flex justify-between">
           <div>

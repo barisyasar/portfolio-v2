@@ -21,7 +21,7 @@ async function FooterXs() {
   const t = await getTranslations("footer");
 
   return (
-    <Card className="lg:hidden">
+    <Card className="md:hidden">
       <CardHeader>
         <CardTitle>
           <h6 className="text-2xl font-medium">Barış Yaşar</h6>
