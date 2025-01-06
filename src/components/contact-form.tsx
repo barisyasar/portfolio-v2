@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useReCaptcha } from "next-recaptcha-v3";
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
 import type { ContactFormType } from "@/lib/schemas/contact";
 import { getContactFormSchema } from "@/lib/schemas/contact";
 import { Button } from "@/components/ui/button";
@@ -21,24 +20,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { submitContact } from "@/actions/contact";
 import { useToast } from "@/hooks/use-toast";
-
-const formAnimation = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (custom: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      delay: custom * 0.1,
-      ease: "easeOut",
-    },
-  }),
-};
+import BlurFade from "@/components/ui/blur-fade";
 
 export function ContactForm() {
   const t = useTranslations("ContactPage.form");
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const { executeRecaptcha } = useReCaptcha();
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -52,13 +38,14 @@ export function ContactForm() {
     },
   });
 
+  const { isSubmitting } = form.formState;
+
   async function onSubmit(data: ContactFormType) {
     try {
       if (!executeRecaptcha) {
         throw new Error(t("validation.recaptcha"));
       }
 
-      setIsSubmitting(true);
       const token = await executeRecaptcha("contact_form");
 
       if (!token) {
@@ -74,8 +61,8 @@ export function ContactForm() {
 
       const result = await submitContact(formData);
 
-      if (result.error) {
-        throw new Error(result.error);
+      if (result.errorKey) {
+        throw new Error(t(result.errorKey));
       }
 
       toast({
@@ -91,8 +78,6 @@ export function ContactForm() {
         title: t("error"),
         description: error instanceof Error ? error.message : t("error"),
       });
-    } finally {
-      setIsSubmitting(false);
     }
   }
 
@@ -106,13 +91,7 @@ export function ContactForm() {
         }}
         className="space-y-4"
       >
-        <motion.div
-          custom={0}
-          initial="hidden"
-          animate="visible"
-          variants={formAnimation}
-          className="space-y-4"
-        >
+        <BlurFade delay={0 * 0.15} className="space-y-4">
           <FormField
             control={form.control}
             name="name"
@@ -126,15 +105,9 @@ export function ContactForm() {
               </FormItem>
             )}
           />
-        </motion.div>
+        </BlurFade>
 
-        <motion.div
-          custom={1}
-          initial="hidden"
-          animate="visible"
-          variants={formAnimation}
-          className="space-y-4"
-        >
+        <BlurFade delay={1 * 0.15} className="space-y-4">
           <FormField
             control={form.control}
             name="email"
@@ -152,15 +125,9 @@ export function ContactForm() {
               </FormItem>
             )}
           />
-        </motion.div>
+        </BlurFade>
 
-        <motion.div
-          custom={2}
-          initial="hidden"
-          animate="visible"
-          variants={formAnimation}
-          className="space-y-4"
-        >
+        <BlurFade delay={2 * 0.15} className="space-y-4">
           <FormField
             control={form.control}
             name="subject"
@@ -174,15 +141,9 @@ export function ContactForm() {
               </FormItem>
             )}
           />
-        </motion.div>
+        </BlurFade>
 
-        <motion.div
-          custom={3}
-          initial="hidden"
-          animate="visible"
-          variants={formAnimation}
-          className="space-y-4"
-        >
+        <BlurFade delay={3 * 0.15} className="space-y-4">
           <FormField
             control={form.control}
             name="message"
@@ -200,18 +161,13 @@ export function ContactForm() {
               </FormItem>
             )}
           />
-        </motion.div>
+        </BlurFade>
 
-        <motion.div
-          custom={4}
-          initial="hidden"
-          animate="visible"
-          variants={formAnimation}
-        >
+        <BlurFade delay={4 * 0.15}>
           <Button type="submit" disabled={isSubmitting} className="w-full">
             {isSubmitting ? t("submit.sending") : t("submit.send")}
           </Button>
-        </motion.div>
+        </BlurFade>
       </form>
     </Form>
   );

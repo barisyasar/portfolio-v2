@@ -26,7 +26,7 @@ export async function submitContact(formData: FormData) {
     const recaptchaData = await recaptchaResponse.json();
     if (!recaptchaData.success) {
       return {
-        error: t("validation.recaptcha"),
+        errorKey: "validation.recaptcha",
       };
     }
 
@@ -48,7 +48,7 @@ export async function submitContact(formData: FormData) {
   } catch (error) {
     console.error("Contact form error:", error);
     return {
-      error: t("error"),
+      errorKey: "error",
     };
   }
 }
