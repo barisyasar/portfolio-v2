@@ -96,5 +96,11 @@
         "recaptcha": "ReCaptcha doğrulaması başarısız"
       }
     }
+  },
+  "Blog": {
+    "title": "Blog",
+    "description": "Bloguma hoş geldiniz! Burada web geliştirme ve teknoloji hakkındaki düşüncelerimi, deneyimlerimi ve öğrendiklerimi paylaşıyorum. İster bir geliştirici olun, ister sadece neler yaptığımı merak edin, doğru yerdesiniz.",
+    "share": "Bu yazıyı paylaş",
+    "backToBlogs": "Bloglara dön"
   }
 }

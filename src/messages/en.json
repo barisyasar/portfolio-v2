@@ -88,6 +88,12 @@
       }
     }
   },
+  "Blog": {
+    "title": "Blog",
+    "description": "Welcome to my blog! Here, I share my thoughts, experiences, and learnings about web development and technology. Whether you're a fellow developer or just curious about what I'm up to, you're in the right place.",
+    "share": "Share this post",
+    "backToBlogs": "Back to blogs"
+  },
   "footer": {
     "pages": "Pages",
     "home": "Home",
