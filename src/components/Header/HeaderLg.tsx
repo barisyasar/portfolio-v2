@@ -1,11 +1,11 @@
-import { Card, CardContent } from "../ui/card";
-import { Link } from "@/i18n/routing";
-import ThemeToggle from "../ThemeToggle";
-import LanguageSelect from "../LanguageSelect";
-import { getTranslations } from "next-intl/server";
+import { Card, CardContent } from '../ui/card';
+import { Link } from '@/i18n/routing';
+import ThemeToggle from '../ThemeToggle';
+import LanguageSelect from '../LanguageSelect';
+import { getTranslations } from 'next-intl/server';
 
 async function HeaderLg() {
-  const t = await getTranslations("Menu");
+  const t = await getTranslations('Menu');
 
   return (
     <Card className="hidden md:block">
@@ -19,27 +19,27 @@ async function HeaderLg() {
           <ul className="flex gap-4">
             <li>
               <Link className="link" href="/">
-                {t("home")}
+                {t('home')}
               </Link>
             </li>
             <li>
               <Link className="link" href="/about">
-                {t("about")}
+                {t('about')}
               </Link>
             </li>
             <li>
-              <Link className="link" href="/projects">
-                {t("projects")}
+              <Link className="link" href="/services">
+                {t('services')}
               </Link>
             </li>
             <li>
               <Link className="link" href="/blogs">
-                {t("blogs")}
+                {t('blogs')}
               </Link>
             </li>
             <li>
               <Link className="link" href="/contact">
-                {t("contact")}
+                {t('contact')}
               </Link>
             </li>
           </ul>

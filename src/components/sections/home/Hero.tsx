@@ -2,7 +2,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -14,10 +13,10 @@ import SocialMedia from "@/components/SocialMedia";
 
 function Hero() {
   return (
-    <Card className="section min-h-[calc(100svh-66px-2rem)] md:min-h-[calc(100svh-66px-3.5rem)] flex flex-col">
-      <div className="flex flex-1 flex-col justify-center items-center">
+    <Card className="section flex min-h-[calc(100svh-66px-2rem)] flex-col md:min-h-[calc(100svh-66px-3.5rem)]">
+      <div className="flex flex-1 flex-col items-center justify-center">
         <div className="max-w-screen-md space-y-3">
-          <div className="rounded-full size-60 xs:size-72 xl:size-96 mx-auto p-3 card--5">
+          <div className="card--5 mx-auto size-60 rounded-full p-3 xs:size-72 xl:size-96">
             <Image
               src={PROFILE_IMG}
               alt="Barış Yaşar"
@@ -33,9 +32,9 @@ function Hero() {
           </div>
           <CardHeader>
             <CardTitle>
-              <h1 className="text-4xl text-center xs:text-5xl">Barış Yaşar</h1>
+              <h1 className="text-center text-4xl xs:text-5xl">Barış Yaşar</h1>
             </CardTitle>
-            <CardDescription className="text-lg text-center xs:text-2xl">
+            <CardDescription className="text-center text-lg xs:text-2xl">
               Full-Stack Developer
             </CardDescription>
           </CardHeader>
@@ -46,7 +45,7 @@ function Hero() {
       </div>
       <div className="flex justify-center">
         <Link href={"#recap"}>
-          <ChevronsDown className="animate-bounce size-8 xs:size-12" />
+          <ChevronsDown className="size-8 animate-bounce xs:size-12" />
         </Link>
       </div>
     </Card>

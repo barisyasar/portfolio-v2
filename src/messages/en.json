@@ -12,23 +12,27 @@
     "menu": "Menu",
     "home": "Home",
     "about": "About",
-    "projects": "Projects",
+    "services": "Services",
     "blogs": "Blogs",
     "contact": "Contact"
   },
   "HomePage": {
     "recap": {
       "A Quick Recap": "A Quick Recap",
-      "summaryText": "With 4 years of software experience and over 2 years of professional work experience, I am a <strong>full-stack developer</strong>. I have professional-level expertise in <strong>JavaScript</strong> and <strong>TypeScript</strong>. Currently, I am developing my projects using <strong>Next</strong> and <strong>Node</strong>.",
+      "summaryText": "With 4 years of software experience and over 2 years of professional work experience, I am a <strong>full-stack developer</strong>. I have professional-level expertise in <strong>JavaScript</strong> and <strong>TypeScript</strong>. Currently, I am developing my experiences using <strong>Next</strong> and <strong>Node</strong>.",
       "learnMore": "Learn more"
     },
-    "projects": {
-      "Projects": "Highlighted Projects",
-      "text": "As a full-stack developer, I've successfully <strong>developed over 10 projects</strong>, showcasing my expertise across the entire stack. Here are three standout projects",
-      "allProjects": "All projects",
-      "tripyText": "Tripy enhances the bicycle-sharing experience with modern technology. Tripy ensures every ride is both comfortable and enjoyable. Whether commuting or exploring, experience effortless journeys with our shared electric bikes.",
-      "enerjeyText": "Enerjey is a multilingual corporate website. On this site, which I developed based on the Adobe XD design, we aimed to artistically convey the client`s corporate language.",
-      "nanografiText": "Nanografi is a comprehensive e-commerce platform that sells chemical materials worldwide and supports multiple currencies."
+    "experiences": {
+      "title": "Experiences",
+      "text": "As a full-stack developer, I've successfully <strong>developed over 10 experiences</strong>. I have experience in many different fields. Here are some of my experiences.",
+      "landingWebPageTitle": "Promotional Websites",
+      "landingWebPage": "Unique websites for different companies. In these experiences, I have try to make interestring and user-friendly designs.",
+      "webpToApplicationTitle": "Web to Application",
+      "webpToApplication": "That takes users from a web page to a mobile application. After registering, users can log in to the application and start using the service.",
+      "ecommerceTitle": "E-commerce",
+      "ecommerceText": "E-commerce webapplication for a global company that sells products to the USA, UK, Germany, France, Italy, Spain, and other countries.",
+      "servicesText": "I provide professional services on these fields. Further details you can look my services.",
+      "services": "Services"
     },
     "contact": {
       "title": "Do you like what you've seen so far?",
@@ -40,7 +44,7 @@
     "recap": {
       "webEnthusiast": "Web Enthusiast",
       "lifelongLearner": "Lifelong Learner",
-      "summary": "<p>As a graduate of the Computer Engineering program at <strong>Ted University</strong>, I have focused my career on software development. During my education, I completed two long-term internships; the first was at <strong>Altima</strong>, and the second was at <strong>Osi</strong>. Following my internships, I worked at <strong>Osi</strong> as a <strong>full-stack developer</strong> for over 2 years, contributing to significant projects during that time.</p> <p>Currently, I am working at <strong>Oak Technology</strong> as a <strong>frontend developer</strong>, where I leverage modern technologies to develop user-focused solutions.</p>"
+      "summary": "<p>As a graduate of the Computer Engineering program at <strong>Ted University</strong>, I have focused my career on software development. During my education, I completed two long-term internships; the first was at <strong>Altima</strong>, and the second was at <strong>Osi</strong>. Following my internships, I worked at <strong>Osi</strong> as a <strong>full-stack developer</strong> for over 2 years, contributing to significant experiences during that time.</p> <p>Currently, I am working at <strong>Oak Technology</strong> as a <strong>frontend developer</strong>, where I leverage modern technologies to develop user-focused solutions.</p>"
     },
     "techStack": {
       "title": "Tech Stack",
@@ -49,8 +53,8 @@
       "frontEnd": "Front-End",
       "backEnd": "Back-End",
       "other": "Other",
-      "visitProjects": "Check out my projects where I use these technologies.",
-      "allProjects": "All projects"
+      "visitServices": "See my services using these technologies.",
+      "allServices": "Services"
     }
   },
   "ContactPage": {
@@ -98,7 +102,7 @@
     "pages": "Pages",
     "home": "Home",
     "about": "About",
-    "projects": "Projects",
+    "services": "Services",
     "blogs": "Blogs",
     "contact": "Contact",
     "socialMedia": "Social Media"

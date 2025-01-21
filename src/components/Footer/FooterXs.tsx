@@ -1,24 +1,24 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations } from 'next-intl/server';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../ui/accordion";
+} from '../ui/accordion';
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "../ui/card";
-import { Link } from "@/i18n/routing";
-import SocialMedia from "../SocialMedia";
-import ThemeToggle from "../ThemeToggle";
-import LanguageSelect from "../LanguageSelect";
+} from '../ui/card';
+import { Link } from '@/i18n/routing';
+import SocialMedia from '../SocialMedia';
+import ThemeToggle from '../ThemeToggle';
+import LanguageSelect from '../LanguageSelect';
 
 async function FooterXs() {
-  const t = await getTranslations("footer");
+  const t = await getTranslations('footer');
 
   return (
     <Card className="md:hidden">
@@ -30,38 +30,38 @@ async function FooterXs() {
       <CardContent>
         <Accordion type="multiple">
           <AccordionItem value="item-1">
-            <AccordionTrigger>{t("pages")}</AccordionTrigger>
+            <AccordionTrigger>{t('pages')}</AccordionTrigger>
             <AccordionContent>
               <nav className="flex-1">
                 <ul className="flex flex-col gap-2">
                   <li>
-                    <Link href="/">{t("home")}</Link>
+                    <Link href="/">{t('home')}</Link>
                   </li>
                   <li>
-                    <Link href="/about">{t("about")}</Link>
+                    <Link href="/about">{t('about')}</Link>
                   </li>
                   <li>
-                    <Link href="/projects">{t("projects")}</Link>
+                    <Link href="/services">{t('services')}</Link>
                   </li>
                   <li>
-                    <Link href="/blogs">{t("blogs")}</Link>
+                    <Link href="/blogs">{t('blogs')}</Link>
                   </li>
                   <li>
-                    <Link href="/contact">{t("contact")}</Link>
+                    <Link href="/contact">{t('contact')}</Link>
                   </li>
                 </ul>
               </nav>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger>{t("socialMedia")}</AccordionTrigger>
+            <AccordionTrigger>{t('socialMedia')}</AccordionTrigger>
             <AccordionContent>
               <SocialMedia />
             </AccordionContent>
           </AccordionItem>
         </Accordion>
       </CardContent>
-      <CardFooter className="gap-2 justify-center">
+      <CardFooter className="justify-center gap-2">
         <ThemeToggle />
         <LanguageSelect />
       </CardFooter>

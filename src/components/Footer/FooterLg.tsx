@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations } from 'next-intl/server';
 
 import {
   Card,
@@ -7,14 +7,14 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "../ui/card";
-import SocialMedia from "../SocialMedia";
-import { Link } from "@/i18n/routing";
-import ThemeToggle from "../ThemeToggle";
-import LanguageSelect from "../LanguageSelect";
+} from '../ui/card';
+import SocialMedia from '../SocialMedia';
+import { Link } from '@/i18n/routing';
+import ThemeToggle from '../ThemeToggle';
+import LanguageSelect from '../LanguageSelect';
 
 async function FooterLg() {
-  const t = await getTranslations("footer");
+  const t = await getTranslations('footer');
   return (
     <Card className="hidden md:block">
       <CardHeader>
@@ -38,27 +38,27 @@ async function FooterLg() {
           <ul className="flex justify-center gap-12 text-sm">
             <li>
               <Link className="link" href="/">
-                {t("home")}
+                {t('home')}
               </Link>
             </li>
             <li>
               <Link className="link" href="/about">
-                {t("about")}
+                {t('about')}
               </Link>
             </li>
             <li>
-              <Link className="link" href="/projects">
-                {t("projects")}
+              <Link className="link" href="/services">
+                {t('services')}
               </Link>
             </li>
             <li>
               <Link className="link" href="/blogs">
-                {t("blogs")}
+                {t('blogs')}
               </Link>
             </li>
             <li>
               <Link className="link" href="/contact">
-                {t("contact")}
+                {t('contact')}
               </Link>
             </li>
           </ul>

@@ -1,34 +1,30 @@
-import { defineRouting } from "next-intl/routing";
-import { createNavigation } from "next-intl/navigation";
+import { defineRouting } from 'next-intl/routing';
+import { createNavigation } from 'next-intl/navigation';
 
 export const routing = defineRouting({
-  locales: ["tr", "en"],
-  defaultLocale: "tr",
+  locales: ['tr', 'en'],
+  defaultLocale: 'tr',
   pathnames: {
-    "/": "/",
-    "/about": {
-      tr: "/hakkimda",
-      en: "/about",
+    '/': '/',
+    '/about': {
+      tr: '/hakkimda',
+      en: '/about',
     },
-    "/projects": {
-      tr: "/projeler",
-      en: "/projects",
+    '/services': {
+      tr: '/hizmetler',
+      en: '/services',
     },
-    "/projects/[id]": {
-      tr: "/projeler/[id]",
-      en: "/projects/[id]",
+    '/blogs': '/blogs',
+    '/blogs/[id]': {
+      tr: '/blogs/[id]',
+      en: '/blogs/[id]',
     },
-    "/blogs": "/blogs",
-    "/blogs/[id]": {
-      tr: "/blogs/[id]",
-      en: "/blogs/[id]",
+    '/contact': {
+      tr: '/iletisim',
+      en: '/contact',
     },
-    "/contact": {
-      tr: "/iletisim",
-      en: "/contact",
-    },
-    "#recap": "#recap",
-    "#tech-stack": "#tech-stack",
+    '#recap': '#recap',
+    '#tech-stack': '#tech-stack',
   },
 });
 

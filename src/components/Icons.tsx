@@ -1,4 +1,4 @@
-export const SlackIcon = ({ className = "size-8" }: { className?: string }) => (
+export const SlackIcon = ({ className = 'size-8' }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={className}
@@ -22,7 +22,7 @@ export const SlackIcon = ({ className = "size-8" }: { className?: string }) => (
     ></path>
   </svg>
 );
-export const JiraIcon = ({ className = "size-8" }: { className?: string }) => (
+export const JiraIcon = ({ className = 'size-8' }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={className}
@@ -65,7 +65,7 @@ export const JiraIcon = ({ className = "size-8" }: { className?: string }) => (
   </svg>
 );
 export const IyzicoIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (
@@ -116,7 +116,7 @@ export const IyzicoIcon = ({
   </svg>
 );
 export const PaypalIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (
@@ -144,7 +144,7 @@ export const PaypalIcon = ({
   </svg>
 );
 export const MaterialUiIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (
@@ -159,7 +159,7 @@ export const MaterialUiIcon = ({
     ></path>
   </svg>
 );
-export const SassIcon = ({ className = "size-8" }: { className?: string }) => (
+export const SassIcon = ({ className = 'size-8' }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={className}
@@ -174,7 +174,7 @@ export const SassIcon = ({ className = "size-8" }: { className?: string }) => (
   </svg>
 );
 export const TailwindIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (
@@ -189,7 +189,7 @@ export const TailwindIcon = ({
     ></path>
   </svg>
 );
-export const GitIcon = ({ className = "size-8" }: { className?: string }) => (
+export const GitIcon = ({ className = 'size-8' }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={className}
@@ -202,7 +202,7 @@ export const GitIcon = ({ className = "size-8" }: { className?: string }) => (
   </svg>
 );
 export const GraphQlIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (
@@ -220,7 +220,7 @@ export const GraphQlIcon = ({
   </svg>
 );
 export const ReactQueryIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (
@@ -247,7 +247,7 @@ export const ReactQueryIcon = ({
     ></path>
   </svg>
 );
-export const SwrIcon = ({ className = "size-8" }: { className?: string }) => (
+export const SwrIcon = ({ className = 'size-8' }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={className}
@@ -260,7 +260,7 @@ export const SwrIcon = ({ className = "size-8" }: { className?: string }) => (
   </svg>
 );
 export const PostgreIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (
@@ -284,7 +284,7 @@ export const PostgreIcon = ({
     ></path>
   </svg>
 );
-export const ReactIcon = ({ className = "size-8" }: { className?: string }) => (
+export const ReactIcon = ({ className = 'size-8' }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 128 128"
@@ -296,7 +296,7 @@ export const ReactIcon = ({ className = "size-8" }: { className?: string }) => (
     </g>
   </svg>
 );
-export const MongoIcon = ({ className = "size-8" }: { className?: string }) => (
+export const MongoIcon = ({ className = 'size-8' }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={className}
@@ -310,7 +310,7 @@ export const MongoIcon = ({ className = "size-8" }: { className?: string }) => (
 );
 
 export const LinkedinIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (
@@ -331,7 +331,7 @@ export const LinkedinIcon = ({
 );
 
 export const GithubIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (
@@ -358,7 +358,7 @@ export const GithubIcon = ({
   </svg>
 );
 
-export const NodeIcon = ({ className = "size-8" }: { className?: string }) => (
+export const NodeIcon = ({ className = 'size-8' }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 32 32"
@@ -375,7 +375,7 @@ export const NodeIcon = ({ className = "size-8" }: { className?: string }) => (
   </svg>
 );
 
-export const NextIcon = ({ className = "size-8" }: { className?: string }) => (
+export const NextIcon = ({ className = 'size-8' }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={className}
@@ -389,7 +389,7 @@ export const NextIcon = ({ className = "size-8" }: { className?: string }) => (
 );
 
 export const ExpressIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (
@@ -411,7 +411,7 @@ export const ExpressIcon = ({
   </svg>
 );
 
-export const ReduxIcon = ({ className = "size-8" }: { className?: string }) => (
+export const ReduxIcon = ({ className = 'size-8' }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={className}
@@ -424,7 +424,7 @@ export const ReduxIcon = ({ className = "size-8" }: { className?: string }) => (
   </svg>
 );
 export const BootstrapIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (
@@ -440,7 +440,7 @@ export const BootstrapIcon = ({
   </svg>
 );
 export const FramerMotionIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (
@@ -463,7 +463,7 @@ export const FramerMotionIcon = ({
 );
 
 export const StripeIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (
@@ -473,13 +473,13 @@ export const StripeIcon = ({
     viewBox="0 0 16 16"
   >
     <path
-      fill="currentColor"
+      fill="#635bff"
       d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.226 5.385c-.584 0-.937.164-.937.593c0 .468.607.674 1.36.93c1.228.415 2.844.963 2.851 2.993C11.5 11.868 9.924 13 7.63 13a7.7 7.7 0 0 1-3.009-.626V9.758c.926.506 2.095.88 3.01.88c.617 0 1.058-.165 1.058-.671c0-.518-.658-.755-1.453-1.041C6.026 8.49 4.5 7.94 4.5 6.11C4.5 4.165 5.988 3 8.226 3a7.3 7.3 0 0 1 2.734.505v2.583c-.838-.45-1.896-.703-2.734-.703"
     ></path>
   </svg>
 );
 export const TypeScriptIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (
@@ -497,7 +497,7 @@ export const TypeScriptIcon = ({
 );
 
 export const JavaScriptIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (
@@ -511,7 +511,7 @@ export const JavaScriptIcon = ({
   </svg>
 );
 export const ApolloIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (
@@ -526,7 +526,7 @@ export const ApolloIcon = ({
     ></path>
   </svg>
 );
-export const AwsIcon = ({ className = "size-8" }: { className?: string }) => (
+export const AwsIcon = ({ className = 'size-8' }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={className}
@@ -538,7 +538,7 @@ export const AwsIcon = ({ className = "size-8" }: { className?: string }) => (
     ></path>
   </svg>
 );
-export const AsanaIcon = ({ className = "size-8" }: { className?: string }) => (
+export const AsanaIcon = ({ className = 'size-8' }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={className}
@@ -551,7 +551,7 @@ export const AsanaIcon = ({ className = "size-8" }: { className?: string }) => (
   </svg>
 );
 export const ShadcnIcon = ({
-  className = "size-8",
+  className = 'size-8',
 }: {
   className?: string;
 }) => (

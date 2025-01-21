@@ -12,7 +12,7 @@
     "menu": "Menü",
     "home": "Anasayfa",
     "about": "Hakkımda",
-    "projects": "Projeler",
+    "services": "Hizmetler",
     "blogs": "Bloglar",
     "contact": "İletişim"
   },
@@ -22,13 +22,17 @@
       "summaryText": "4 yıllık yazılım deneyimim ve 2 yılı aşkın profesyonel çalışma geçmişimle bir <strong>full-stack developer</strong> olarak kariyerime devam ediyorum. <strong>JavaScript</strong> ve <strong>TypeScript</strong> konularında derin bir bilgi birikimine sahibim. Şu anda projelerimi <strong>Next.js</strong> ve <strong>Node.js</strong> ile geliştiriyorum.",
       "learnMore": "Daha fazlası"
     },
-    "projects": {
-      "Projects": "Öne Çıkarılan Projeler",
-      "text": "Full-stack developer olarak, <strong>10'dan fazla projede baştan sona yer alarak</strong>, hem front-end hem de back-end becerilerimi geliştirme fırsatı buldum. Aşağıda size en sevdiğim üç projeyi bırakıyorum.",
-      "allProjects": "Tüm projeler",
-      "tripyText": "Tripy ile elektrikli bisikletleri paylaşarak kolayca ve keyifle istediğin yere ulaşabilirsin. Hem çevreye duyarlı, hem de pratik bir ulaşım seçeneği.",
-      "enerjeyText": "Enerjey, çok dilli bir kurumsal web sitesidir. Adobe XD tasarımına dayanarak geliştirdiğim bu sitede, müşterinin kurumsal dilini sanatsal bir şekilde aktarmayı hedefledik.",
-      "nanografiText": "Nanografi, dünya çapında kimyasal malzeme satan ve çoklu para birimini destekleyen kapsamlı bir e-ticaret platformudur."
+    "experiences": {
+      "title": "Deneyimler",
+      "text": "Full-stack developer olarak, <strong>10'dan fazla projede baştan sona yer alarak</strong>, hem front-end hem de back-endde farklı konularda deneyim kazandım. İşte bu deneyimlerimin bazıları.",
+      "landingWebPageTitle": "Tanıtım Siteleri",
+      "landingWebPage": "Farklı şirketler için özgün web siteleri tasarlıyorum. Bu projelerde, ilgi çekici ve kullanıcı dostu tasarımlar oluşturmayı hedefliyorum.",
+      "webpToApplicationTitle": "Web'den Uygulamaya",
+      "webpToApplication": "Kullanıcıları bir web sayfasından mobil uygulamaya taşıyan projeler. Kayıt olduktan sonra, kullanıcılar uygulamaya giriş yapabilir ve hizmetten yararlanmaya başlayabilir.",
+      "ecommerceTitle": "E-Ticaret",
+      "ecommerceText": "Bir dünya markasının ürünlerini ABD, İngiltere, Almanya, Fransa, İtalya, İspanya ve diğer ülkelerde satan e-ticaret web uygulaması.",
+      "servicesText": "Bu alanlarda profesyonel hizmetler sunuyorum. Daha fazla detay için hizmetlerime göz atabilirsiniz.",
+      "services": "Hizmetler"
     },
     "contact": {
       "title": "Gördüklerinizi beğendiniz mi?",
@@ -49,15 +53,15 @@
       "frontEnd": "Front-End",
       "backEnd": "Back-End",
       "other": "Diğer",
-      "visitProjects": "Bunları hangi projelerde nasıl kulladığımı görün.",
-      "allProjects": "Tüm projeler"
+      "visitServices": "Bunları kullanarak verdiğim hizmetleri görün.",
+      "allServices": "Hizmetler"
     }
   },
   "footer": {
     "pages": "Sayfalar",
     "home": "Anasayfa",
     "about": "Hakkımda",
-    "projects": "Projeler",
+    "services": "Hizmetler",
     "blogs": "Bloglar",
     "contact": "İletişim",
     "socialMedia": "Sosyal Medya"
