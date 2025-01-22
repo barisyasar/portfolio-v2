@@ -4,7 +4,7 @@ date: '2024-01-04'
 author: 'Sarah Johnson'
 excerpt: 'Learn how to build modern web applications with Next.js 14, featuring Server Components, App Router, and the latest best practices.'
 coverImage: '/blog/getting-started-with-nextjs.png'
-category: ['reactjs']
+categories: ['nextjs']
 ---
 
 # Getting Started with Next.js 14: A Comprehensive Guide

@@ -1,9 +1,10 @@
 ---
-title: "Next.js 14 ile Başlangıç: Kapsamlı Rehber"
-date: "2024-01-04"
-author: "Sarah Johnson"
-excerpt: "Next.js 14 ile modern web uygulamaları geliştirmeyi öğrenin. Server Components, App Router ve en iyi pratikler dahil."
-coverImage: "/blog/nextjs-guide.jpg"
+title: 'Next.js 14 ile Başlangıç: Kapsamlı Rehber'
+date: '2024-01-04'
+author: 'Sarah Johnson'
+excerpt: 'Next.js 14 ile modern web uygulamaları geliştirmeyi öğrenin. Server Components, App Router ve en iyi pratikler dahil.'
+coverImage: '/blog/getting-started-with-nextjs.png'
+categories: ['nextjs']
 ---
 
 # Next.js 14 ile Başlangıç: Kapsamlı Rehber
@@ -124,7 +125,7 @@ export default function Error({
 1. **Görsel Optimizasyonu**
 
    ```jsx
-   import Image from "next/image";
+   import Image from 'next/image';
 
    <Image src="/hero.jpg" alt="Hero" width={1200} height={600} priority />;
    ```
@@ -132,9 +133,9 @@ export default function Error({
 2. **Font Optimizasyonu**
 
    ```jsx
-   import { Inter } from "next/font/google";
+   import { Inter } from 'next/font/google';
 
-   const inter = Inter({ subsets: ["latin"] });
+   const inter = Inter({ subsets: ['latin'] });
    ```
 
 ## Kod Örnekleri

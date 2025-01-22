@@ -105,6 +105,21 @@
     "title": "Blog",
     "description": "Bloguma hoş geldiniz! Burada web geliştirme ve teknoloji hakkındaki düşüncelerimi, deneyimlerimi ve öğrendiklerimi paylaşıyorum. İster bir geliştirici olun, ister sadece neler yaptığımı merak edin, doğru yerdesiniz.",
     "share": "Bu yazıyı paylaş",
-    "backToBlogs": "Bloglara dön"
+    "backToBlogs": "Bloglara dön",
+    "totalBlogs": "Toplam {count} makale",
+    "postsPerPage": "Sayfa başına gönderi",
+    "invalidUrl": "Geçersiz sayfa veya gönderi sayısı. Geçerli sayfaya yönlendiriliyorsunuz.",
+    "invalidUrlFormat": "Sayfa ve gönderi sayısı rakam olmalıdır. İlk sayfaya yönlendiriliyorsunuz.",
+    "sortBy": "Sıralama",
+    "newest": "En Yeniler Önce",
+    "oldest": "En Eskiler Önce",
+    "category": "Kategori",
+    "categories": {
+      "all": "Tüm Kategoriler",
+      "nextjs": "Next.js",
+      "react": "React",
+      "typescript": "TypeScript",
+      "javascript": "JavaScript"
+    }
   }
 }
