@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { unstable_cache } from 'next/cache';
 
 export interface BlogPost {
   id: string;
@@ -23,13 +24,18 @@ function calculateReadingTime(content: string): number {
   return Math.ceil(words / wordsPerMinute);
 }
 
-export async function getAllBlogs(locale: string): Promise<BlogPost[]> {
-  const files = fs.readdirSync(path.join(BLOGS_DIRECTORY, locale));
+export async function getAllBlogs(locale: string = 'en'): Promise<BlogPost[]> {
+  const localePath = path.join(BLOGS_DIRECTORY, locale);
+  if (!fs.existsSync(localePath)) {
+    throw new Error(`Invalid locale: ${locale}`);
+  }
+
+  const files = fs.readdirSync(localePath);
 
   const blogs = files
     .filter((filename) => filename.endsWith('.md'))
     .map((filename) => {
-      const filePath = path.join(BLOGS_DIRECTORY, locale, filename);
+      const filePath = path.join(localePath, filename);
       const fileContents = fs.readFileSync(filePath, 'utf8');
       const { data, content } = matter(fileContents);
 
@@ -41,7 +47,7 @@ export async function getAllBlogs(locale: string): Promise<BlogPost[]> {
       }
 
       return {
-        id: filename.replace(/\.md$/, ''),
+        id: data.id,
         title: data.title,
         date: data.date,
         author: data.author,
@@ -58,52 +64,85 @@ export async function getAllBlogs(locale: string): Promise<BlogPost[]> {
   return blogs;
 }
 
-export async function getBlogById(
-  id: string,
-  locale: string,
-): Promise<BlogPost | null> {
-  try {
-    const filePath = path.join(BLOGS_DIRECTORY, locale, `${id}.md`);
-    const fileContents = fs.readFileSync(filePath, 'utf8');
-    const { data, content } = matter(fileContents);
+export const getBlogById = unstable_cache(
+  async (id: string, locale: string): Promise<BlogPost | null> => {
+    try {
+      const filePath = path.join(BLOGS_DIRECTORY, locale, `${id}.md`);
+      const fileContents = fs.readFileSync(filePath, 'utf8');
+      const { data, content } = matter(fileContents);
 
-    let categories = ['all'];
-    if (data.categories) {
-      categories = Array.isArray(data.categories)
-        ? data.categories
-        : [data.categories];
+      let categories = ['all'];
+      if (data.categories) {
+        categories = Array.isArray(data.categories)
+          ? data.categories
+          : [data.categories];
+      }
+
+      return {
+        id: data.id,
+        title: data.title,
+        date: data.date,
+        author: data.author,
+        excerpt: data.excerpt,
+        content: content,
+        coverImage: data.coverImage,
+        readingTime: calculateReadingTime(content),
+        locale,
+        categories,
+      };
+    } catch (error) {
+      return null;
+    }
+  },
+  ['blog', 'id'],
+  {
+    revalidate: 3600,
+    tags: ['blog', 'id'],
+  },
+);
+
+export const getPaginatedBlogs = unstable_cache(
+  async (
+    locale: string = 'en',
+    page: number = 1,
+    postsPerPage: number = 10,
+    category: string = 'all',
+    sort: 'newest' | 'oldest' = 'newest',
+  ) => {
+    if (!fs.existsSync(path.join(BLOGS_DIRECTORY, locale))) {
+      throw new Error(`Invalid locale: ${locale}`);
     }
 
+    const blogs = await getAllBlogs(locale);
+
+    const filteredBlogs =
+      category === 'all'
+        ? blogs
+        : blogs.filter((blog) => blog.categories.includes(category));
+
+    const sortedBlogs = filteredBlogs.sort((a, b) => {
+      const dateA = new Date(a.date).getTime();
+      const dateB = new Date(b.date).getTime();
+      return sort === 'newest' ? dateB - dateA : dateA - dateB;
+    });
+
+    const startIndex = (page - 1) * postsPerPage;
+    const paginatedBlogs = sortedBlogs.slice(
+      startIndex,
+      startIndex + postsPerPage,
+    );
+    const totalBlogs = sortedBlogs.length;
+    const totalPages = Math.ceil(totalBlogs / postsPerPage);
+
     return {
-      id,
-      title: data.title,
-      date: data.date,
-      author: data.author,
-      excerpt: data.excerpt,
-      content: content,
-      coverImage: data.coverImage,
-      readingTime: calculateReadingTime(content),
-      locale,
-      categories,
+      blogs: paginatedBlogs,
+      totalPages,
+      totalBlogs,
     };
-  } catch (error) {
-    return null;
-  }
-}
-
-export async function getPaginatedBlogs(
-  locale: string,
-  page: number = 1,
-  postsPerPage: number = 6,
-) {
-  const blogs = await getAllBlogs(locale);
-  const totalPages = Math.ceil(blogs.length / postsPerPage);
-  const startIndex = (page - 1) * postsPerPage;
-  const endIndex = startIndex + postsPerPage;
-
-  return {
-    blogs: blogs.slice(startIndex, endIndex),
-    totalPages,
-    totalBlogs: blogs.length,
-  };
-}
+  },
+  ['blogs', 'pagination'],
+  {
+    revalidate: 3600,
+    tags: ['blogs'],
+  },
+);

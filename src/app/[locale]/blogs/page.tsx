@@ -17,12 +17,9 @@ import { InvalidUrlToast } from '@/components/blog/InvalidUrlToast';
 import { Toaster } from '@/components/ui/toaster';
 import { SortSelect } from '@/components/blog/SortSelect';
 import { CategorySelect } from '@/components/blog/CategorySelect';
+import { Card } from '@/components/ui/card';
 
-export async function generateMetadata({
-  params: { locale },
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('Blog');
 
   return {
@@ -60,16 +57,18 @@ const VALID_CATEGORIES = [
   'javascript',
 ];
 
-async function BlogPage({ params: { locale }, searchParams }: BlogPageProps) {
+async function BlogPage({ params, searchParams }: BlogPageProps) {
+  const { locale } = await params;
+  const { page, postsPerPage, sort, category, error } = await searchParams;
+
   const t = await getTranslations('Blog');
 
   // Check for non-numeric values and invalid sort/category
   const hasInvalidFormat =
-    (searchParams.page && !/^\d+$/.test(searchParams.page)) ||
-    (searchParams.postsPerPage && !/^\d+$/.test(searchParams.postsPerPage)) ||
-    (searchParams.sort && !VALID_SORT_OPTIONS.includes(searchParams.sort)) ||
-    (searchParams.category &&
-      !VALID_CATEGORIES.includes(searchParams.category));
+    (page && !/^\d+$/.test(page)) ||
+    (postsPerPage && !/^\d+$/.test(postsPerPage)) ||
+    (sort && !VALID_SORT_OPTIONS.includes(sort)) ||
+    (category && !VALID_CATEGORIES.includes(category));
 
   if (hasInvalidFormat) {
     redirect(
@@ -78,12 +77,11 @@ async function BlogPage({ params: { locale }, searchParams }: BlogPageProps) {
   }
 
   // Get current options
-  const currentSort = searchParams.sort || VALID_SORT_OPTIONS[0];
-  const currentCategory = searchParams.category || VALID_CATEGORIES[0];
+  const currentSort = sort || VALID_SORT_OPTIONS[0];
+  const currentCategory = category || VALID_CATEGORIES[0];
 
   // Validate and parse postsPerPage
-  const requestedPostsPerPage =
-    Number(searchParams.postsPerPage) || VALID_POSTS_PER_PAGE[0];
+  const requestedPostsPerPage = Number(postsPerPage) || VALID_POSTS_PER_PAGE[0];
   const currentPostsPerPage = VALID_POSTS_PER_PAGE.includes(
     requestedPostsPerPage,
   )
@@ -99,7 +97,7 @@ async function BlogPage({ params: { locale }, searchParams }: BlogPageProps) {
   const maxPages = Math.ceil(allBlogs.length / currentPostsPerPage);
 
   // Validate and parse page number
-  const requestedPage = Number(searchParams.page) || 1;
+  const requestedPage = Number(page) || 1;
   const currentPage = Math.max(1, Math.min(requestedPage, maxPages));
 
   // Check if URL was invalid
@@ -118,22 +116,9 @@ async function BlogPage({ params: { locale }, searchParams }: BlogPageProps) {
     locale,
     currentPage,
     currentPostsPerPage,
+    currentCategory,
+    currentSort as 'newest' | 'oldest',
   );
-
-  // Filter blogs by category if needed
-  let filteredBlogs = [...blogs];
-  if (currentCategory !== 'all') {
-    filteredBlogs = filteredBlogs.filter((blog) =>
-      blog.categories.includes(currentCategory),
-    );
-  }
-
-  // Sort filtered blogs
-  const sortedBlogs = filteredBlogs.sort((a, b) => {
-    const dateA = new Date(a.date).getTime();
-    const dateB = new Date(b.date).getTime();
-    return currentSort === 'newest' ? dateB - dateA : dateA - dateB;
-  });
 
   // Create categories array for the select component
   const categories = VALID_CATEGORIES.map((cat) => ({
@@ -142,126 +127,130 @@ async function BlogPage({ params: { locale }, searchParams }: BlogPageProps) {
   }));
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto">
       <Toaster />
-      {searchParams.error === 'format' && (
+      {error === 'format' && (
         <InvalidUrlToast message={t('invalidUrlFormat')} />
       )}
-      {searchParams.error === 'invalid' && (
-        <InvalidUrlToast message={t('invalidUrl')} />
-      )}
+      {error === 'invalid' && <InvalidUrlToast message={t('invalidUrl')} />}
 
-      <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
-        <div>
-          <h1 className="text-4xl font-bold">{t('title')}</h1>
-          <p className="mt-2 text-muted-foreground">
-            {t('totalBlogs', { count: totalBlogs })}
-          </p>
+      <Card className="section flex flex-col gap-4">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <h1 className="text-4xl font-bold">{t('title')}</h1>
+            <p className="mt-2 text-muted-foreground">
+              {t('totalBlogs', { count: totalBlogs })}
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-4">
+            <CategorySelect
+              locale={locale}
+              currentCategory={currentCategory}
+              currentPage={currentPage}
+              currentPostsPerPage={currentPostsPerPage}
+              currentSort={currentSort}
+              label={t('category')}
+              categories={categories}
+            />
+            <SortSelect
+              locale={locale}
+              currentSort={currentSort}
+              currentPage={currentPage}
+              currentPostsPerPage={currentPostsPerPage}
+              label={t('sortBy')}
+              newestLabel={t('newest')}
+              oldestLabel={t('oldest')}
+            />
+            <PostsPerPageSelect
+              locale={locale}
+              currentPostsPerPage={currentPostsPerPage}
+              label={t('postsPerPage')}
+            />
+          </div>
         </div>
-        <div className="flex items-center gap-4">
-          <CategorySelect
-            locale={locale}
-            currentCategory={currentCategory}
-            currentPage={currentPage}
-            currentPostsPerPage={currentPostsPerPage}
-            currentSort={currentSort}
-            label={t('category')}
-            categories={categories}
-          />
-          <SortSelect
-            locale={locale}
-            currentSort={currentSort}
-            currentPage={currentPage}
-            currentPostsPerPage={currentPostsPerPage}
-            label={t('sortBy')}
-            newestLabel={t('newest')}
-            oldestLabel={t('oldest')}
-          />
-          <PostsPerPageSelect
-            locale={locale}
-            currentPostsPerPage={currentPostsPerPage}
-            label={t('postsPerPage')}
-          />
-        </div>
-      </div>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {sortedBlogs.map((blog) => (
-          <Link
-            href={`/${locale}/blogs/${blog.id}`}
-            key={blog.id}
-            className="group"
-          >
-            <div className="card--5 overflow-hidden rounded-lg border">
-              <div className="relative h-48 w-full">
-                <Image
-                  src={blog.coverImage}
-                  alt={blog.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-4">
-                <h2 className="mb-2 text-xl font-semibold group-hover:text-primary">
-                  {blog.title}
-                </h2>
-                <p className="text-muted-foreground">{blog.excerpt}</p>
-                <div className="mt-4 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-                  <time>{blog.date}</time>
-                  <span>•</span>
-                  <span>{blog.readingTime} min read</span>
-                  <span>•</span>
-                  <div className="flex flex-wrap gap-1">
-                    {blog.categories.map((cat) => (
-                      <span
-                        key={cat}
-                        className="rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary"
-                      >
-                        {t(`categories.${cat}`)}
-                      </span>
-                    ))}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {blogs.map((blog) => (
+            <Link
+              href={`/${locale}/blogs/${blog.id}`}
+              key={blog.id}
+              className="group"
+            >
+              <div className="card--5 overflow-hidden rounded-lg border">
+                <div
+                  className="relative w-full"
+                  style={{ paddingTop: '52.5%' }}
+                >
+                  <Image
+                    src={blog.coverImage}
+                    alt={blog.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="p-4">
+                  <h2 className="mb-2 text-xl font-semibold group-hover:text-primary">
+                    {blog.title}
+                  </h2>
+                  <p className="text-muted-foreground">{blog.excerpt}</p>
+                  <div className="mt-4 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+                    <time>{blog.date}</time>
+                    <span>•</span>
+                    <span>{blog.readingTime} min read</span>
+                    <span>•</span>
+                    <div className="flex flex-wrap gap-1">
+                      {blog.categories.map((cat) => (
+                        <span
+                          key={cat}
+                          className="rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary"
+                        >
+                          {t(`categories.${cat}`)}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Link>
-        ))}
-      </div>
-
-      <Pagination className="mt-8">
-        <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious
-              href={`/${locale}/blogs?page=${currentPage - 1}&postsPerPage=${currentPostsPerPage}`}
-              className={
-                currentPage <= 1 ? 'pointer-events-none opacity-50' : ''
-              }
-            />
-          </PaginationItem>
-
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-            <PaginationItem key={page}>
-              <PaginationLink
-                href={`/${locale}/blogs?page=${page}&postsPerPage=${currentPostsPerPage}`}
-                isActive={currentPage === page}
-              >
-                {page}
-              </PaginationLink>
-            </PaginationItem>
+            </Link>
           ))}
+        </div>
 
-          <PaginationItem>
-            <PaginationNext
-              href={`/${locale}/blogs?page=${currentPage + 1}&postsPerPage=${currentPostsPerPage}`}
-              className={
-                currentPage >= totalPages
-                  ? 'pointer-events-none opacity-50'
-                  : ''
-              }
-            />
-          </PaginationItem>
-        </PaginationContent>
-      </Pagination>
+        <Pagination className="mt-8">
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious
+                href={`/${locale}/blogs?page=${currentPage - 1}&postsPerPage=${currentPostsPerPage}`}
+                className={
+                  currentPage <= 1 ? 'pointer-events-none opacity-50' : ''
+                }
+              />
+            </PaginationItem>
+
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <PaginationItem key={page}>
+                <PaginationLink
+                  href={`/${locale}/blogs?page=${page}&postsPerPage=${currentPostsPerPage}`}
+                  isActive={currentPage === page}
+                >
+                  {page}
+                </PaginationLink>
+              </PaginationItem>
+            ))}
+
+            <PaginationItem>
+              <PaginationNext
+                href={`/${locale}/blogs?page=${currentPage + 1}&postsPerPage=${currentPostsPerPage}`}
+                className={
+                  currentPage >= totalPages
+                    ? 'pointer-events-none opacity-50'
+                    : ''
+                }
+              />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
+      </Card>
     </div>
   );
 }

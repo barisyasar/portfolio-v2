@@ -1,30 +1,33 @@
-import { getBlogById } from "@/lib/blog";
-import { getTranslations } from "next-intl/server";
-import { Metadata } from "next";
-import Image from "next/image";
-import { notFound } from "next/navigation";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import components from "@/components/mdx-components";
-import { Card } from "@/components/ui/card";
-import { Link } from "@/i18n/routing";
-import { ChevronLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { getBlogById } from '@/lib/blog';
+import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
+import Image from 'next/image';
+import { notFound } from 'next/navigation';
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import components from '@/components/mdx-components';
+import { Card } from '@/components/ui/card';
+import { Link } from '@/i18n/routing';
+import { ChevronLeft } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ShareMenu } from '@/components/blog/ShareMenu';
 
 interface BlogDetailPageProps {
-  params: {
+  params: Promise<{
     locale: string;
     id: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({
-  params: { locale, id },
+  params,
 }: BlogDetailPageProps): Promise<Metadata> {
+  const { locale, id } = await params;
+  const t = await getTranslations('Blog');
   const blog = await getBlogById(id, locale);
 
   if (!blog) {
     return {
-      title: "Blog Not Found",
+      title: t('notFound'),
     };
   }
 
@@ -34,7 +37,7 @@ export async function generateMetadata({
     openGraph: {
       title: blog.title,
       description: blog.excerpt,
-      type: "article",
+      type: 'article',
       publishedTime: blog.date,
       authors: blog.author ? [blog.author] : undefined,
       images: [
@@ -47,7 +50,7 @@ export async function generateMetadata({
       ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: 'summary_large_image',
       title: blog.title,
       description: blog.excerpt,
       images: [blog.coverImage],
@@ -55,24 +58,28 @@ export async function generateMetadata({
   };
 }
 
-async function BlogDetailPage({ params: { locale, id } }: BlogDetailPageProps) {
+async function BlogDetailPage({ params }: BlogDetailPageProps) {
+  const { locale, id } = await params;
+
   const blog = await getBlogById(id, locale);
-  const t = await getTranslations("Blog");
+  const t = await getTranslations('Blog');
 
   if (!blog) {
     notFound();
   }
 
+  const currentUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/blogs/${id}`;
+
   return (
     <main className="container max-w-4xl py-6">
-      <Button asChild>
+      <Button asChild className="mb-4">
         <Link href="/blogs">
           <ChevronLeft className="mr-2 h-4 w-4" />
-          {t("backToBlogs")}
+          {t('backToBlogs')}
         </Link>
       </Button>
-      <Card className="overflow-hidden space-y-0">
-        <div className="relative aspect-video rounded-lg overflow-hidden">
+      <Card className="space-y-0 overflow-hidden">
+        <div className="relative aspect-video overflow-hidden rounded-lg">
           <Image
             src={blog.coverImage}
             alt={blog.title}
@@ -80,46 +87,11 @@ async function BlogDetailPage({ params: { locale, id } }: BlogDetailPageProps) {
             className="object-cover"
             priority
           />
+          <ShareMenu url={currentUrl} title={blog.title} />
         </div>
 
         <div className="px-6 py-4">
           <MDXRemote source={blog.content} components={components} />
-
-          <div className="mt-8 pt-8 border-t">
-            <h2 className="text-2xl font-bold mb-4">{t("share")}</h2>
-            <div className="flex gap-4">
-              <a
-                href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-                  `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/blogs/${id}`
-                )}&text=${encodeURIComponent(blog.title)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary"
-              >
-                Twitter
-              </a>
-              <a
-                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                  `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/blogs/${id}`
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary"
-              >
-                Facebook
-              </a>
-              <a
-                href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-                  `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/blogs/${id}`
-                )}&title=${encodeURIComponent(blog.title)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary"
-              >
-                LinkedIn
-              </a>
-            </div>
-          </div>
         </div>
       </Card>
     </main>
