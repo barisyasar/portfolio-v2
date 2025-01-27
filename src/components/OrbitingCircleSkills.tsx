@@ -1,5 +1,5 @@
-import { ExpressIcon, NextIcon, NodeIcon, ReactIcon } from "./Icons";
-import OrbitingCircles from "./ui/orbiting-circles";
+import { ExpressIcon, NextIcon, NodeIcon, ReactIcon } from './Icons';
+import OrbitingCircles from './ui/orbiting-circles';
 
 export default function OrbitingCircleSkills() {
   return (

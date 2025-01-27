@@ -24,7 +24,7 @@
     },
     "experiences": {
       "title": "Experiences",
-      "text": "As a full-stack developer, I've successfully <strong>developed over 10 experiences</strong>. I have experience in many different fields. Here are some of my experiences.",
+      "text": "As a full-stack developer, I've successfully <strong>developed over 10 projects</strong>. I have experience in many different fields. Here are some of my experiences.",
       "landingWebPageTitle": "Promotional Websites",
       "landingWebPage": "Unique websites for different companies. In these experiences, I have try to make interestring and user-friendly designs.",
       "webpToApplicationTitle": "Web to Application",
@@ -112,6 +112,10 @@
       "typescript": "TypeScript",
       "javascript": "JavaScript"
     }
+  },
+  "Services": {
+    "title": "Services",
+    "description": "Throughout my career in software development, I have contributed to <strong>more than 10 successful projects</strong>, taking on significant responsibilities in frontend, backend, and SEO. With the experience gained from these projects, I have developed <strong>user-friendly websites</strong> and <strong>high-performance applications</strong>. I closely follow <strong>modern software technologies</strong> and implement the latest and best solutions in all my projects. My goal is to create <strong>high-quality and sustainable</strong> projects that best meet my clients' needs. I continue to grow and learn with each new project."
   },
   "footer": {
     "pages": "Pages",
