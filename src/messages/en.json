@@ -109,7 +109,7 @@
   },
   "Services": {
     "title": "Services",
-    "description": "I offer comprehensive web development solutions including front-end design, back-end development, and SEO optimization. With extensive experience across modern technologies, I can help bring your digital vision to life. Explore my tech stack below to see the tools and frameworks I use to create powerful, efficient solutions.",
+    "description": "I offer comprehensive web development solutions including <strong>front-end design</strong>, <strong>back-end development</strong>, and <strong>SEO optimization</strong>. With extensive experience across modern technologies, I can help bring your digital vision to life. Explore my tech stack below to see the tools and frameworks I use to create powerful, efficient solutions.",
     "techStack": {
       "title": "Tech Stack",
       "description": "As a full-stack developer, I use a lot of libraries, tools etc. Here are the ones I use most.",
