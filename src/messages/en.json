@@ -44,17 +44,11 @@
     "recap": {
       "webEnthusiast": "Web Enthusiast",
       "lifelongLearner": "Lifelong Learner",
-      "summary": "<p>As a graduate of the Computer Engineering program at <strong>Ted University</strong>, I have focused my career on software development. During my education, I completed two long-term internships; the first was at <strong>Altima</strong>, and the second was at <strong>Osi</strong>. Following my internships, I worked at <strong>Osi</strong> as a <strong>full-stack developer</strong> for over 2 years, contributing to significant experiences during that time.</p> <p>Currently, I am working at <strong>Oak Technology</strong> as a <strong>frontend developer</strong>, where I leverage modern technologies to develop user-focused solutions.</p>"
-    },
-    "techStack": {
-      "title": "Tech Stack",
-      "description": "As a full-stack developer, I use a lot of libraries, tools etc. Here are the ones I use most.",
-      "all": "All",
-      "frontEnd": "Front-End",
-      "backEnd": "Back-End",
-      "other": "Other",
-      "visitServices": "See my services using these technologies.",
-      "allServices": "Services"
+      "summary": "<p>As a graduate of the Computer Engineering program at <strong>Ted University</strong>, I have focused my career on software development. During my education, I completed two long-term internships; the first was at <strong>Altima</strong>, and the second was at <strong>Osi</strong>. Following my internships, I worked at <strong>Osi</strong> as a <strong>full-stack developer</strong> for over 2 years, contributing to significant experiences during that time.</p> <p>Currently, I am working at <strong>Oak Technology</strong> as a <strong>front-end developer</strong>, where I leverage modern technologies to develop user-focused solutions.</p>",
+      "title2": "Focues Right Now",
+      "description2": "<p>Throughout my career in software development, I have contributed to <strong>more than 10 successful projects</strong>, taking on significant responsibilities in <strong>front-end</strong>, <strong>back-end</strong>, and <strong>SEO</strong>. With the experience gained from these projects, I have developed <strong>user-friendly websites</strong> and <strong>high-performance applications</strong>. I closely follow <strong>modern software technologies</strong> and implement the latest and best solutions in all my projects.</p> <p>My goal is to create <strong>high-quality and sustainable</strong> projects that best meet my clients' needs. I continue to grow and learn with each new project.</p>",
+      "servicesText": "<p>I give professional services on <strong>front-end</strong>, <strong>back-end</strong>, <strong>SEO</strong> and more. You can look my services.</p>",
+      "services": "Services"
     }
   },
   "ContactPage": {
@@ -115,7 +109,17 @@
   },
   "Services": {
     "title": "Services",
-    "description": "Throughout my career in software development, I have contributed to <strong>more than 10 successful projects</strong>, taking on significant responsibilities in frontend, backend, and SEO. With the experience gained from these projects, I have developed <strong>user-friendly websites</strong> and <strong>high-performance applications</strong>. I closely follow <strong>modern software technologies</strong> and implement the latest and best solutions in all my projects. My goal is to create <strong>high-quality and sustainable</strong> projects that best meet my clients' needs. I continue to grow and learn with each new project."
+    "description": "I offer comprehensive web development solutions including front-end design, back-end development, and SEO optimization. With extensive experience across modern technologies, I can help bring your digital vision to life. Explore my tech stack below to see the tools and frameworks I use to create powerful, efficient solutions.",
+    "techStack": {
+      "title": "Tech Stack",
+      "description": "As a full-stack developer, I use a lot of libraries, tools etc. Here are the ones I use most.",
+      "all": "All",
+      "frontEnd": "Front-End",
+      "backEnd": "Back-End",
+      "other": "Other",
+      "visitContact": "Are you ready to start your project? Let's talk about it.",
+      "contact": "Contact"
+    }
   },
   "footer": {
     "pages": "Pages",

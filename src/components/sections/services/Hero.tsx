@@ -14,7 +14,7 @@ async function Hero() {
         </div>
 
         <div className="xl:w-1/2">
-          <CardHeader className="my-3">
+          <CardHeader className="my-3 xl:mt-0">
             <CardTitle>
               <h1 className="text-2xl">{t('title')}</h1>
             </CardTitle>

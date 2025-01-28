@@ -14,10 +14,10 @@ import { ChevronRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 
 async function TechStack() {
-  const t = await getTranslations('AboutPage.techStack');
+  const t = await getTranslations('Services.techStack');
 
   return (
-    <Card className="section min-h-[calc(100svh-2rem)]" id="tech-stack">
+    <Card className="section min-h-[calc(100svh-2rem)]">
       <div className="mx-auto max-w-screen-lg space-y-5">
         <CardHeader>
           <CardTitle>{t('title')}</CardTitle>
@@ -27,10 +27,14 @@ async function TechStack() {
           <TechStackTabList />
         </CardContent>
         <CardFooter className="flex-col items-start gap-2">
-          <p>{t('visitServices')}</p>
-          <Button asChild>
-            <Link href="/services">
-              {t('allServices')}{' '}
+          <p>{t('visitContact')}</p>
+          <Button
+            asChild
+            className="shadow-[0_0px_10px] shadow-primary"
+            size="lg"
+          >
+            <Link href="/contact">
+              {t('contact')}{' '}
               <ChevronRight className="animate-bounce-horizontal" />
             </Link>
           </Button>

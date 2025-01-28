@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
 function TechStackTabList() {
-  const t = useTranslations('AboutPage.techStack');
+  const t = useTranslations('Services.techStack');
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = [

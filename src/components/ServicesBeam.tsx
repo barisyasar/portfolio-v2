@@ -7,7 +7,7 @@ import { AnimatedBeam } from './ui/animated-beam';
 import { FrontendIcon, SeoIcon, BackendIcon } from './Icons';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import Image from 'next/image';
-import PROFILE_IMG_2 from '@/assets/profile_2.webp';
+import PROFILE_IMG_1 from '../../public/profile_1.webp';
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -51,7 +51,12 @@ export function AnimatedBeamDemo() {
       <div className="flex size-full max-w-lg justify-between gap-10">
         <div className="flex flex-row items-center justify-center">
           <Circle ref={div4Ref} className="relative size-20 overflow-hidden">
-            <Image src={PROFILE_IMG_2} alt="Barış Yaşar" fill />
+            <Image
+              src={PROFILE_IMG_1}
+              alt="Barış Yaşar"
+              fill
+              blurDataURL="data:image/webp;base64,UklGRjwDAABXRUJQVlA4WAoAAAAgAAAAmgAAmgAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggTgEAALANAJ0BKpsAmwA+7XCxVSmmJCMh8ro5MB2JZ27gR02/yUcPl/7AJlCUXsWk85e9Uf/pWd4eqL3/a3SOMtIQ/hdGAvWKfS9TGB5a+Q9A3u9EPH+3k8cpDetlkdD/5+CjBHhmqwvOiS+YU/LhyYiG9eToKkwP3AAA/uqhTuk/U/0Xe5aKv5pVs1SFmfqZkavUfuZJabPF64x0c8h4HkQDJaoc2SzcCzd7VCARPlz4qPws/XXLGguv7r3lx8zFHsVT42gF5n9RinEcfKQUCl+G5qw9swaB/G4N1X55lSJTg3WoN8uoEDpgB71wbiESCjOHfJUxy+B8uEfffUWGoubBCA7ovKUUAkVDtCTNI66y2jJWmt+ym1LLMk1MPxChIkcuXF5cxQeIrYEL01j2qWles4n4qg63mssjktcxPIHytUWjQlL0G5YlHuZR/60RQAA="
+            />
           </Circle>
         </div>
         <div className="flex flex-col items-center justify-between">
