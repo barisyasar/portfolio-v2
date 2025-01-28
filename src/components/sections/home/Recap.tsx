@@ -23,7 +23,6 @@ async function Recap() {
               <h2 className="xs:text-3xl lg:text-4xl">{t('A Quick Recap')}</h2>
             </CardTitle>
             <CardDescription
-              className="xs:text-lg lg:text-xl"
               dangerouslySetInnerHTML={{ __html: t.raw('summaryText') }}
             />
           </CardHeader>

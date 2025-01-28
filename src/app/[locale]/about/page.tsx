@@ -14,6 +14,7 @@ import WordRotate from '@/components/ui/word-rotate';
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/routing';
 import { ChevronRight } from 'lucide-react';
+import Experiences from '@/components/sections/home/Experinces';
 
 async function About() {
   const t = await getTranslations('AboutPage.recap');
@@ -21,7 +22,7 @@ async function About() {
   return (
     <main className="container">
       <Card className="section">
-        <div className="mx-auto max-w-screen-sm">
+        <div className="mx-auto max-w-screen-md">
           <div className="card--5 float-right size-32 rounded p-1 2xs:size-36 xs:size-40 sm:size-48 md:ms-3 md:size-64 md:p-3">
             <Image
               src={PROFILE_IMG_3}
@@ -36,9 +37,9 @@ async function About() {
               }
             />
           </div>
-          <CardHeader className="mb-3 space-y-0">
+          <CardHeader>
             <CardTitle>
-              <h1 className="text-2xl">Barış Yaşar</h1>
+              <h1 className="xs:text-3xl lg:text-4xl">Barış Yaşar</h1>
             </CardTitle>
             <CardDescription>
               <WordRotate
@@ -47,12 +48,15 @@ async function About() {
               />
             </CardDescription>
           </CardHeader>
-          <CardContent dangerouslySetInnerHTML={{ __html: t.raw('summary') }} />
+          <CardContent
+            className="mt-3"
+            dangerouslySetInnerHTML={{ __html: t.raw('summary') }}
+          />
         </div>
       </Card>
 
       <Card className="section">
-        <div className="mx-auto max-w-screen-sm">
+        <div className="mx-auto max-w-screen-md">
           <div className="card--5 float-left aspect-video w-32 rounded p-1 2xs:w-36 xs:w-40 sm:w-48 md:me-3 md:w-64 md:p-3">
             <Image
               src={PROFILE_IMG_2}
@@ -67,16 +71,19 @@ async function About() {
               }
             />
           </div>
-          <CardHeader>
+          <CardHeader className="mb-3">
             <CardTitle>
-              <h2 className="text-2xl">{t('title2')}</h2>
+              <h2 className="xs:text-3xl lg:text-4xl">{t('title2')}</h2>
             </CardTitle>
           </CardHeader>
           <CardContent
             dangerouslySetInnerHTML={{ __html: t.raw('description2') }}
           />
           <CardFooter className="mt-3 flex-col items-start gap-2">
-            <div dangerouslySetInnerHTML={{ __html: t.raw('servicesText') }} />
+            <div
+              className="text-muted-foreground"
+              dangerouslySetInnerHTML={{ __html: t.raw('servicesText') }}
+            />
             <Button asChild>
               <Link href="/services">
                 {t('services')}{' '}
@@ -86,7 +93,7 @@ async function About() {
           </CardFooter>
         </div>
       </Card>
-      {/* <TechStack /> */}
+      <Experiences />
     </main>
   );
 }

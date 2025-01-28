@@ -27,7 +27,7 @@ async function TechStack() {
           <TechStackTabList />
         </CardContent>
         <CardFooter className="flex-col items-start gap-2">
-          <p>{t('visitContact')}</p>
+          <p className="text-muted-foreground">{t('visitContact')}</p>
           <Button
             asChild
             className="shadow-[0_0px_10px] shadow-primary"

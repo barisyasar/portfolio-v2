@@ -19,9 +19,7 @@ async function Contact() {
           <CardTitle>
             <h2 className="xs:text-3xl lg:text-4xl">{t('title')}</h2>
           </CardTitle>
-          <CardDescription className="xs:text-lg lg:text-xl">
-            {t('text')}
-          </CardDescription>
+          <CardDescription>{t('text')}</CardDescription>
         </CardHeader>
         <CardFooter>
           <Button
