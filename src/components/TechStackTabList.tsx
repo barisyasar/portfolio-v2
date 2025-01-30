@@ -15,6 +15,7 @@ function TechStackTabList() {
     { id: 'all', label: t('all') },
     { id: 'frontend', label: t('frontEnd') },
     { id: 'backend', label: t('backEnd') },
+    { id: 'seo', label: 'SEO' },
     { id: 'other', label: t('other') },
   ];
 
