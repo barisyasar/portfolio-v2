@@ -88,7 +88,7 @@ body {
 
 @layer components {
   .link {
-    @apply relative block after:block after:content-[''] after:absolute after:h-[1px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:hover:origin-left after:transition after:duration-300 after:origin-right;
+    @apply relative block after:absolute after:block after:h-[1px] after:w-full after:origin-right after:scale-x-0 after:bg-primary after:transition after:duration-300 after:content-[''] after:hover:origin-left after:hover:scale-x-100;
   }
 
   .section {
