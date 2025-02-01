@@ -20,7 +20,9 @@ async function TechStack() {
     <Card className="section min-h-[calc(100svh-2rem)]">
       <div className="mx-auto max-w-screen-lg space-y-5">
         <CardHeader>
-          <CardTitle>{t('title')}</CardTitle>
+          <CardTitle>
+            <h2>{t('title')}</h2>
+          </CardTitle>
           <CardDescription>{t('description')}</CardDescription>
         </CardHeader>
         <CardContent>

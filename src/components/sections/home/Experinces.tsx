@@ -12,15 +12,12 @@ import { Button } from '../../ui/button';
 import { ChevronRight } from 'lucide-react';
 import BlurFade from '../../ui/blur-fade';
 import {
-  BootstrapIcon,
-  ExpressIcon,
   FramerMotionIcon,
-  IyzicoIcon,
   NextIcon,
   NodeIcon,
   PaypalIcon,
   ReactIcon,
-  ReduxIcon,
+  SassIcon,
   StripeIcon,
   TailwindIcon,
 } from '../../Icons';
@@ -70,7 +67,7 @@ async function Experiences() {
               <CardFooter className="gap-3">
                 <NextIcon />
                 <FramerMotionIcon />
-                <BootstrapIcon />
+                <SassIcon />
               </CardFooter>
             </Card>
           </BlurFade>

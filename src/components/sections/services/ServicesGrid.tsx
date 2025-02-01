@@ -1,16 +1,34 @@
 import { ServicesGridList } from '@/components/ServicesGridList';
-import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Card, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Link } from '@/i18n/routing';
+import { ChevronRight } from 'lucide-react';
+import { getTranslations } from 'next-intl/server';
 
-function ServicesGrid() {
+async function ServicesGrid() {
+  const t = await getTranslations('Services.servicesGrid');
   return (
-    <Card className="section">
+    <Card className="section scroll-m-4" id="what-can-i-do">
       <div className="mx-auto max-w-screen-lg space-y-5">
-        <CardHeader className="my-3 xl:mt-0">
+        <CardHeader>
           <CardTitle>
-            <h1 className="text-2xl">Services Grid</h1>
+            <h2>{t('title')}</h2>
           </CardTitle>
         </CardHeader>
         <ServicesGridList />
+        <CardFooter className="flex-col items-start gap-2">
+          <p className="text-muted-foreground">{t('visitContact')}</p>
+          <Button
+            asChild
+            className="shadow-[0_0px_10px] shadow-primary"
+            size="lg"
+          >
+            <Link href="/contact">
+              {t('contact')}{' '}
+              <ChevronRight className="animate-bounce-horizontal" />
+            </Link>
+          </Button>
+        </CardFooter>
       </div>
     </Card>
   );

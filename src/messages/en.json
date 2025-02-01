@@ -44,10 +44,10 @@
     "recap": {
       "webEnthusiast": "Web Enthusiast",
       "lifelongLearner": "Lifelong Learner",
-      "summary": "<p>As a graduate of the Computer Engineering program at <strong>Ted University</strong>, I have focused my career on software development. During my education, I completed two long-term internships; the first was at <strong>Altima</strong>, and the second was at <strong>Osi</strong>. Following my internships, I worked at <strong>Osi</strong> as a <strong>full-stack developer</strong> for over 2 years, contributing to significant experiences during that time.</p> <p>Currently, I am working at <strong>Oak Technology</strong> as a <strong>front-end developer</strong>, where I leverage modern technologies to develop user-focused solutions.</p>",
-      "title2": "Focuses Right Now",
-      "description2": "<p>Throughout my career in software development, I have taken on significant responsibilities in <strong>front-end</strong>, <strong>back-end</strong>, and <strong>SEO</strong>. With the experience gained from these projects, I have developed <strong>user-friendly websites</strong> and <strong>high-performance applications</strong>. I closely follow <strong>modern software technologies</strong> and implement the latest and best solutions in all my projects.</p> <p>My goal is to create <strong>high-quality and sustainable</strong> projects that best meet my clients' needs. I continue to grow and learn with each new project.</p>",
-      "servicesText": "<p>I give professional services on <strong>front-end</strong>, <strong>back-end</strong>, <strong>SEO</strong> and more. You can look my services.</p>",
+      "summary": "<p>As a graduate of the Computer Engineering program at <strong>Ted University</strong>, I have focused my career on software development. During my education, I completed two long-term internships; the first was at <strong>Altima</strong>, and the second was at <strong>Osi</strong>. Following my internships, I worked at <strong>Osi</strong> as a <strong>full-stack developer</strong> for over 2 years, contributing to significant experiences during that time.</p> <p>Currently, I am working at <strong>Oak Technology</strong> as a <strong>frontend developer</strong>, where I leverage modern technologies to develop user-focused solutions.</p>",
+      "title2": "My Software Journay",
+      "description2": "<p>Throughout my career in software development, I have taken on significant responsibilities in <strong>frontend</strong>, <strong>backend</strong>, and <strong>seo</strong>. With the experience gained from these projects, I have developed <strong>user-friendly websites</strong> and <strong>high-performance applications</strong>. I closely follow <strong>modern software technologies</strong> and implement the latest and best solutions in all my projects.</p> <p>My goal is to create <strong>high-quality and sustainable</strong> projects that best meet my clients' needs. I continue to grow and learn with each new project.</p>",
+      "servicesText": "<p>I give professional services on <strong>frontend</strong>, <strong>backend</strong>, <strong>seo</strong> and more. You can look my services.</p>",
       "services": "Services"
     }
   },
@@ -84,6 +84,10 @@
         "message": "Message must be at least 10 characters",
         "recaptcha": "ReCaptcha verification failed"
       }
+    },
+    "metadata": {
+      "title": "Contact | Baris Yasar",
+      "description": "Get in touch for collaborations, project inquiries, or just to say hello. I'm always excited to connect and discuss new opportunities."
     }
   },
   "Blog": {
@@ -105,20 +109,39 @@
       "reactjs": "React",
       "typescript": "TypeScript",
       "javascript": "JavaScript"
+    },
+    "metadata": {
+      "title": "Blog | Baris Yasar",
+      "description": "Insights and articles about web development, modern technologies, and software engineering best practices."
     }
   },
   "Services": {
     "title": "Services",
-    "description": "I offer comprehensive web development solutions including <strong>front-end design</strong>, <strong>back-end development</strong>, and <strong>SEO optimization</strong>. With extensive experience across modern technologies, I can help bring your digital vision to life. Explore my tech stack below to see the tools and frameworks I use to create powerful, efficient solutions.",
+    "description": "<p>I offer comprehensive web development solutions including <strong>frontend design</strong>, <strong>backend development</strong>, and <strong>seo</strong>.</p> <p>With extensive experience across modern technologies, I can help bring your digital vision to life. Explore my tech stack below to see the tools and frameworks I use to create powerful, efficient solutions.</p>",
+    "servicesGrid": {
+      "title": "What I Can Do For You?",
+      "frontendDevelopment": "Frontend Development",
+      "frontendDevelopmentDescription": "<p>I build <strong>unique and user-friendly websites</strong> optimized for performance. My solutions have been <strong>battle-tested with over 10,000 users</strong>, ensuring fast load times and smooth interactions using modern technologies like <strong>Next.js</strong> and <strong>React</strong>.</p>",
+      "backendDevelopment": "Backend Development",
+      "backendDevelopmentDescription": "<p>I develop <strong>secure and scalable backend systems</strong> using Node.js and Express. My experience includes implementing <strong>payment integrations</strong>, <strong>user authentication</strong>, and building <strong>RESTful APIs</strong> that can handle high traffic loads.</p>",
+      "seo": "SEO",
+      "seoDescription": "<p>I optimize websites using industry-leading tools like <strong>Semrush</strong> and <strong>Ahrefs</strong> to improve search rankings. My SEO strategies focus on <strong>technical optimization</strong>, <strong>content quality</strong>, and <strong>performance metrics</strong> to drive organic traffic growth.</p>",
+      "visitContact": "Ready to bring your ideas to life? Let's discuss your project.",
+      "contact": "Contact"
+    },
     "techStack": {
       "title": "Tech Stack",
       "description": "As a full-stack developer, I use a lot of libraries, tools etc. Here are the ones I use most.",
       "all": "All",
-      "frontEnd": "Front-End",
-      "backEnd": "Back-End",
+      "frontend": "Frontend",
+      "backend": "Backend",
       "other": "Other",
       "visitContact": "Are you ready to start your project? Let's talk about it.",
       "contact": "Contact"
+    },
+    "metadata": {
+      "title": "Services | Baris Yasar",
+      "description": "Professional web development services including frontend design, backend development, and SEO optimization. Let's build something amazing together."
     }
   },
   "footer": {
@@ -129,5 +152,23 @@
     "blogs": "Blogs",
     "contact": "Contact",
     "socialMedia": "Social Media"
+  },
+  "Metadata": {
+    "defaultTitle": "Baris Yasar - Full Stack Developer",
+    "titleTemplate": "%s | Baris Yasar",
+    "defaultDescription": "Full Stack Developer specializing in modern web technologies, building scalable and performant applications.",
+    "siteName": "Baris Yasar"
+  },
+  "Home": {
+    "metadata": {
+      "title": "Home | Baris Yasar",
+      "description": "Full Stack Developer specializing in modern web technologies. Explore my portfolio and see how I can help bring your digital vision to life."
+    }
+  },
+  "About": {
+    "metadata": {
+      "title": "About Me | Baris Yasar",
+      "description": "Learn more about my journey, skills, and experience as a Full Stack Developer with expertise in modern web technologies."
+    }
   }
 }

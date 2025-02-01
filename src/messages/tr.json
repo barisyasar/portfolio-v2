@@ -24,14 +24,14 @@
     },
     "experiences": {
       "title": "Deneyimler",
-      "text": "Full-stack developer olarak, <strong>10'dan fazla projede baştan sona yer alarak</strong>, hem front-end hem de back-endde farklı konularda deneyim kazandım. İşte bu deneyimlerimin bazıları.",
+      "text": "Full-stack developer olarak, <strong>10'dan fazla projede baştan sona yer alarak</strong>, hem frontend hem de backendde deneyim kazandım. İşte bunlardan bazıları.",
       "landingWebPageTitle": "Tanıtım Siteleri",
       "landingWebPage": "Farklı şirketler için özgün web siteleri tasarlıyorum. Bu projelerde, ilgi çekici ve kullanıcı dostu tasarımlar oluşturmayı hedefliyorum.",
       "webpToApplicationTitle": "Web'den Uygulamaya",
       "webpToApplication": "Kullanıcıları bir web sayfasından mobil uygulamaya taşıyan projeler. Kayıt olduktan sonra, kullanıcılar uygulamaya giriş yapabilir ve hizmetten yararlanmaya başlayabilir.",
       "ecommerceTitle": "E-Ticaret",
-      "ecommerceText": "Bir dünya markasının ürünlerini ABD, İngiltere, Almanya, Fransa, İtalya, İspanya ve diğer ülkelerde satan e-ticaret web uygulaması.",
-      "servicesText": "Bu alanlarda profesyonel hizmetler sunuyorum. Daha fazla detay için hizmetlerime göz atabilirsiniz.",
+      "ecommerceText": "Birçok ülkede satışa yapan e-ticaret sitesi. Ödeme sistemleri entegrasyonu, stok yönetimi, sipariş takibi ve çoklu dil desteği gibi özelliklerle donatılmış kapsamlı bir platform.",
+      "servicesText": "Bu alanlarda profesyonel hizmetler sunuyorum. Daha fazlası için hizmetlerime göz atabilirsiniz.",
       "services": "Hizmetler"
     },
     "contact": {
@@ -44,14 +44,18 @@
     "recap": {
       "webEnthusiast": "Web Meraklısı",
       "lifelongLearner": "Araştırmacı",
-      "summary": "<p>Ted Üniversitesi bilgisayar mühendisliği mezunu olarak, kariyerime yazılım alanında odaklanarak yön verdim. Eğitim sürecimde iki uzun dönem staj deneyimi edindim; bunlardan ilki <strong>Altima</strong>, diğeri ise <strong>Osi</strong> şirketinde gerçekleşti. Stajlarımın ardından, <strong>Osi</strong> bünyesinde <strong>full-stack developer</strong> olarak 2 yılı aşkın bir süre görev yaptım ve bu süreçte önemli projelerde yer aldım.</p><p>Şu anda <strong>Oak Technology</strong> şirketinde <strong>frontend developer</strong> olarak çalışıyor ve modern teknolojileri kullanarak kullanıcı odaklı çözümler geliştiriyorum.</p>"
+      "summary": "<p>Ted Üniversitesi bilgisayar mühendisliği mezunu olarak, kariyerime yazılım alanında yön verdim. Eğitim sürecimde iki uzun dönem staj yaptım; bunlardan ilki <strong>Altima</strong>, diğeri ise <strong>Osi</strong> şirketinde gerçekleşti. Stajlarımın ardından, <strong>Osi</strong> bünyesinde <strong>full-stack developer</strong> olarak 2 yılı aşkın bir süre görev yaptım ve bu süreçte önemli projelerde yer aldım.</p><p>Şu anda <strong>Oak Technology</strong> şirketinde <strong>frontend developer</strong> olarak çalışıyor ve modern teknolojileri kullanarak kullanıcı odaklı çözümler geliştiriyorum.</p>",
+      "title2": "Yazılım Yolculuğum",
+      "description2": "<p>Yazılım geliştirme kariyerim boyunca, <strong>frontend</strong>, <strong>backend</strong> ve <strong>seo</strong> alanlarında önemli sorumluluklar üstlendim. Bu projelerden edindiğim deneyimle, <strong>kullanıcı dostu web siteleri</strong> ve <strong>yüksek performanslı uygulamalar</strong> geliştirdim. <strong>Modern yazılım teknolojilerini</strong> yakından takip ediyor ve tüm projelerimde en yeni ve en iyi çözümleri uyguluyorum.</p> <p>Amacım, müşterilerimin ihtiyaçlarını en iyi şekilde karşılayan <strong>kaliteli ve sürdürülebilir</strong> projeler üretmek. Her yeni projeyle birlikte büyümeye ve öğrenmeye devam ediyorum.</p>",
+      "servicesText": "<p><strong>Frontend</strong>, <strong>backend</strong> ve <strong>seo</strong> konularında profesyonel hizmetler veriyorum. Hizmetlerime göz atabilirsiniz.</p>",
+      "services": "Hizmetler"
     },
     "techStack": {
       "title": "Tech Stack",
       "description": "Full-Stack Developer olarak en çok kullandığım kütüphaneleri, araçları vb. aşağıda görebilirsiniz.",
       "all": "Tümü",
-      "frontEnd": "Front-End",
-      "backEnd": "Back-End",
+      "frontend": "Frontend",
+      "backend": "Backend",
       "other": "Diğer",
       "visitServices": "Bunları kullanarak verdiğim hizmetleri görün.",
       "allServices": "Hizmetler"
@@ -68,7 +72,7 @@
   },
   "ContactPage": {
     "title": "İletişime Geç",
-    "description": "Benimle iletişime geçmekten çekinmeyin! Sorularınız, geri bildirimleriniz veya yardıma ihtiyacınız varsa, size yardımcı olmaktan mutluluk duyarım. Bana bir mesaj gönderin, en kısa sürede size geri döneceğim.",
+    "description": "Aklınıza takılan bir soru mu var? Ya da birlikte çalışmak istediğiniz bir proje? Formu doldurarak bana ulaşabilirsiniz. Mesajınızı aldığım gibi size dönüş yapacağım.",
     "form": {
       "name": {
         "label": "İsim",
@@ -99,6 +103,10 @@
         "message": "Mesaj en az 10 karakter olmalıdır",
         "recaptcha": "ReCaptcha doğrulaması başarısız"
       }
+    },
+    "metadata": {
+      "title": "İletişim | Barış Yaşar",
+      "description": "İş birlikleri, proje görüşmeleri veya sadece merhaba demek için iletişime geçin. Yeni fırsatları değerlendirmek için her zaman heyecanlıyım."
     }
   },
   "Blog": {
@@ -107,23 +115,70 @@
     "share": "Bu yazıyı paylaş",
     "backToBlogs": "Bloglara dön",
     "totalBlogs": "Toplam {count} makale",
-    "postsPerPage": "Sayfa başına gönderi",
+    "postsPerPage": "Gönderi Sayısı",
     "invalidUrl": "Geçersiz sayfa veya gönderi sayısı. Geçerli sayfaya yönlendiriliyorsunuz.",
     "invalidUrlFormat": "Sayfa ve gönderi sayısı rakam olmalıdır. İlk sayfaya yönlendiriliyorsunuz.",
     "sortBy": "Sıralama",
-    "newest": "En Yeniler Önce",
-    "oldest": "En Eskiler Önce",
+    "newest": "Yeniler Önce",
+    "oldest": "Eskiler Önce",
     "category": "Kategori",
     "categories": {
-      "all": "Tüm Kategoriler",
+      "all": "Tümü",
       "nextjs": "Next.js",
-      "react": "React",
+      "reactjs": "React",
       "typescript": "TypeScript",
       "javascript": "JavaScript"
+    },
+    "metadata": {
+      "title": "Blog | Barış Yaşar",
+      "description": "Web geliştirme, modern teknolojiler ve yazılım mühendisliği en iyi uygulamaları hakkında içgörüler ve makaleler."
     }
   },
   "Services": {
     "title": "Hizmetler",
-    "description": "Yazılım alanında çalıştığım süre boyunca, <strong>10'dan fazla başarılı projede</strong> yer aldım ve her birinde frontend, backend ve SEO konularında önemli görevler üstlendim. Bu projelerde edindiğim tecrübe ile <strong>kullanıcı dostu web siteleri</strong> ve <strong>hızlı çalışan uygulamalar</strong> geliştirdim. <strong>Modern yazılım teknolojilerini</strong> yakından takip ediyor, her projeme en yeni ve en iyi çözümleri katıyorum. Amacım, müşterilerimin ihtiyaçlarını en iyi şekilde karşılayan, <strong>kaliteli ve uzun ömürlü</strong> projeler üretmek. Her yeni projede kendimi geliştirmeye ve öğrenmeye devam ediyorum."
+    "description": "<p>Yazılım alanında çalıştığım süre boyunca, <strong>10'dan fazla başarılı projede</strong> yer aldım ve her birinde <strong>frontend</strong>, <strong>backend</strong> ve <strong>seo</strong> konularında önemli görevler üstlendim. Bu projelerde edindiğim tecrübe ile <strong>kullanıcı dostu web siteleri</strong> ve <strong>hızlı çalışan uygulamalar</strong> geliştirdim. <strong>Modern yazılım teknolojilerini</strong> yakından takip ediyor, her projeme en yeni ve en iyi çözümleri katıyorum.</p> <p>Amacım, müşterilerimin ihtiyaçlarını en iyi şekilde karşılayan, <strong>kaliteli ve uzun ömürlü</strong> projeler üretmek. Her yeni projede kendimi geliştirmeye ve öğrenmeye devam ediyorum.</p>",
+    "servicesGrid": {
+      "title": "Sizin İçin Neler Yapabilirim?",
+      "frontendDevelopment": "Frontend Geliştirme",
+      "frontendDevelopmentDescription": "<p><strong>Kullanıcı dostu web siteleri</strong> geliştiriyorum. Çözümlerim <strong>10.000'den fazla kullanıcı</strong> tarafından test edilmiş olup, <strong>Next.js</strong> ve <strong>React</strong> gibi modern teknolojiler kullanarak hızlı yükleme süreleri ve sorunsuz etkileşimler sağlıyor.</p>",
+      "backendDevelopment": "Backend Geliştirme",
+      "backendDevelopmentDescription": "<p>Node.js ve Express kullanarak <strong>güvenli ve ölçeklenebilir backend sistemleri</strong> geliştiriyorum. Deneyimlerim arasında <strong>ödeme entegrasyonları</strong>, ve yoğun trafiği kaldırabilen <strong>RESTful API'ler</strong> yer alıyor.</p>",
+      "seo": "SEO",
+      "seoDescription": "<p><strong>Semrush</strong> ve <strong>Ahrefs</strong> gibi sektörün önde gelen araçlarını kullanarak web sitelerini optimize ediyorum. SEO stratejilerim, organik trafiği artırmak için <strong>teknik optimizasyon</strong>, <strong>içerik kalitesi</strong> ve <strong>performans metrikleri</strong> üzerine odaklanıyor.</p>",
+      "visitContact": "Fikirlerinizi hayata geçirmeye hazır mısınız? Projenizi konuşalım.",
+      "contact": "İletişim"
+    },
+    "techStack": {
+      "title": "Teknoloji Yığını",
+      "description": "Full-stack geliştirici olarak birçok kütüphane ve araç kullanıyorum. İşte en çok kullandıklarım.",
+      "all": "Tümü",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "other": "Diğer",
+      "visitContact": "Projenizi hayata geçirmeye hazır mısınız?",
+      "contact": "İletişim"
+    },
+    "metadata": {
+      "title": "Hizmetler | Barış Yaşar",
+      "description": "Frontend tasarımı, backend geliştirme ve SEO optimizasyonu dahil profesyonel web geliştirme hizmetleri. Birlikte harika bir şeyler inşa edelim."
+    }
+  },
+  "Metadata": {
+    "defaultTitle": "Barış Yaşar - Full Stack Geliştirici",
+    "titleTemplate": "%s | Barış Yaşar",
+    "defaultDescription": "Modern web teknolojileri konusunda uzmanlaşmış, ölçeklenebilir ve performanslı uygulamalar geliştiren Full Stack Developer.",
+    "siteName": "Barış Yaşar"
+  },
+  "Home": {
+    "metadata": {
+      "title": "Anasayfa | Barış Yaşar",
+      "description": "Modern web teknolojileri konusunda uzmanlaşmış Full Stack Developer. Dijital vizyonunuzu hayata geçirmek için portfolyomu inceleyin."
+    }
+  },
+  "About": {
+    "metadata": {
+      "title": "Hakkımda | Barış Yaşar",
+      "description": "Modern web teknolojileri konusunda uzmanlaşmış bir Full Stack Developer olarak yolculuğum, yeteneklerim ve deneyimlerim hakkında daha fazla bilgi edinin."
+    }
   }
 }

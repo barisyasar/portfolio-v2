@@ -1,17 +1,44 @@
-import { ContactForm } from "@/components/contact-form";
+import { ContactForm } from '@/components/contact-form';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { getTranslations } from "next-intl/server";
-import { ReCaptchaProvider } from "next-recaptcha-v3";
+} from '@/components/ui/card';
+import { getTranslations } from 'next-intl/server';
+import { ReCaptchaProvider } from 'next-recaptcha-v3';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations('ContactPage');
+
+  return {
+    title: t('metadata.title'),
+    description: t('metadata.description'),
+    alternates: {
+      canonical: '/contact',
+      languages: {
+        en: '/en/contact',
+        tr: '/tr/contact',
+      },
+    },
+    openGraph: {
+      title: t('metadata.title'),
+      description: t('metadata.description'),
+      url: '/contact',
+      locale: locale === 'tr' ? 'tr_TR' : 'en_US',
+    },
+  };
+}
 
 // Server Component
 async function Contact() {
-  const t = await getTranslations("ContactPage");
+  const t = await getTranslations('ContactPage');
 
   return (
     <ReCaptchaProvider
@@ -20,12 +47,12 @@ async function Contact() {
     >
       <main className="container">
         <Card className="section">
-          <div className="space-y-5 max-w-screen-md mx-auto">
+          <div className="mx-auto max-w-screen-md space-y-5">
             <CardHeader>
               <CardTitle>
-                <h1>{t("title")}</h1>
+                <h1>{t('title')}</h1>
               </CardTitle>
-              <CardDescription>{t("description")}</CardDescription>
+              <CardDescription>{t('description')}</CardDescription>
             </CardHeader>
             <CardContent>
               <ContactForm />

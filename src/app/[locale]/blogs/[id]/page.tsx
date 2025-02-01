@@ -71,10 +71,10 @@ async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const currentUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/blogs/${id}`;
 
   return (
-    <main className="container max-w-4xl py-6">
+    <main className="container py-6">
       <Button asChild className="mb-4">
         <Link href="/blogs">
-          <ChevronLeft className="mr-2 h-4 w-4" />
+          <ChevronLeft className="mr-2 h-4 w-4 animate-bounce-horizontal" />
           {t('backToBlogs')}
         </Link>
       </Button>

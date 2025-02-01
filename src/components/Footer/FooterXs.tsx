@@ -61,9 +61,12 @@ async function FooterXs() {
           </AccordionItem>
         </Accordion>
       </CardContent>
-      <CardFooter className="justify-center gap-2">
-        <ThemeToggle />
-        <LanguageSelect />
+      <CardFooter className="flex flex-col items-center gap-2">
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <LanguageSelect />
+        </div>
+        <div className="text-sm text-muted-foreground">© 2025 Barış Yaşar</div>
       </CardFooter>
     </Card>
   );

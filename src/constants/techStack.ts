@@ -2,14 +2,12 @@ import {
   ApolloIcon,
   AsanaIcon,
   AwsIcon,
-  BootstrapIcon,
   ExpressIcon,
   FramerMotionIcon,
   GithubIcon,
   GitIcon,
   GraphQlIcon,
   IyzicoIcon,
-  JavaScriptIcon,
   JiraIcon,
   MaterialUiIcon,
   MongoIcon,
@@ -52,11 +50,6 @@ export const ALL_TECHS = [
   {
     name: 'TypeScript',
     icon: TypeScriptIcon,
-    categories: ['frontend', 'backend'],
-  },
-  {
-    name: 'JavaScript',
-    icon: JavaScriptIcon,
     categories: ['frontend', 'backend'],
   },
   {
@@ -137,11 +130,6 @@ export const ALL_TECHS = [
   {
     name: 'ShadCN',
     icon: ShadcnIcon,
-    categories: ['frontend'],
-  },
-  {
-    name: 'Bootstrap',
-    icon: BootstrapIcon,
     categories: ['frontend'],
   },
   {

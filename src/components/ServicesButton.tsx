@@ -6,7 +6,7 @@ function ServicesButton() {
   return (
     <Button
       onClick={() => {
-        const techStack = document.getElementById('tech-stack');
+        const techStack = document.getElementById('what-can-i-do');
         techStack?.scrollIntoView({ behavior: 'smooth' });
       }}
       variant={'link'}

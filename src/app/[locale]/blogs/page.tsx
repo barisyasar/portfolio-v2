@@ -19,17 +19,30 @@ import { SortSelect } from '@/components/blog/SortSelect';
 import { CategorySelect } from '@/components/blog/CategorySelect';
 import { Card } from '@/components/ui/card';
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
   const t = await getTranslations('Blog');
 
   return {
-    title: t('title'),
-    description: t('description'),
+    title: t('metadata.title'),
+    description: t('metadata.description'),
+    alternates: {
+      canonical: '/blogs',
+      languages: {
+        en: '/en/blogs',
+        tr: '/tr/blogs',
+      },
+    },
     openGraph: {
-      title: t('title'),
-      description: t('description'),
+      title: t('metadata.title'),
+      description: t('metadata.description'),
       type: 'website',
-      images: ['/og-image.jpg'], // You'll need to add a default OG image
+      url: '/blogs',
+      locale: locale === 'tr' ? 'tr_TR' : 'en_US',
+      images: ['/og-image.jpg'],
     },
   };
 }

@@ -64,8 +64,9 @@ async function FooterLg() {
           </ul>
         </nav>
       </CardContent>
-      <CardFooter className="justify-center">
+      <CardFooter className="flex flex-col items-center gap-2">
         <SocialMedia className="[&_svg]:size-8" />
+        <p className="text-sm text-muted-foreground">© 2025 Barış Yaşar</p>
       </CardFooter>
     </Card>
   );

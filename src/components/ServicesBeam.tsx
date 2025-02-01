@@ -25,9 +25,7 @@ const Circle = forwardRef<
 
       {title && (
         <CardHeader className="hidden xs:block">
-          <CardTitle className="text-center text-sm">
-            <h2>{title}</h2>
-          </CardTitle>
+          <CardTitle className="text-center text-sm">{title}</CardTitle>
         </CardHeader>
       )}
     </Card>
@@ -60,10 +58,10 @@ export function AnimatedBeamDemo() {
           </Circle>
         </div>
         <div className="flex flex-col items-center justify-between">
-          <Circle ref={div1Ref} title="Front-End">
+          <Circle ref={div1Ref} title="Frontend">
             <FrontendIcon />
           </Circle>
-          <Circle ref={div3Ref} title="Back-End">
+          <Circle ref={div3Ref} title="Backend">
             <BackendIcon />
           </Circle>
           <Circle ref={div5Ref} title="SEO">

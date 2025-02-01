@@ -38,57 +38,29 @@ export function ShareMenu({ url, title }: ShareMenuProps) {
           <ShareIcon className="size-4" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-[180px]">
-        <DropdownMenuItem
-          asChild
-          className="flex cursor-pointer items-center gap-2 px-3 py-2"
-        >
-          <FacebookShareButton
-            url={url}
-            title={title}
-            className="flex w-full items-center gap-2"
-          >
-            <FacebookIcon className="size-5" />
-            <span>Facebook</span>
+      <DropdownMenuContent
+        align="end"
+        className="flex min-w-10 flex-col items-center gap-4 py-2"
+        side="top"
+      >
+        <DropdownMenuItem asChild>
+          <FacebookShareButton url={url} title={title}>
+            <FacebookIcon className="!size-5" />
           </FacebookShareButton>
         </DropdownMenuItem>
-        <DropdownMenuItem
-          asChild
-          className="flex cursor-pointer items-center gap-2 px-3 py-2"
-        >
-          <TwitterShareButton
-            url={url}
-            title={title}
-            className="flex w-full items-center gap-2"
-          >
-            <TwitterIcon className="size-5" />
-            <span>Twitter</span>
+        <DropdownMenuItem asChild>
+          <TwitterShareButton url={url} title={title}>
+            <TwitterIcon className="!size-5" />
           </TwitterShareButton>
         </DropdownMenuItem>
-        <DropdownMenuItem
-          asChild
-          className="flex cursor-pointer items-center gap-2 px-3 py-2"
-        >
-          <LinkedinShareButton
-            url={url}
-            title={title}
-            className="flex w-full items-center gap-2"
-          >
-            <LinkedinIcon className="size-5" />
-            <span>LinkedIn</span>
+        <DropdownMenuItem asChild>
+          <LinkedinShareButton url={url} title={title}>
+            <LinkedinIcon className="!size-5" />
           </LinkedinShareButton>
         </DropdownMenuItem>
-        <DropdownMenuItem
-          asChild
-          className="flex cursor-pointer items-center gap-2 px-3 py-2"
-        >
-          <WhatsappShareButton
-            url={url}
-            title={title}
-            className="flex w-full items-center gap-2"
-          >
-            <WhatsappIcon className="size-5" />
-            <span>WhatsApp</span>
+        <DropdownMenuItem asChild>
+          <WhatsappShareButton url={url} title={title}>
+            <WhatsappIcon className="!size-5" />
           </WhatsappShareButton>
         </DropdownMenuItem>
       </DropdownMenuContent>

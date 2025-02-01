@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import {
   AhrefsIcon,
   ExpressIcon,
@@ -22,7 +23,8 @@ import {
 } from './ui/card';
 import HoverGrid from './ui/hover-grid';
 
-export function ServicesGridList() {
+export async function ServicesGridList() {
+  const t = await getTranslations('Services.servicesGrid');
   return (
     <HoverGrid
       className="grid gap-2 lg:grid-cols-2"
@@ -35,11 +37,13 @@ export function ServicesGridList() {
       <Card className="bg-card/100">
         <CardHeader>
           <CardTitle className="text-xl font-bold">
-            Frontend Development
+            <h3>{t('frontendDevelopment')}</h3>
           </CardTitle>
-          <CardDescription>
-            We build modern, responsive, and scalable web applications using the
-          </CardDescription>
+          <CardDescription
+            dangerouslySetInnerHTML={{
+              __html: t.raw('frontendDevelopmentDescription'),
+            }}
+          />
         </CardHeader>
         <CardFooter className="flex-wrap gap-3">
           <NextIcon />
@@ -49,15 +53,16 @@ export function ServicesGridList() {
           <TypeScriptIcon />
         </CardFooter>
       </Card>
-      <Card className="h-full bg-card/100">
-        <CardHeader>
+      <Card className="flex h-full flex-col justify-between bg-card/100">
+        <CardHeader className="flex-grow">
           <CardTitle className="text-xl font-bold">
-            Backend Development
+            <h3>{t('backendDevelopment')}</h3>
           </CardTitle>
-          <CardDescription>
-            We build robust, scalable, and secure backend systems using the
-            latest technologies and best practices.
-          </CardDescription>
+          <CardDescription
+            dangerouslySetInnerHTML={{
+              __html: t.raw('backendDevelopmentDescription'),
+            }}
+          />
         </CardHeader>
         <CardFooter className="flex-wrap gap-3">
           <ExpressIcon />
@@ -66,15 +71,14 @@ export function ServicesGridList() {
           <StripeIcon />
         </CardFooter>
       </Card>
-      <Card className="h-full bg-card/100">
-        <CardHeader>
+      <Card className="flex h-full flex-col justify-between bg-card/100">
+        <CardHeader className="flex-grow">
           <CardTitle className="text-xl font-bold">
-            Search Engine Optimization
+            <h3>{t('seo')}</h3>
           </CardTitle>
-          <CardDescription>
-            We optimize your website for search engines to improve your online
-            presence and drive more traffic to your site.
-          </CardDescription>
+          <CardDescription
+            dangerouslySetInnerHTML={{ __html: t.raw('seoDescription') }}
+          />
         </CardHeader>
         <CardFooter className="flex-wrap gap-3">
           <SeoIcon />

@@ -13,8 +13,8 @@ function TechStackTabList() {
 
   const categories = [
     { id: 'all', label: t('all') },
-    { id: 'frontend', label: t('frontEnd') },
-    { id: 'backend', label: t('backEnd') },
+    { id: 'frontend', label: t('frontend') },
+    { id: 'backend', label: t('backend') },
     { id: 'seo', label: 'SEO' },
     { id: 'other', label: t('other') },
   ];
