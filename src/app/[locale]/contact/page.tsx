@@ -11,15 +11,16 @@ import { ReCaptchaProvider } from 'next-recaptcha-v3';
 import { Metadata } from 'next';
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const t = await getTranslations('ContactPage');
+  const { locale } = await params;
+  const t = await getTranslations('ContactPage.metadata');
 
   return {
-    title: t('metadata.title'),
-    description: t('metadata.description'),
+    title: t('title'),
+    description: t('description'),
     alternates: {
       canonical: '/contact',
       languages: {
@@ -28,8 +29,8 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: t('metadata.title'),
-      description: t('metadata.description'),
+      title: t('title'),
+      description: t('description'),
       url: '/contact',
       locale: locale === 'tr' ? 'tr_TR' : 'en_US',
     },

@@ -12,10 +12,11 @@ const roboto = Roboto({
 });
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations('Metadata');
 
   return {
@@ -68,6 +69,7 @@ import { Locale, routing } from '@/i18n/routing';
 import AnimatedGridPattern from '@/components/ui/animated-grid-pattern';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export default async function LocaleLayout({
   children,
@@ -104,6 +106,7 @@ export default async function LocaleLayout({
               }
             />
             <Footer />
+            <ScrollToTop />
             <Toaster />
           </NextIntlClientProvider>
         </ThemeProvider>

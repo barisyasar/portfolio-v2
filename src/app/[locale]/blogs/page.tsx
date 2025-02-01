@@ -20,15 +20,16 @@ import { CategorySelect } from '@/components/blog/CategorySelect';
 import { Card } from '@/components/ui/card';
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const t = await getTranslations('Blog');
+  const { locale } = await params;
+  const t = await getTranslations('BlogPage.metadata');
 
   return {
-    title: t('metadata.title'),
-    description: t('metadata.description'),
+    title: t('title'),
+    description: t('description'),
     alternates: {
       canonical: '/blogs',
       languages: {
@@ -37,8 +38,8 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: t('metadata.title'),
-      description: t('metadata.description'),
+      title: t('title'),
+      description: t('description'),
       type: 'website',
       url: '/blogs',
       locale: locale === 'tr' ? 'tr_TR' : 'en_US',
@@ -74,7 +75,7 @@ async function BlogPage({ params, searchParams }: BlogPageProps) {
   const { locale } = await params;
   const { page, postsPerPage, sort, category, error } = await searchParams;
 
-  const t = await getTranslations('Blog');
+  const t = await getTranslations('BlogPage');
 
   // Check for non-numeric values and invalid sort/category
   const hasInvalidFormat =

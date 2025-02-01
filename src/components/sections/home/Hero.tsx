@@ -7,13 +7,12 @@ import {
 } from '@/components/ui/card';
 import Image from 'next/image';
 import PROFILE_IMG from '../../../../public/profile_1.webp';
-import { ChevronsDown } from 'lucide-react';
-import { Link } from '@/i18n/routing';
 import SocialMedia from '@/components/SocialMedia';
+import RecapButton from '@/components/RecapButton';
 
 function Hero() {
   return (
-    <Card className="section flex min-h-[calc(100svh-66px-2rem)] flex-col md:min-h-[calc(100svh-66px-3.5rem)]">
+    <Card className="section flex min-h-[calc(100svh-66px-3rem)] flex-col md:min-h-[calc(100svh-66px-3.5rem)]">
       <div className="flex flex-1 flex-col items-center justify-center">
         <div className="max-w-screen-md space-y-3">
           <div className="card--5 mx-auto size-60 rounded-full p-3 xs:size-72 xl:size-96">
@@ -44,9 +43,7 @@ function Hero() {
         </div>
       </div>
       <div className="flex justify-center">
-        <Link href={'#recap'}>
-          <ChevronsDown className="size-8 animate-bounce xs:size-12" />
-        </Link>
+        <RecapButton />
       </div>
     </Card>
   );

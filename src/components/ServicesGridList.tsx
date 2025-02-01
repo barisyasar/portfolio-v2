@@ -24,7 +24,7 @@ import {
 import HoverGrid from './ui/hover-grid';
 
 export async function ServicesGridList() {
-  const t = await getTranslations('Services.servicesGrid');
+  const t = await getTranslations('ServicesPage.servicesGrid');
   return (
     <HoverGrid
       className="grid gap-2 lg:grid-cols-2"

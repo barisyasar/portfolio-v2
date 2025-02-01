@@ -4,7 +4,7 @@ import ServicesButton from '@/components/ServicesButton';
 import { AnimatedBeamDemo } from '@/components/ServicesBeam';
 
 async function Hero() {
-  const t = await getTranslations('Services');
+  const t = await getTranslations('ServicesPage');
 
   return (
     <Card className="section space-y-8">

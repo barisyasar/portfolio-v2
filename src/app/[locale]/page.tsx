@@ -6,15 +6,16 @@ import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const t = await getTranslations('Home');
+  const { locale } = await params;
+  const t = await getTranslations('HomePage.metadata');
 
   return {
-    title: t('metadata.title'),
-    description: t('metadata.description'),
+    title: t('title'),
+    description: t('description'),
     alternates: {
       canonical: '/',
       languages: {
@@ -23,8 +24,8 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: t('metadata.title'),
-      description: t('metadata.description'),
+      title: t('title'),
+      description: t('description'),
       url: '/',
       locale: locale === 'tr' ? 'tr_TR' : 'en_US',
     },

@@ -8,10 +8,11 @@ import {
   SheetTrigger,
 } from '../ui/sheet';
 import { Button } from '../ui/button';
-import { Link } from '@/i18n/routing';
 import ThemeToggle from '../ThemeToggle';
 import LanguageSelect from '../LanguageSelect';
 import { getTranslations } from 'next-intl/server';
+import HeaderLink from './HeaderLink';
+import { Link } from '@/i18n/routing';
 
 async function HeaderXs() {
   const t = await getTranslations('Menu');
@@ -19,10 +20,10 @@ async function HeaderXs() {
   return (
     <Card className="md:hidden">
       <CardContent className="flex items-center justify-between">
-        <div className="text-3xl">
+        <Link href="/" className="text-3xl font-extrabold">
           <span className="font-extrabold">Barış</span>&nbsp;
           <span className="font-light">Yaşar</span>
-        </div>
+        </Link>
         <Sheet>
           <SheetTrigger>
             <Button variant="outline" asChild className="size-10 p-1">
@@ -36,19 +37,39 @@ async function HeaderXs() {
             <nav className="flex-1">
               <ul className="flex flex-col gap-2">
                 <li>
-                  <Link href="/">{t('home')}</Link>
+                  <HeaderLink
+                    href="/"
+                    text="home"
+                    layoutId="header-link-active-xs"
+                  />
                 </li>
                 <li>
-                  <Link href="/about">{t('about')}</Link>
+                  <HeaderLink
+                    href="/about"
+                    text="about"
+                    layoutId="header-link-active-xs"
+                  />
                 </li>
                 <li>
-                  <Link href="/services">{t('services')}</Link>
+                  <HeaderLink
+                    href="/services"
+                    text="services"
+                    layoutId="header-link-active-xs"
+                  />
                 </li>
                 <li>
-                  <Link href="/blogs">{t('blogs')}</Link>
+                  <HeaderLink
+                    href="/blogs"
+                    text="blogs"
+                    layoutId="header-link-active-xs"
+                  />
                 </li>
                 <li>
-                  <Link href="/contact">{t('contact')}</Link>
+                  <HeaderLink
+                    href="/contact"
+                    text="contact"
+                    layoutId="header-link-active-xs"
+                  />
                 </li>
               </ul>
             </nav>

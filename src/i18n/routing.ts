@@ -23,8 +23,6 @@ export const routing = defineRouting({
       tr: '/iletisim',
       en: '/contact',
     },
-    '#recap': '#recap',
-    '#tech-stack': '#tech-stack',
   },
 });
 

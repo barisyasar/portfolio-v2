@@ -14,7 +14,7 @@ import { ChevronRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 
 async function TechStack() {
-  const t = await getTranslations('Services.techStack');
+  const t = await getTranslations('ServicesPage.techStack');
 
   return (
     <Card className="section min-h-[calc(100svh-2rem)]">

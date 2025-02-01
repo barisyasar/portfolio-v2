@@ -22,7 +22,7 @@ export async function generateMetadata({
   params,
 }: BlogDetailPageProps): Promise<Metadata> {
   const { locale, id } = await params;
-  const t = await getTranslations('Blog');
+  const t = await getTranslations('BlogPage.metadata');
   const blog = await getBlogById(id, locale);
 
   if (!blog) {
@@ -62,7 +62,7 @@ async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const { locale, id } = await params;
 
   const blog = await getBlogById(id, locale);
-  const t = await getTranslations('Blog');
+  const t = await getTranslations('BlogPage');
 
   if (!blog) {
     notFound();

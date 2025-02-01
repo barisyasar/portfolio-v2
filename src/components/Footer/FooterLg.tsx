@@ -1,5 +1,3 @@
-import { getTranslations } from 'next-intl/server';
-
 import {
   Card,
   CardContent,
@@ -9,19 +7,21 @@ import {
   CardTitle,
 } from '../ui/card';
 import SocialMedia from '../SocialMedia';
-import { Link } from '@/i18n/routing';
 import ThemeToggle from '../ThemeToggle';
 import LanguageSelect from '../LanguageSelect';
+import FooterLink from './FooterLink';
+import { Link } from '@/i18n/routing';
 
-async function FooterLg() {
-  const t = await getTranslations('footer');
+function FooterLg() {
   return (
     <Card className="hidden md:block">
       <CardHeader>
         <div className="flex justify-between">
           <div>
             <CardTitle>
-              <h6 className="text-xl font-medium">Barış Yaşar</h6>
+              <Link href="/" className="text-xl font-medium">
+                <h6>Barış Yaşar</h6>
+              </Link>
             </CardTitle>
             <CardDescription className="text-sm">
               Full-Stack Developer
@@ -37,29 +37,19 @@ async function FooterLg() {
         <nav>
           <ul className="flex justify-center gap-12 text-sm">
             <li>
-              <Link className="link" href="/">
-                {t('home')}
-              </Link>
+              <FooterLink href="/" text="home" />
             </li>
             <li>
-              <Link className="link" href="/about">
-                {t('about')}
-              </Link>
+              <FooterLink href="/about" text="about" />
             </li>
             <li>
-              <Link className="link" href="/services">
-                {t('services')}
-              </Link>
+              <FooterLink href="/services" text="services" />
             </li>
             <li>
-              <Link className="link" href="/blogs">
-                {t('blogs')}
-              </Link>
+              <FooterLink href="/blogs" text="blogs" />
             </li>
             <li>
-              <Link className="link" href="/contact">
-                {t('contact')}
-              </Link>
+              <FooterLink href="/contact" text="contact" />
             </li>
           </ul>
         </nav>

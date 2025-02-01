@@ -18,15 +18,16 @@ import Experiences from '@/components/sections/home/Experinces';
 import { Metadata } from 'next';
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const t = await getTranslations('About');
+  const { locale } = await params;
+  const t = await getTranslations('AboutPage.metadata');
 
   return {
-    title: t('metadata.title'),
-    description: t('metadata.description'),
+    title: t('title'),
+    description: t('description'),
     alternates: {
       canonical: '/about',
       languages: {
@@ -35,8 +36,8 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: t('metadata.title'),
-      description: t('metadata.description'),
+      title: t('title'),
+      description: t('description'),
       url: '/about',
       locale: locale === 'tr' ? 'tr_TR' : 'en_US',
     },

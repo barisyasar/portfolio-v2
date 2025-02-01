@@ -16,6 +16,7 @@ import { Link } from '@/i18n/routing';
 import SocialMedia from '../SocialMedia';
 import ThemeToggle from '../ThemeToggle';
 import LanguageSelect from '../LanguageSelect';
+import FooterLink from './FooterLink';
 
 async function FooterXs() {
   const t = await getTranslations('footer');
@@ -24,7 +25,9 @@ async function FooterXs() {
     <Card className="md:hidden">
       <CardHeader>
         <CardTitle>
-          <h6 className="text-2xl font-medium">Barış Yaşar</h6>
+          <Link href="/" className="text-2xl font-medium">
+            <h6>Barış Yaşar</h6>
+          </Link>
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -35,19 +38,39 @@ async function FooterXs() {
               <nav className="flex-1">
                 <ul className="flex flex-col gap-2">
                   <li>
-                    <Link href="/">{t('home')}</Link>
+                    <FooterLink
+                      href="/"
+                      text={'home'}
+                      layoutId="footer-link-active-xs"
+                    />
                   </li>
                   <li>
-                    <Link href="/about">{t('about')}</Link>
+                    <FooterLink
+                      href="/about"
+                      text={'about'}
+                      layoutId="footer-link-active-xs"
+                    />
                   </li>
                   <li>
-                    <Link href="/services">{t('services')}</Link>
+                    <FooterLink
+                      href="/services"
+                      text={'services'}
+                      layoutId="footer-link-active-xs"
+                    />
                   </li>
                   <li>
-                    <Link href="/blogs">{t('blogs')}</Link>
+                    <FooterLink
+                      href="/blogs"
+                      text={'blogs'}
+                      layoutId="footer-link-active-xs"
+                    />
                   </li>
                   <li>
-                    <Link href="/contact">{t('contact')}</Link>
+                    <FooterLink
+                      href="/contact"
+                      text={'contact'}
+                      layoutId="footer-link-active-xs"
+                    />
                   </li>
                 </ul>
               </nav>

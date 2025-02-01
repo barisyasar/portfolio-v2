@@ -6,7 +6,7 @@ import { ChevronRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 
 async function ServicesGrid() {
-  const t = await getTranslations('Services.servicesGrid');
+  const t = await getTranslations('ServicesPage.servicesGrid');
   return (
     <Card className="section scroll-m-4" id="what-can-i-do">
       <div className="mx-auto max-w-screen-lg space-y-5">

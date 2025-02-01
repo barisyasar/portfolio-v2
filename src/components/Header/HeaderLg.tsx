@@ -1,46 +1,35 @@
 import { Card, CardContent } from '../ui/card';
-import { Link } from '@/i18n/routing';
 import ThemeToggle from '../ThemeToggle';
 import LanguageSelect from '../LanguageSelect';
-import { getTranslations } from 'next-intl/server';
+import HeaderLink from './HeaderLink';
+import { Link } from '@/i18n/routing';
+import { Button } from '../ui/button';
 
-async function HeaderLg() {
-  const t = await getTranslations('Menu');
-
+export default function HeaderLg() {
   return (
     <Card className="hidden md:block">
       <CardContent className="flex items-center justify-between">
-        <div className="text-2xl lg:text-3xl">
+        <Link href="/" className="text-2xl lg:text-3xl">
           <span className="font-extrabold">Barış</span>&nbsp;
           <span className="font-light">Yaşar</span>
-        </div>
+        </Link>
 
         <nav>
-          <ul className="flex gap-4">
+          <ul className="flex gap-3 lg:gap-4">
             <li>
-              <Link className="link" href="/">
-                {t('home')}
-              </Link>
+              <HeaderLink href="/" text="home" />
             </li>
             <li>
-              <Link className="link" href="/about">
-                {t('about')}
-              </Link>
+              <HeaderLink href="/about" text="about" />
             </li>
             <li>
-              <Link className="link" href="/services">
-                {t('services')}
-              </Link>
+              <HeaderLink href="/services" text="services" />
             </li>
             <li>
-              <Link className="link" href="/blogs">
-                {t('blogs')}
-              </Link>
+              <HeaderLink href="/blogs" text="blogs" />
             </li>
             <li>
-              <Link className="link" href="/contact">
-                {t('contact')}
-              </Link>
+              <HeaderLink href="/contact" text="contact" />
             </li>
           </ul>
         </nav>
@@ -52,5 +41,3 @@ async function HeaderLg() {
     </Card>
   );
 }
-
-export default HeaderLg;
