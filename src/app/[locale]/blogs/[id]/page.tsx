@@ -71,27 +71,29 @@ async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const currentUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/blogs/${id}`;
 
   return (
-    <main className="container py-6">
+    <main className="container">
       <Button asChild className="mb-4">
         <Link href="/blogs">
-          <ChevronLeft className="mr-2 h-4 w-4 animate-bounce-horizontal" />
+          <ChevronLeft className="mr-2 animate-bounce-horizontal" />
           {t('backToBlogs')}
         </Link>
       </Button>
-      <Card className="space-y-0 overflow-hidden">
-        <div className="relative aspect-video overflow-hidden rounded-lg">
-          <Image
-            src={blog.coverImage}
-            alt={blog.title}
-            fill
-            className="object-cover"
-            priority
-          />
-          <ShareMenu url={currentUrl} title={blog.title} />
-        </div>
+      <Card className="overflow-hidden">
+        <div className="mx-auto max-w-screen-md">
+          <div className="relative aspect-video overflow-hidden rounded-lg">
+            <Image
+              src={blog.coverImage}
+              alt={blog.title}
+              fill
+              className="object-cover"
+              priority
+            />
+            <ShareMenu url={currentUrl} title={blog.title} />
+          </div>
 
-        <div className="px-6 py-4">
-          <MDXRemote source={blog.content} components={components} />
+          <div className="px-6 py-4">
+            <MDXRemote source={blog.content} components={components} />
+          </div>
         </div>
       </Card>
     </main>

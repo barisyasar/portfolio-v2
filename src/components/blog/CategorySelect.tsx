@@ -7,14 +7,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useCallback } from 'react';
 
 interface CategorySelectProps {
-  locale: string;
-  currentCategory: string;
-  currentPage: number;
-  currentPostsPerPage: number;
-  currentSort: string;
   label: string;
   categories: {
     value: string;
@@ -22,25 +18,28 @@ interface CategorySelectProps {
   }[];
 }
 
-export function CategorySelect({
-  locale,
-  currentCategory,
-  currentPostsPerPage,
-  currentSort,
-  label,
-  categories,
-}: CategorySelectProps) {
+export function CategorySelect({ label, categories }: CategorySelectProps) {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+
+  const createQueryString = useCallback(
+    (name: string, value: string) => {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set(name, value);
+      params.set('page', '1');
+      return params.toString();
+    },
+    [searchParams],
+  );
 
   return (
     <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
       <span className="text-sm text-muted-foreground">{label}:</span>
       <Select
-        defaultValue={currentCategory}
+        defaultValue={'all'}
         onValueChange={(value) => {
-          router.push(
-            `/${locale}/blogs?page=1&postsPerPage=${currentPostsPerPage}&sort=${currentSort}&category=${value}`,
-          );
+          router.push(`${pathname}?${createQueryString('category', value)}`);
         }}
       >
         <SelectTrigger className="w-[140px]">

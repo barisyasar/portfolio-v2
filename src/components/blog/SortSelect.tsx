@@ -7,38 +7,42 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useCallback } from 'react';
 
 interface SortSelectProps {
-  locale: string;
-  currentSort: string;
-  currentPage: number;
-  currentPostsPerPage: number;
   label: string;
   newestLabel: string;
   oldestLabel: string;
 }
 
 export function SortSelect({
-  locale,
-  currentSort,
-  currentPage,
-  currentPostsPerPage,
   label,
   newestLabel,
   oldestLabel,
 }: SortSelectProps) {
   const router = useRouter();
 
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  console.log(pathname);
+
+  const createQueryString = useCallback(
+    (name: string, value: string) => {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set(name, value);
+      return params.toString();
+    },
+    [searchParams],
+  );
+
   return (
     <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
       <span className="text-sm text-muted-foreground">{label}:</span>
       <Select
-        defaultValue={currentSort}
+        defaultValue={searchParams.get('sort') || 'newest'}
         onValueChange={(value) => {
-          router.push(
-            `/${locale}/blogs?page=${currentPage}&postsPerPage=${currentPostsPerPage}&sort=${value}`,
-          );
+          router.push(`${pathname}?${createQueryString('sort', value)}`);
         }}
       >
         <SelectTrigger className="w-[140px]">

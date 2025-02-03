@@ -1,94 +1,41 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
 import { unstable_cache } from 'next/cache';
+import { db } from '@/db';
+import { eq, desc, asc, and, sql } from 'drizzle-orm';
+import { blogs, BlogPost } from '@/db/schema';
 
-export interface BlogPost {
-  id: string;
-  title: string;
-  date: string;
-  author?: string;
-  excerpt: string;
-  content: string;
-  coverImage: string;
-  readingTime: number;
-  locale: string;
-  categories: string[];
-}
+export type BlogPostWithStringDate = Omit<BlogPost, 'date'> & { date: string };
 
-const BLOGS_DIRECTORY = path.join(process.cwd(), 'src/constants/blogs');
+export async function getAllBlogs(
+  locale: string = 'en',
+): Promise<BlogPostWithStringDate[]> {
+  const results = await db
+    .select()
+    .from(blogs)
+    .where(eq(blogs.locale, locale))
+    .orderBy(desc(blogs.date));
 
-function calculateReadingTime(content: string): number {
-  const wordsPerMinute = 200;
-  const words = content.trim().split(/\s+/).length;
-  return Math.ceil(words / wordsPerMinute);
-}
-
-export async function getAllBlogs(locale: string = 'en'): Promise<BlogPost[]> {
-  const localePath = path.join(BLOGS_DIRECTORY, locale);
-  if (!fs.existsSync(localePath)) {
-    throw new Error(`Invalid locale: ${locale}`);
-  }
-
-  const files = fs.readdirSync(localePath);
-
-  const blogs = files
-    .filter((filename) => filename.endsWith('.md'))
-    .map((filename) => {
-      const filePath = path.join(localePath, filename);
-      const fileContents = fs.readFileSync(filePath, 'utf8');
-      const { data, content } = matter(fileContents);
-
-      let categories = ['all'];
-      if (data.categories) {
-        categories = Array.isArray(data.categories)
-          ? data.categories
-          : [data.categories];
-      }
-
-      return {
-        id: data.id,
-        title: data.title,
-        date: data.date,
-        author: data.author,
-        excerpt: data.excerpt,
-        content: content,
-        coverImage: data.coverImage,
-        readingTime: calculateReadingTime(content),
-        locale,
-        categories,
-      };
-    })
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-  return blogs;
+  return results.map((blog) => ({
+    ...blog,
+    date: blog.date.toISOString(),
+  }));
 }
 
 export const getBlogById = unstable_cache(
-  async (id: string, locale: string): Promise<BlogPost | null> => {
+  async (
+    id: string,
+    locale: string,
+  ): Promise<BlogPostWithStringDate | null> => {
     try {
-      const filePath = path.join(BLOGS_DIRECTORY, locale, `${id}.md`);
-      const fileContents = fs.readFileSync(filePath, 'utf8');
-      const { data, content } = matter(fileContents);
+      const [result] = await db
+        .select()
+        .from(blogs)
+        .where(and(eq(blogs.id, id), eq(blogs.locale, locale)));
 
-      let categories = ['all'];
-      if (data.categories) {
-        categories = Array.isArray(data.categories)
-          ? data.categories
-          : [data.categories];
-      }
+      if (!result) return null;
 
       return {
-        id: data.id,
-        title: data.title,
-        date: data.date,
-        author: data.author,
-        excerpt: data.excerpt,
-        content: content,
-        coverImage: data.coverImage,
-        readingTime: calculateReadingTime(content),
-        locale,
-        categories,
+        ...result,
+        date: result.date.toISOString(),
       };
     } catch (error) {
       return null;
@@ -105,37 +52,47 @@ export const getPaginatedBlogs = unstable_cache(
   async (
     locale: string = 'en',
     page: number = 1,
-    postsPerPage: number = 10,
-    category: string = 'all',
+    postsPerPage: number = 6,
+    categories: string = 'all',
     sort: 'newest' | 'oldest' = 'newest',
   ) => {
-    if (!fs.existsSync(path.join(BLOGS_DIRECTORY, locale))) {
-      throw new Error(`Invalid locale: ${locale}`);
+    function sleep(ms: number) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+    await sleep(5000);
+    const offset = (page - 1) * postsPerPage;
+
+    let baseQuery = db.select().from(blogs).where(eq(blogs.locale, locale));
+
+    if (categories !== 'all') {
+      baseQuery = baseQuery.where(
+        sql`${blogs.categories} @> ARRAY[${categories}]::text[]`,
+      );
     }
 
-    const blogs = await getAllBlogs(locale);
+    const query = baseQuery
+      .orderBy(sort === 'newest' ? desc(blogs.date) : asc(blogs.date))
+      .limit(postsPerPage)
+      .offset(offset);
 
-    const filteredBlogs =
-      category === 'all'
-        ? blogs
-        : blogs.filter((blog) => blog.categories.includes(category));
+    const [blogResults, countResult] = await Promise.all([
+      query,
+      db
+        .select({ count: sql`count(*)::int` })
+        .from(blogs)
+        .where(eq(blogs.locale, locale)),
+    ]);
 
-    const sortedBlogs = filteredBlogs.sort((a, b) => {
-      const dateA = new Date(a.date).getTime();
-      const dateB = new Date(b.date).getTime();
-      return sort === 'newest' ? dateB - dateA : dateA - dateB;
-    });
-
-    const startIndex = (page - 1) * postsPerPage;
-    const paginatedBlogs = sortedBlogs.slice(
-      startIndex,
-      startIndex + postsPerPage,
-    );
-    const totalBlogs = sortedBlogs.length;
+    const totalBlogs = Number(countResult[0].count);
     const totalPages = Math.ceil(totalBlogs / postsPerPage);
 
+    const mappedBlogs = blogResults.map((blog) => ({
+      ...blog,
+      date: blog.date.toISOString(),
+    }));
+
     return {
-      blogs: paginatedBlogs,
+      blogs: mappedBlogs as BlogPostWithStringDate[],
       totalPages,
       totalBlogs,
     };

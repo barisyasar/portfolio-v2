@@ -14,7 +14,7 @@ function Hero() {
   return (
     <Card className="section flex min-h-[calc(100svh-66px-3rem)] flex-col md:min-h-[calc(100svh-66px-3.5rem)]">
       <div className="flex flex-1 flex-col items-center justify-center">
-        <div className="max-w-screen-md space-y-3">
+        <div className="max-w-screen-sm space-y-3">
           <div className="card--5 mx-auto size-60 rounded-full p-3 xs:size-72 xl:size-96">
             <Image
               src={PROFILE_IMG}
