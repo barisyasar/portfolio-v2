@@ -4,6 +4,15 @@ import '../globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 import { getTranslations } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { Locale, routing } from '@/i18n/routing';
+import AnimatedGridPattern from '@/components/ui/animated-grid-pattern';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
+import { NuqsAdapter } from 'nuqs/adapters/next/app';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700', '900'],
@@ -62,15 +71,6 @@ export async function generateMetadata({
   };
 }
 
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import { notFound } from 'next/navigation';
-import { Locale, routing } from '@/i18n/routing';
-import AnimatedGridPattern from '@/components/ui/animated-grid-pattern';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import ScrollToTop from '@/components/ScrollToTop';
-
 export default async function LocaleLayout({
   children,
   params,
@@ -92,24 +92,26 @@ export default async function LocaleLayout({
       }}
     >
       <body className={`${roboto.className} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system">
-          <NextIntlClientProvider messages={messages}>
-            <Header />
-            {children}
-            <AnimatedGridPattern
-              numSquares={25}
-              maxOpacity={0.05}
-              duration={2}
-              repeatDelay={3}
-              className={
-                'hidden[mask-image:radial-gradient(350px_circle_at_center,white,transparent)] fixed left-0 top-0 -z-10 h-screen w-full opacity-50 sm:flex lg:[mask-image:radial-gradient(500px_circle_at_center,white,transparent)] xl:[mask-image:radial-gradient(700px_circle_at_center,white,transparent)]'
-              }
-            />
-            <Footer />
-            <ScrollToTop />
-            <Toaster />
-          </NextIntlClientProvider>
-        </ThemeProvider>
+        <NuqsAdapter>
+          <ThemeProvider attribute="class" defaultTheme="system">
+            <NextIntlClientProvider messages={messages}>
+              <Header />
+              {children}
+              <AnimatedGridPattern
+                numSquares={25}
+                maxOpacity={0.05}
+                duration={2}
+                repeatDelay={3}
+                className={
+                  'hidden[mask-image:radial-gradient(350px_circle_at_center,white,transparent)] fixed left-0 top-0 -z-10 h-screen w-full opacity-50 sm:flex lg:[mask-image:radial-gradient(500px_circle_at_center,white,transparent)] xl:[mask-image:radial-gradient(700px_circle_at_center,white,transparent)]'
+                }
+              />
+              <Footer />
+              <ScrollToTop />
+              <Toaster />
+            </NextIntlClientProvider>
+          </ThemeProvider>
+        </NuqsAdapter>
       </body>
     </html>
   );

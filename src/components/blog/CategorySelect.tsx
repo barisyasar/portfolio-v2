@@ -9,16 +9,13 @@ import {
 } from '@/components/ui/select';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useCallback } from 'react';
+import BLOG_CATEGORIES from '@/constants/blogCategories';
 
 interface CategorySelectProps {
   label: string;
-  categories: {
-    value: string;
-    label: string;
-  }[];
 }
 
-export function CategorySelect({ label, categories }: CategorySelectProps) {
+export function CategorySelect({ label }: CategorySelectProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -46,9 +43,9 @@ export function CategorySelect({ label, categories }: CategorySelectProps) {
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
-          {categories.map((category) => (
-            <SelectItem key={category.value} value={category.value}>
-              {category.label}
+          {BLOG_CATEGORIES.map((category) => (
+            <SelectItem key={category} value={category}>
+              {category}
             </SelectItem>
           ))}
         </SelectContent>

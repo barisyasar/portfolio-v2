@@ -1,15 +1,12 @@
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
-import { PostsPerPageSelect } from '@/components/blog/PostsPerPageSelect';
-import { redirect } from 'next/navigation';
-import { InvalidUrlToast } from '@/components/blog/InvalidUrlToast';
-import { Toaster } from '@/components/ui/toaster';
-import { SortSelect } from '@/components/blog/SortSelect';
-import { CategorySelect } from '@/components/blog/CategorySelect';
+// import { PostsPerPageSelect } from '@/components/blog/PostsPerPageSelect';
+// import { SortSelect } from '@/components/blog/SortSelect';
+// import { CategorySelect } from '@/components/blog/CategorySelect';
 import { Card } from '@/components/ui/card';
-import { Suspense } from 'react';
-import { BlogGridSkeleton } from '@/components/blog/BlogCardSkeleton';
-import BlogGrid from '@/components/blog/BlockGrid';
+import { z } from 'zod';
+import { getPaginatedBlogs } from '@/lib/blog';
+import BLOG_CATEGORIES from '@/constants/blogCategories';
 
 export async function generateMetadata({
   params,
@@ -53,90 +50,55 @@ interface BlogPageProps {
   };
 }
 
-const VALID_POSTS_PER_PAGE = [6, 10, 15];
-const VALID_SORT_OPTIONS = ['newest', 'oldest'];
-const VALID_CATEGORIES = [
-  'all',
-  'nextjs',
-  'reactjs',
-  'typescript',
-  'javascript',
-];
+const querySchema = z.object({
+  locale: z.string(),
+  page: z.coerce.number().optional().default(1),
+  postsPerPage: z
+    .union([z.literal(6), z.literal(10), z.literal(15)])
+    .default(6),
+  sort: z.union([z.literal('newest'), z.literal('oldest')]).default('newest'),
+  category: z
+    .string()
+    .refine((val): val is (typeof BLOG_CATEGORIES)[number] =>
+      BLOG_CATEGORIES.includes(val as any),
+    )
+    .optional()
+    .default(BLOG_CATEGORIES[0]),
+});
 
-async function BlogPage({ params, searchParams }: BlogPageProps) {
-  const { locale } = await params;
-  const { page, postsPerPage, sort, category, error } = await searchParams;
+async function BlogPage(props: BlogPageProps) {
+  const searchParams = await props.searchParams;
+  const { locale } = await props.params;
+
+  const query = querySchema.parse({
+    ...searchParams,
+    locale,
+  });
 
   const t = await getTranslations('BlogPage');
 
-  const hasInvalidFormat =
-    (page && !/^\d+$/.test(page)) ||
-    (postsPerPage && !/^\d+$/.test(postsPerPage)) ||
-    (sort && !VALID_SORT_OPTIONS.includes(sort)) ||
-    (category && !VALID_CATEGORIES.includes(category));
-
-  if (hasInvalidFormat) {
-    redirect(
-      `/${locale}/blogs?page=1&postsPerPage=${VALID_POSTS_PER_PAGE[0]}&sort=${VALID_SORT_OPTIONS[0]}&category=${VALID_CATEGORIES[0]}&error=format`,
-    );
-  }
-
-  const currentCategory = category || VALID_CATEGORIES[0];
-
-  const requestedPostsPerPage = Number(postsPerPage) || VALID_POSTS_PER_PAGE[0];
-  const currentPostsPerPage = VALID_POSTS_PER_PAGE.includes(
-    requestedPostsPerPage,
-  )
-    ? requestedPostsPerPage
-    : VALID_POSTS_PER_PAGE[0];
-
-  const requestedPage = Number(page) || 1;
-  const currentPage = Math.max(1, Math.min(requestedPage, currentPostsPerPage));
-
-  const wasInvalid =
-    requestedPage !== currentPage ||
-    requestedPostsPerPage !== currentPostsPerPage;
-
-  if (wasInvalid) {
-    redirect(
-      `/${locale}/blogs?page=${currentPage}&postsPerPage=${currentPostsPerPage}&error=invalid`,
-    );
-  }
-
-  const categories = VALID_CATEGORIES.map((cat) => ({
-    value: cat,
-    label: t(`categories.${cat}`),
-  }));
+  const data = await getPaginatedBlogs(query);
+  console.log(data);
 
   return (
-    <div className="container mx-auto">
-      <Toaster />
-      {error === 'format' && (
-        <InvalidUrlToast message={t('invalidUrlFormat')} />
-      )}
-      {error === 'invalid' && <InvalidUrlToast message={t('invalidUrl')} />}
-
-      <Card className="section flex flex-col gap-4">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <h1 className="text-4xl font-bold">{t('title')}</h1>
-          </div>
-          <div className="flex flex-wrap items-center gap-4">
-            <CategorySelect label={t('category')} categories={categories} />
-            <SortSelect
-              label={t('sortBy')}
-              newestLabel={t('newest')}
-              oldestLabel={t('oldest')}
-            />
-            <PostsPerPageSelect label={t('postsPerPage')} />
-          </div>
+    <Card className="section container mx-auto flex flex-col gap-4">
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h1 className="text-4xl font-bold">{t('title')}</h1>
         </div>
+        <div className="flex flex-wrap items-center gap-4">
+          {/*          <CategorySelect label={t('category')} />
+          <SortSelect
+            label={t('sortBy')}
+            newestLabel={t('newest')}
+            oldestLabel={t('oldest')}
+          />
+          <PostsPerPageSelect label={t('postsPerPage')} /> */}
+        </div>
+      </div>
 
-        <Suspense fallback={<BlogGridSkeleton />}>
-          <BlogGrid />
-        </Suspense>
-      </Card>
-    </div>
+      {/* <BlogGrid /> */}
+    </Card>
   );
 }
 

@@ -49,25 +49,37 @@ export const getBlogById = unstable_cache(
 );
 
 export const getPaginatedBlogs = unstable_cache(
-  async (
-    locale: string = 'en',
-    page: number = 1,
-    postsPerPage: number = 6,
-    categories: string = 'all',
-    sort: 'newest' | 'oldest' = 'newest',
-  ) => {
+  async ({
+    locale,
+    page,
+    postsPerPage,
+    category,
+    sort,
+  }: {
+    locale: string;
+    page: number;
+    postsPerPage: number;
+    category: string;
+    sort: 'newest' | 'oldest';
+  }) => {
     function sleep(ms: number) {
       return new Promise((resolve) => setTimeout(resolve, ms));
     }
-    await sleep(5000);
+    // await sleep(5000);
     const offset = (page - 1) * postsPerPage;
 
     let baseQuery = db.select().from(blogs).where(eq(blogs.locale, locale));
 
-    if (categories !== 'all') {
-      baseQuery = baseQuery.where(
-        sql`${blogs.categories} @> ARRAY[${categories}]::text[]`,
-      );
+    if (category !== 'all') {
+      baseQuery = db
+        .select()
+        .from(blogs)
+        .where(
+          and(
+            eq(blogs.locale, locale),
+            sql`${blogs.categories} @> ARRAY[${category}]::text[]`,
+          ),
+        );
     }
 
     const query = baseQuery

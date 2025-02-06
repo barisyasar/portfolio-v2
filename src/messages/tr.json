@@ -96,8 +96,6 @@
     "backToBlogs": "Bloglara dön",
     "totalBlogs": "Toplam {count} makale",
     "postsPerPage": "Gönderi Sayısı",
-    "invalidUrl": "Geçersiz sayfa veya gönderi sayısı. Geçerli sayfaya yönlendiriliyorsunuz.",
-    "invalidUrlFormat": "Sayfa ve gönderi sayısı rakam olmalıdır. İlk sayfaya yönlendiriliyorsunuz.",
     "sortBy": "Sıralama",
     "newest": "Yeniler Önce",
     "oldest": "Eskiler Önce",

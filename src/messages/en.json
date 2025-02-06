@@ -95,8 +95,6 @@
     "backToBlogs": "Back to blogs",
     "totalBlogs": "{count} articles in total",
     "postsPerPage": "Posts per page",
-    "invalidUrl": "Invalid page or posts per page value. Redirecting to valid page.",
-    "invalidUrlFormat": "Page and posts per page must be numbers. Redirecting to first page.",
     "sortBy": "Sort by",
     "newest": "Newest First",
     "oldest": "Oldest First",

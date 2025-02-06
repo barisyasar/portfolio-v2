@@ -1,4 +1,3 @@
-'use client';
 import {
   Pagination,
   PaginationContent,
@@ -7,53 +6,26 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from '../ui/pagination';
-import { BlogPostWithStringDate, getPaginatedBlogs } from '@/lib/blog';
+import { getPaginatedBlogs } from '@/lib/blog';
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
-import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+// import { useTranslations } from 'next-intl';
+// import { useSearchParams } from 'next/navigation';
 
-export default function BlogGrid() {
-  const searchParams = useSearchParams();
+export default async function BlogGrid() {
+  // const searchParams = useSearchParams();
 
-  const locale = searchParams.get('locale') || 'en';
+  /*   const locale = searchParams.get('locale') || 'en';
   const currentPage = Number(searchParams.get('page')) || 1;
   const currentPostsPerPage = Number(searchParams.get('postsPerPage')) || 6;
   const currentCategory = searchParams.get('category') || 'all';
-  const currentSort = searchParams.get('sort') || 'newest';
+  const currentSort = searchParams.get('sort') || 'newest'; */
 
-  const t = useTranslations('BlogPage');
-
-  const [data, setData] = useState<{
-    blogs: BlogPostWithStringDate[];
-    totalPages: number;
-  }>({
-    blogs: [],
-    totalPages: 0,
-  });
-
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      const res = await getPaginatedBlogs(
-        locale,
-        currentPage,
-        currentPostsPerPage,
-        currentCategory,
-        currentSort as 'newest' | 'oldest',
-      );
-      setData(res);
-    };
-    try {
-      fetchBlogs();
-    } catch (error) {
-      console.error(error);
-    }
-  }, [locale, currentPage, currentPostsPerPage, currentCategory, currentSort]);
+  // const t = useTranslations('BlogPage');
 
   return (
     <>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+      {/*       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {data.blogs.map((blog) => (
           <Link
             href={{
@@ -98,8 +70,8 @@ export default function BlogGrid() {
             </div>
           </Link>
         ))}
-      </div>
-      <Pagination className="mt-8">
+      </div> */}
+      {/*  <Pagination className="mt-8">
         <PaginationContent>
           <PaginationItem>
             <PaginationPrevious
@@ -134,7 +106,7 @@ export default function BlogGrid() {
             />
           </PaginationItem>
         </PaginationContent>
-      </Pagination>
+      </Pagination> */}
     </>
   );
 }
