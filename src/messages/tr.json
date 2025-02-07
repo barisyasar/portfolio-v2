@@ -9,6 +9,7 @@
     "en": "English"
   },
   "Menu": {
+    "barisyasar": "<span>Barış</span>&nbsp;<span>Yaşar</span>",
     "menu": "Menü",
     "home": "Anasayfa",
     "about": "Hakkımda",
@@ -24,7 +25,7 @@
     },
     "experiences": {
       "title": "Deneyimler",
-      "text": "Full-stack developer olarak, <strong>10'dan fazla projede baştan sona yer alarak</strong>, hem frontend hem de backendde deneyim kazandım. İşte bunlardan bazıları.",
+      "text": "Full-stack developer olarak, <strong>10'dan fazla projede baştan sona yer alarak</strong> hem frontend hem de backendde deneyim kazandım. İşte bunlardan bazıları.",
       "landingWebPageTitle": "Tanıtım Siteleri",
       "landingWebPage": "Farklı şirketler için özgün web siteleri tasarlıyorum. Bu projelerde, ilgi çekici ve kullanıcı dostu tasarımlar oluşturmayı hedefliyorum.",
       "webpToApplicationTitle": "Web'den Uygulamaya",
@@ -90,7 +91,6 @@
     }
   },
   "BlogPage": {
-    "title": "Blog",
     "description": "Bloguma hoş geldiniz! Burada web geliştirme ve teknoloji hakkındaki düşüncelerimi, deneyimlerimi ve öğrendiklerimi paylaşıyorum. İster bir geliştirici olun, ister sadece neler yaptığımı merak edin, doğru yerdesiniz.",
     "share": "Bu yazıyı paylaş",
     "backToBlogs": "Bloglara dön",

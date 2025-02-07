@@ -4,7 +4,7 @@ import OrbitingCircles from './ui/orbiting-circles';
 export default function OrbitingCircleSkills() {
   return (
     <div className="relative flex h-[300px] w-full flex-col items-center justify-center overflow-hidden">
-      <span className="pointer-events-none whitespace-pre-wrap text-center text-4xl font-semibold leading-none opacity-20 2xs:text-5xl xs:text-6xl">
+      <span className="pointer-events-none whitespace-pre-wrap text-center text-xl font-semibold leading-none opacity-20 2xs:text-5xl sm:text-6xl">
         Web Development
       </span>
 

@@ -6,14 +6,16 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { ReCaptchaProvider } from 'next-recaptcha-v3';
 import { Metadata } from 'next';
+
+type Params = Promise<{ locale: string }>;
 
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Params;
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations('ContactPage.metadata');
@@ -36,9 +38,9 @@ export async function generateMetadata({
     },
   };
 }
-
-// Server Component
-async function Contact() {
+async function Contact({ params }: { params: Params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations('ContactPage');
 
   return (

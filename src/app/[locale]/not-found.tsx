@@ -1,5 +1,3 @@
-import { getTranslations } from 'next-intl/server';
-import { Metadata } from 'next';
 import {
   Card,
   CardDescription,
@@ -11,36 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/routing';
 import { ChevronRight } from 'lucide-react';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations('NotFoundPage.metadata');
-
-  return {
-    title: t('title'),
-    description: t('description'),
-    alternates: {
-      canonical: '/404',
-      languages: {
-        en: '/en/404',
-        tr: '/tr/404',
-      },
-    },
-    openGraph: {
-      title: t('title'),
-      description: t('description'),
-      url: '/404',
-      locale: locale === 'tr' ? 'tr_TR' : 'en_US',
-    },
-  };
-}
-
 export default async function NotFoundPage() {
-  const t = await getTranslations('NotFoundPage');
-
   return (
     <main className="container">
       <Card className="section">
@@ -48,16 +17,16 @@ export default async function NotFoundPage() {
           <CardHeader>
             <CardTitle>
               <h1 className="text-6xl font-bold">404</h1>
-              <p className="mt-4 text-2xl">{t('title')}</p>
+              <p className="mt-4 text-2xl">Page not found</p>
             </CardTitle>
             <CardDescription className="text-lg">
-              {t('description')}
+              The page you are looking for does not exist.
             </CardDescription>
           </CardHeader>
           <CardFooter className="justify-center">
             <Button asChild>
               <Link href="/">
-                {t('goHome')}
+                Go Home
                 <ChevronRight className="ml-2 h-4 w-4 animate-bounce-horizontal" />
               </Link>
             </Button>

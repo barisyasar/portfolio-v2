@@ -7,50 +7,36 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { useCallback } from 'react';
+import { useTranslations } from 'next-intl';
+import { useQueryState } from 'nuqs';
 
 interface SortSelectProps {
-  label: string;
-  newestLabel: string;
-  oldestLabel: string;
+  startTransition: (fn: () => void) => void;
+  isLoading: boolean;
 }
 
-export function SortSelect({
-  label,
-  newestLabel,
-  oldestLabel,
-}: SortSelectProps) {
-  const router = useRouter();
-
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
-  console.log(pathname);
-
-  const createQueryString = useCallback(
-    (name: string, value: string) => {
-      const params = new URLSearchParams(searchParams.toString());
-      params.set(name, value);
-      return params.toString();
-    },
-    [searchParams],
-  );
+export function SortSelect({ startTransition, isLoading }: SortSelectProps) {
+  const t = useTranslations('BlogPage');
+  const [sort, setSort] = useQueryState('sort', {
+    defaultValue: 'newest',
+    shallow: false,
+    startTransition,
+  });
 
   return (
     <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
-      <span className="text-sm text-muted-foreground">{label}:</span>
+      <span className="text-sm text-muted-foreground">{t('sortBy')}:</span>
       <Select
-        defaultValue={searchParams.get('sort') || 'newest'}
-        onValueChange={(value) => {
-          router.push(`${pathname}?${createQueryString('sort', value)}`);
-        }}
+        disabled={isLoading}
+        value={sort}
+        onValueChange={(value) => setSort(value)}
       >
         <SelectTrigger className="w-[140px]">
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="newest">{newestLabel}</SelectItem>
-          <SelectItem value="oldest">{oldestLabel}</SelectItem>
+          <SelectItem value="newest">{t('newest')}</SelectItem>
+          <SelectItem value="oldest">{t('oldest')}</SelectItem>
         </SelectContent>
       </Select>
     </div>

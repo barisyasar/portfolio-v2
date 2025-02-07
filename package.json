@@ -6,7 +6,7 @@
     "dev": "pnpm open-browser && next dev --turbopack",
     "open-browser": "open http://localhost:3000",
     "build": "next build",
-    "start": "next start --open",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {

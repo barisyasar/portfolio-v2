@@ -8,10 +8,12 @@ function HeaderLink({
   href,
   text,
   layoutId = 'navbar-active',
+  className,
 }: {
   href: string;
   text: string;
   layoutId?: string;
+  className?: string;
 }) {
   const t = useTranslations('Menu');
   const pathname = usePathname();
@@ -25,6 +27,7 @@ function HeaderLink({
     <Link
       className={cn(
         'relative z-0 p-2',
+        className,
         isActive(href) ? 'text-primary' : 'text-foreground',
       )}
       href={href as '/' | '/about' | '/services' | '/blogs' | '/contact'}
@@ -36,7 +39,11 @@ function HeaderLink({
           transition={{ type: 'spring', duration: 0.6 }}
         />
       )}
-      {t(text)}
+      {text === 'barisyasar' ? (
+        <div dangerouslySetInnerHTML={{ __html: t.raw(text) }} />
+      ) : (
+        t(text)
+      )}
     </Link>
   );
 }

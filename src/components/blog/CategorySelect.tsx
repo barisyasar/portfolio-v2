@@ -1,5 +1,4 @@
 'use client';
-
 import {
   Select,
   SelectContent,
@@ -7,36 +6,34 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { useCallback } from 'react';
 import BLOG_CATEGORIES from '@/constants/blogCategories';
+import { useTranslations } from 'next-intl';
+import { useQueryState } from 'nuqs';
 
 interface CategorySelectProps {
-  label: string;
+  startTransition: (fn: () => void) => void;
+  isLoading: boolean;
 }
 
-export function CategorySelect({ label }: CategorySelectProps) {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
-
-  const createQueryString = useCallback(
-    (name: string, value: string) => {
-      const params = new URLSearchParams(searchParams.toString());
-      params.set(name, value);
-      params.set('page', '1');
-      return params.toString();
-    },
-    [searchParams],
-  );
+export function CategorySelect({
+  startTransition,
+  isLoading,
+}: CategorySelectProps) {
+  const t = useTranslations('BlogPage');
+  const [category, setCategory] = useQueryState('category', {
+    defaultValue: 'all',
+    shallow: false,
+    startTransition,
+  });
 
   return (
     <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
-      <span className="text-sm text-muted-foreground">{label}:</span>
+      <span className="text-sm text-muted-foreground">{t('category')}:</span>
       <Select
-        defaultValue={'all'}
+        disabled={isLoading}
+        value={category}
         onValueChange={(value) => {
-          router.push(`${pathname}?${createQueryString('category', value)}`);
+          setCategory(value);
         }}
       >
         <SelectTrigger className="w-[140px]">

@@ -3,7 +3,7 @@ import { Roboto } from 'next/font/google';
 import '../globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -14,19 +14,24 @@ import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
 
+type Params = Promise<{ locale: string }>;
 const roboto = Roboto({
   weight: ['300', '400', '500', '700', '900'],
   subsets: ['latin'],
   display: 'swap',
 });
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export async function generateMetadata({
   params,
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations('Metadata');
+  const locale = (await params).locale;
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {
     title: {
@@ -76,12 +81,12 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Params;
 }) {
   const { locale } = await params;
   if (!locale || !routing.locales.includes(locale as Locale)) notFound();
-
   const messages = await getMessages();
+  setRequestLocale(locale);
 
   return (
     <html
@@ -89,9 +94,15 @@ export default async function LocaleLayout({
       suppressHydrationWarning
       style={{
         scrollBehavior: 'smooth',
+        scrollbarGutter: 'stable',
       }}
     >
-      <body className={`${roboto.className} antialiased`}>
+      <body
+        className={`${roboto.className} antialiased`}
+        style={{
+          scrollbarGutter: 'stable',
+        }}
+      >
         <NuqsAdapter>
           <ThemeProvider attribute="class" defaultTheme="system">
             <NextIntlClientProvider messages={messages}>

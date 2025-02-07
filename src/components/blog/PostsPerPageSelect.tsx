@@ -7,38 +7,48 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { useCallback } from 'react';
+import { useTranslations } from 'next-intl';
+import { parseAsInteger, useQueryState } from 'nuqs';
 
-const VALID_POSTS_PER_PAGE = [6, 10, 15];
+const VALID_POSTS_PER_PAGE = [1, 6, 10, 15];
 
 interface PostsPerPageSelectProps {
-  label: string;
+  startTransition: (fn: () => void) => void;
+  isLoading: boolean;
 }
 
-export function PostsPerPageSelect({ label }: PostsPerPageSelectProps) {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
+export function PostsPerPageSelect({
+  startTransition,
+  isLoading,
+}: PostsPerPageSelectProps) {
+  const t = useTranslations('BlogPage');
 
-  const createQueryString = useCallback(
-    (name: string, value: string) => {
-      const params = new URLSearchParams(searchParams.toString());
-      params.set(name, value);
-      return params.toString();
-    },
-    [searchParams],
+  const [postsPerPage, setPostsPerPage] = useQueryState(
+    'postsPerPage',
+    parseAsInteger.withDefault(1).withOptions({
+      shallow: false,
+      startTransition,
+    }),
+  );
+  const [page, setPage] = useQueryState(
+    'page',
+    parseAsInteger.withDefault(1).withOptions({
+      shallow: false,
+      startTransition,
+    }),
   );
 
   return (
     <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
-      <span className="text-sm text-muted-foreground">{label}:</span>
+      <span className="text-sm text-muted-foreground">
+        {t('postsPerPage')}:
+      </span>
       <Select
-        defaultValue={searchParams.get('postsPerPage') || '6'}
+        disabled={isLoading}
+        value={postsPerPage?.toString() ?? '1'}
         onValueChange={(value) => {
-          router.push(
-            `${pathname}?${createQueryString('postsPerPage', value)}`,
-          );
+          setPostsPerPage(Number(value));
+          setPage(1);
         }}
       >
         <SelectTrigger className="w-[100px]">

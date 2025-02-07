@@ -9,7 +9,7 @@ import {
 import Image from 'next/image';
 import PROFILE_IMG_2 from '../../../../public/profile_2.webp';
 import PROFILE_IMG_3 from '../../../../public/profile_3.webp';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import WordRotate from '@/components/ui/word-rotate';
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/routing';
@@ -17,13 +17,15 @@ import { ChevronRight } from 'lucide-react';
 import Experiences from '@/components/sections/home/Experinces';
 import { Metadata } from 'next';
 
+type Params = Promise<{ locale: string }>;
+
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Params;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations('AboutPage.metadata');
+  const t = await getTranslations({ locale, namespace: 'AboutPage.metadata' });
 
   return {
     title: t('title'),
@@ -44,8 +46,10 @@ export async function generateMetadata({
   };
 }
 
-async function About() {
-  const t = await getTranslations('AboutPage.recap');
+async function About(props: { params: Params }) {
+  const { locale } = await props.params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: 'AboutPage.recap' });
 
   return (
     <main className="container">

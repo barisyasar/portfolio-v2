@@ -1,4 +1,4 @@
-import { getBlogById } from '@/lib/blog';
+import { getAllBlogsIds, getBlogById } from '@/lib/blog';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import Image from 'next/image';
@@ -16,6 +16,14 @@ interface BlogDetailPageProps {
     locale: string;
     id: string;
   }>;
+}
+
+export async function generateStaticParams() {
+  const blogs = await getAllBlogsIds();
+  return blogs.map((blog) => ({
+    locale: blog.locale,
+    id: blog.id,
+  }));
 }
 
 export async function generateMetadata({

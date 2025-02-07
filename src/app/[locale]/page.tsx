@@ -3,15 +3,16 @@ import Hero from '@/components/sections/home/Hero';
 import Experinces from '@/components/sections/home/Experinces';
 import Recap from '@/components/sections/home/Recap';
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
+type Params = Promise<{ locale: string }>;
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Params;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations('HomePage.metadata');
+  const t = await getTranslations({ locale, namespace: 'HomePage.metadata' });
 
   return {
     title: t('title'),
@@ -32,7 +33,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function Home() {
+export default async function Home({ params }: { params: Params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <main className="container">
       <Hero />
