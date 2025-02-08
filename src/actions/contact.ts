@@ -1,32 +1,32 @@
-"use server";
+'use server';
 
-import { getContactFormSchema } from "@/lib/schemas/contact";
-import { sendEmail } from "@/lib/email";
-import { getTranslations } from "next-intl/server";
+import { getContactFormSchema } from '@/lib/schemas/contact';
+import { sendEmail } from '@/lib/email';
+import { getTranslations } from 'next-intl/server';
 
 export async function submitContact(formData: FormData) {
-  const t = await getTranslations("ContactPage.form");
+  const t = await getTranslations('ContactPage.form');
 
   try {
     const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      subject: formData.get("subject"),
-      message: formData.get("message"),
-      recaptchaToken: formData.get("recaptchaToken"),
+      name: formData.get('name'),
+      email: formData.get('email'),
+      subject: formData.get('subject'),
+      message: formData.get('message'),
+      recaptchaToken: formData.get('recaptchaToken'),
     };
 
     const validatedData = getContactFormSchema(t).parse(data);
 
     const recaptchaResponse = await fetch(
       `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${validatedData.recaptchaToken}`,
-      { method: "POST" }
+      { method: 'POST' },
     );
 
     const recaptchaData = await recaptchaResponse.json();
     if (!recaptchaData.success) {
       return {
-        errorKey: "validation.recaptcha",
+        errorKey: 'validation.recaptcha',
       };
     }
 
@@ -46,9 +46,9 @@ export async function submitContact(formData: FormData) {
 
     return { success: true };
   } catch (error) {
-    console.error("Contact form error:", error);
+    console.error('Contact form error:', error);
     return {
-      errorKey: "error",
+      errorKey: 'error',
     };
   }
 }

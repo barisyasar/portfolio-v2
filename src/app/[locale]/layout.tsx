@@ -13,6 +13,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 type Params = Promise<{ locale: string }>;
 const roboto = Roboto({
@@ -97,6 +98,7 @@ export default async function LocaleLayout({
         scrollbarGutter: 'stable',
       }}
     >
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GTM_ID!} />
       <body
         className={`${roboto.className} antialiased`}
         style={{
