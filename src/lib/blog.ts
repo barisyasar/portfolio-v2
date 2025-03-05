@@ -1,12 +1,14 @@
 import { db } from '@/db';
-import { eq, desc, asc, and, sql } from 'drizzle-orm';
-import { blogs, BlogPost } from '@/db/schema';
+import type { PrismaClient } from '@prisma/client';
 
-export type BlogPostWithStringDate = Omit<BlogPost, 'date'> & { date: string };
+type Blog = NonNullable<
+  Awaited<ReturnType<PrismaClient['blog']['findUnique']>>
+>;
+export type BlogPostWithStringDate = Omit<Blog, 'date'> & { date: string };
 
 export const getAllBlogsIds = async () => {
-  const result = await db.select().from(blogs);
-  return result.map((blog) => ({
+  const result = await db.blog.findMany();
+  return result.map((blog: Blog) => ({
     id: blog.id,
     locale: blog.locale,
   }));
@@ -17,10 +19,14 @@ export const getBlogById = async (
   locale: string,
 ): Promise<BlogPostWithStringDate | null> => {
   try {
-    const [result] = await db
-      .select()
-      .from(blogs)
-      .where(and(eq(blogs.id, id), eq(blogs.locale, locale)));
+    const result = await db.blog.findUnique({
+      where: {
+        id_locale: {
+          id,
+          locale,
+        },
+      },
+    });
 
     if (!result) return null;
 
@@ -46,43 +52,36 @@ export const getPaginatedBlogs = async ({
   category: string;
   sort: 'newest' | 'oldest';
 }) => {
-  function sleep(ms: number) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
-  // await sleep(3000);
   const offset = (page - 1) * postsPerPage;
 
-  let baseQuery = db.select().from(blogs).where(eq(blogs.locale, locale));
+  const where = {
+    locale,
+    ...(category !== 'all'
+      ? {
+          categories: {
+            has: category,
+          },
+        }
+      : {}),
+  };
 
-  if (category !== 'all') {
-    baseQuery = db
-      .select()
-      .from(blogs)
-      .where(
-        and(
-          eq(blogs.locale, locale),
-          sql`${blogs.categories} @> ARRAY[${category}]::text[]`,
-        ),
-      );
-  }
-
-  const query = baseQuery
-    .orderBy(sort === 'newest' ? desc(blogs.date) : asc(blogs.date))
-    .limit(postsPerPage)
-    .offset(offset);
-
-  const [blogResults, countResult] = await Promise.all([
-    query,
-    db
-      .select({ count: sql`count(*)::int` })
-      .from(blogs)
-      .where(eq(blogs.locale, locale)),
+  const [blogResults, totalBlogs] = await Promise.all([
+    db.blog.findMany({
+      where,
+      orderBy: {
+        date: sort === 'newest' ? 'desc' : 'asc',
+      },
+      skip: offset,
+      take: postsPerPage,
+    }),
+    db.blog.count({
+      where,
+    }),
   ]);
 
-  const totalBlogs = Number(countResult[0].count);
   const totalPages = Math.ceil(totalBlogs / postsPerPage);
 
-  const mappedBlogs = blogResults.map((blog) => ({
+  const mappedBlogs = blogResults.map((blog: Blog) => ({
     ...blog,
     date: blog.date.toISOString(),
   }));

@@ -92,15 +92,7 @@ async function BlogPage(props: { params: Params; searchParams: SearchParams }) {
   return (
     <main className="container">
       <Card className="section">
-        {data.blogs.length === 0 ? (
-          <div className="flex h-full items-center justify-center">
-            <p className="text-center text-sm text-muted-foreground">
-              No blogs found
-            </p>
-          </div>
-        ) : (
-          <BlogGrid blogs={data.blogs} totalPages={data.totalPages} />
-        )}
+        <BlogGrid blogs={data.blogs} totalPages={data.totalPages} />
       </Card>
     </main>
   );

@@ -1,13 +1,11 @@
-import { drizzle } from 'drizzle-orm/node-postgres';
-import { Pool } from 'pg';
-import * as schema from './schema';
+import { PrismaClient } from '@prisma/client';
 
-const pool = new Pool({
-  host: process.env.DB_HOST,
-  port: parseInt(process.env.DB_PORT || '5432'),
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-});
+declare global {
+  var prisma: PrismaClient | undefined;
+}
 
-export const db = drizzle(pool, { schema });
+export const db = globalThis.prisma || new PrismaClient();
+
+if (process.env.NODE_ENV !== 'production') {
+  globalThis.prisma = db;
+}

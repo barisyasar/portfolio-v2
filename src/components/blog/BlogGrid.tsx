@@ -44,7 +44,7 @@ export default function BlogGrid({
         <BlogGridSkeleton />
       ) : (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {blogs.map((blog) => (
+          {blogs?.map((blog) => (
             <Link
               href={{
                 pathname: '/blogs/[id]',
@@ -78,7 +78,7 @@ export default function BlogGrid({
                     <span>{blog.readingTime} min read</span>
                     <span>•</span>
                     <div className="flex flex-wrap gap-1">
-                      {blog.categories.map((category) => (
+                      {blog?.categories.map((category: string) => (
                         <span
                           key={category}
                           className="rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary"
@@ -94,6 +94,7 @@ export default function BlogGrid({
           ))}
         </div>
       )}
+      {blogs.length === 0 && <div>No blogs found</div>}
       <BlogPagination
         totalPages={totalPages}
         startTransition={startTransition}

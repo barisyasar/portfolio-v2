@@ -1,19 +1,9 @@
-import { drizzle } from 'drizzle-orm/node-postgres';
-import { Pool } from 'pg';
-import { blogs } from '../src/db/schema';
+import { PrismaClient } from '@prisma/client';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const pool = new Pool({
-  host: process.env.DB_HOST || 'localhost',
-  port: parseInt(process.env.DB_PORT || '5432'),
-  user: process.env.DB_USER || 'barisyasar',
-  password: process.env.DB_PASSWORD || '12345',
-  database: process.env.DB_NAME || 'portfolio',
-});
-
-const db = drizzle(pool);
+const prisma = new PrismaClient();
 
 function calculateReadingTime(content: string): number {
   const wordsPerMinute = 200;
@@ -23,19 +13,17 @@ function calculateReadingTime(content: string): number {
 
 async function insertTrBlog() {
   try {
-    const filePath = path.join(process.cwd(), 'src/constants/blogs/tr/1.md');
-    const fileContents = fs.readFileSync(filePath, 'utf8');
+    const blogPath = process.argv[2];
+    if (!blogPath) {
+      console.error('Please provide a blog file path');
+      process.exit(1);
+    }
+
+    const fileContents = fs.readFileSync(blogPath, 'utf8');
     const { data, content } = matter(fileContents);
 
-    // Handle categories properly
-    const categories = data.categories
-      ? Array.isArray(data.categories)
-        ? data.categories
-        : [data.categories]
-      : [];
-
     const blogPost = {
-      id: '1', // Using the file name as the ID
+      id: data.id,
       title: data.title,
       date: new Date(data.date),
       author: data.author || null,
@@ -44,19 +32,25 @@ async function insertTrBlog() {
       coverImage: data.coverImage,
       readingTime: calculateReadingTime(content).toString(),
       locale: 'tr',
-      categories: categories,
+      categories: data.categories,
     };
 
-    await db.insert(blogs).values(blogPost).onConflictDoUpdate({
-      target: blogs.id,
-      set: blogPost,
+    await prisma.blog.upsert({
+      where: {
+        id_locale: {
+          id: blogPost.id,
+          locale: blogPost.locale,
+        },
+      },
+      update: blogPost,
+      create: blogPost,
     });
 
-    console.log('Successfully inserted Turkish blog post');
+    console.log('Blog post inserted successfully!');
   } catch (error) {
     console.error('Error inserting blog post:', error);
   } finally {
-    await pool.end();
+    await prisma.$disconnect();
   }
 }
 
