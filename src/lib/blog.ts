@@ -7,11 +7,18 @@ type Blog = NonNullable<
 export type BlogPostWithStringDate = Omit<Blog, 'date'> & { date: string };
 
 export const getAllBlogsIds = async () => {
-  const result = await db.blog.findMany();
-  return result.map((blog: Blog) => ({
-    id: blog.id,
-    locale: blog.locale,
-  }));
+  try {
+    const result = await db.blog.findMany({
+      select: {
+        id: true,
+        locale: true,
+      },
+    });
+    return result;
+  } catch (error) {
+    console.error('Error fetching blog IDs:', error);
+    return [];
+  }
 };
 
 export const getBlogById = async (
