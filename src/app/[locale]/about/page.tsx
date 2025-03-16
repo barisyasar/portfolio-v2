@@ -60,6 +60,7 @@ async function About(props: { params: Params }) {
               src={PROFILE_IMG_3}
               alt="Barış Yaşar"
               priority
+              unoptimized
               quality={100}
               className="rounded"
               loading="eager"
@@ -92,6 +93,7 @@ async function About(props: { params: Params }) {
           <div className="card--5 float-left me-3 aspect-video w-32 rounded p-1 2xs:w-36 xs:w-40 sm:w-48 md:w-64 md:p-3">
             <Image
               src={PROFILE_IMG_2}
+              unoptimized
               alt="Barış Yaşar"
               priority
               quality={100}

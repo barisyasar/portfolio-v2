@@ -21,6 +21,7 @@ function Hero() {
               alt="Barış Yaşar"
               priority
               quality={100}
+              unoptimized
               className="rounded-full"
               loading="eager"
               placeholder="blur"
