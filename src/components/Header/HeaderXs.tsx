@@ -26,7 +26,12 @@ async function HeaderXs() {
         </Link>
         <Sheet>
           <SheetTrigger>
-            <Button variant="outline" asChild className="size-10 p-1">
+            <Button
+              name="menu-button"
+              variant="outline"
+              asChild
+              className="size-10 p-1"
+            >
               <AlignJustify />
             </Button>
           </SheetTrigger>

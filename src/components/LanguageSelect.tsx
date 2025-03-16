@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Select,
@@ -6,14 +6,14 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Locale, routing, usePathname, useRouter } from "@/i18n/routing";
-import { useLocale, useTranslations } from "next-intl";
-import { useParams } from "next/navigation";
-import { useTransition } from "react";
+} from '@/components/ui/select';
+import { Locale, routing, usePathname, useRouter } from '@/i18n/routing';
+import { useLocale, useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
+import { useTransition } from 'react';
 
 export default function LanguageSelect() {
-  const t = useTranslations("languages");
+  const t = useTranslations('languages');
   const local = useLocale();
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
@@ -26,8 +26,8 @@ export default function LanguageSelect() {
       router.replace(
         // @ts-expect-error -- TypeScript will validate that only known `params`
         { pathname, params },
-        { locale: nextLocale as Locale }
-      )
+        { locale: nextLocale as Locale },
+      ),
     );
   }
 
@@ -37,7 +37,7 @@ export default function LanguageSelect() {
       onValueChange={onSelectChange}
       disabled={isPending}
     >
-      <SelectTrigger className="capitalize w-28">
+      <SelectTrigger className="w-28 capitalize" name="language-select">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>

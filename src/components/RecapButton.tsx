@@ -11,6 +11,7 @@ function RecapButton() {
       }}
       variant={'link'}
       className="block h-12 w-12 p-0"
+      name="scroll-down"
     >
       <ChevronsDown className="!size-full animate-bounce" />
     </Button>

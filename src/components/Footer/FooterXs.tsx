@@ -26,7 +26,7 @@ async function FooterXs() {
       <CardHeader>
         <CardTitle>
           <Link href="/" className="text-2xl font-medium">
-            <h6>Barış Yaşar</h6>
+            Barış Yaşar
           </Link>
         </CardTitle>
       </CardHeader>

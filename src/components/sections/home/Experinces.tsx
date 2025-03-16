@@ -72,7 +72,7 @@ async function Experiences() {
             </Card>
           </BlurFade>
           <BlurFade
-            delay={0.75}
+            delay={0.5}
             direction="up"
             className="col-span-1 row-span-1"
           >

@@ -20,7 +20,7 @@ function FooterLg() {
           <div>
             <CardTitle>
               <Link href="/" className="text-xl font-medium">
-                <h6>Barış Yaşar</h6>
+                Barış Yaşar
               </Link>
             </CardTitle>
             <CardDescription className="text-sm">
