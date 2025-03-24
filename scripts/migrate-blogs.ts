@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { PrismaClient } from '@prisma/client';
+import { db } from '@/db';
 
 const BLOGS_DIRECTORY = path.join(process.cwd(), 'src/constants/blogs');
 
@@ -12,8 +12,6 @@ function calculateReadingTime(content: string): number {
 }
 
 async function migrateBlogs() {
-  const prisma = new PrismaClient();
-
   console.log('Starting blog migration...');
 
   const locales = fs.readdirSync(BLOGS_DIRECTORY);
@@ -47,7 +45,7 @@ async function migrateBlogs() {
         };
 
         try {
-          await prisma.blog.upsert({
+          await db.blog.upsert({
             where: {
               id_locale: {
                 id: blogPost.id,
@@ -67,7 +65,7 @@ async function migrateBlogs() {
       }
     }
   } finally {
-    await prisma.$disconnect();
+    await db.$disconnect();
   }
 
   console.log('Migration completed!');

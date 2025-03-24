@@ -1,9 +1,7 @@
-import { PrismaClient } from '@prisma/client';
+import { db } from '@/db';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-
-const prisma = new PrismaClient();
 
 function calculateReadingTime(content: string): number {
   const wordsPerMinute = 200;
@@ -35,7 +33,7 @@ async function insertTrBlog() {
       categories: data.categories,
     };
 
-    await prisma.blog.upsert({
+    await db.blog.upsert({
       where: {
         id_locale: {
           id: blogPost.id,
@@ -50,8 +48,8 @@ async function insertTrBlog() {
   } catch (error) {
     console.error('Error inserting blog post:', error);
   } finally {
-    await prisma.$disconnect();
+    await db.$disconnect();
   }
 }
 
-insertTrBlog().catch(console.error);
+insertTrBlog();
