@@ -19,11 +19,9 @@ export default function Error({
   reset: () => void;
 }) {
   useEffect(() => {
-    // Log the error to an error reporting service
     console.error(error);
   }, [error]);
 
-  // Determine if it's a Prisma error
   const isPrismaError =
     error.message?.includes('PrismaClientUnknownRequestError') ||
     error.message?.includes('ConnectorError');
