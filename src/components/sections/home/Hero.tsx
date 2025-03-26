@@ -20,8 +20,7 @@ function Hero() {
               src={PROFILE_IMG}
               alt="Barış Yaşar"
               priority
-              quality={100}
-              unoptimized
+              quality={80}
               className="rounded-full"
               loading="eager"
               placeholder="blur"
