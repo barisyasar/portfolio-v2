@@ -27,6 +27,7 @@ interface ShareMenuProps {
 }
 
 export function ShareMenu({ url, title }: ShareMenuProps) {
+  console.log(url);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

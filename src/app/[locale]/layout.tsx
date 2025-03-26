@@ -39,7 +39,7 @@ export async function generateMetadata({
       template: t('titleTemplate'),
     },
     description: t('defaultDescription'),
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL! + '/' + locale),
     alternates: {
       canonical: '/',
       languages: {
