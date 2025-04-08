@@ -19,8 +19,8 @@
   },
   "HomePage": {
     "recap": {
-      "A Quick Recap": "A Quick Recap",
-      "summaryText": "With 4 years of software experience and over 2 years of professional work experience, I am a <strong>full-stack developer</strong>. I have professional-level expertise in <strong>JavaScript</strong> and <strong>TypeScript</strong>. Currently, I am developing my experiences using <strong>Next</strong> and <strong>Node</strong>.",
+      "A Quick Recap": "Who is Barış Yaşar?",
+      "summaryText": "<strong>Barış Yaşar</strong> is a <strong>Full-Stack Developer</strong> with <strong>over 4 years of software development experience</strong> and <strong>more than 2 years of professional work background</strong>. He has deep knowledge of <strong>JavaScript</strong> and <strong>TypeScript</strong> technologies. Currently, he develops his projects using <strong>Next.js</strong> and <strong>Node.js</strong>. By leveraging <strong>modern web technologies</strong>.",
       "learnMore": "Learn more"
     },
     "experiences": {
@@ -41,7 +41,7 @@
       "getInTouchNow": "Get in touch now"
     },
     "metadata": {
-      "title": "Home | Baris Yasar",
+      "title": "Home",
       "description": "Full Stack Developer specializing in modern web technologies. Explore my portfolio and see how I can help bring your digital vision to life."
     }
   },
@@ -49,7 +49,7 @@
     "recap": {
       "webEnthusiast": "Web Enthusiast",
       "lifelongLearner": "Lifelong Learner",
-      "summary": "<p>As a graduate of the Computer Engineering program at <strong>Ted University</strong>, I have focused my career on software development. During my education, I completed two long-term internships; the first was at <strong>Altima</strong>, and the second was at <strong>Osi</strong>. Following my internships, I worked at <strong>Osi</strong> as a <strong>full-stack developer</strong> for over 2 years, contributing to significant experiences during that time.</p> <p>Currently, I am working at <strong>Oak Technology</strong> as a <strong>frontend developer</strong>, where I leverage modern technologies to develop user-focused solutions.</p>",
+      "summary": "<p>As a graduate of the Computer Engineering program at <strong>Ted University</strong>, I have focused my career on full-stack development. During my education, I completed two long-term internships; the first was at <strong>Altima</strong>, and the second was at <strong>Osi</strong>. Following my internships, I worked at <strong>Osi</strong> as a <strong>full-stack developer</strong> for over 2 years, contributing to significant experiences during that time.</p> <p>Currently, I am working at <strong>Oak Technology</strong> as a <strong>frontend developer</strong>, where I leverage modern technologies to develop user-focused solutions.</p>",
       "title2": "My Software Journey",
       "description2": "<p>Throughout my career in software development, I have taken on significant responsibilities in <strong>frontend</strong>, <strong>backend</strong>, and <strong>seo</strong>. With the experience gained from these projects, I have developed <strong>user-friendly websites</strong> and <strong>high-performance applications</strong>. I closely follow <strong>modern software technologies</strong> and implement the latest and best solutions in all my projects.</p> <p>My goal is to create <strong>high-quality and sustainable</strong> projects that best meet my clients' needs. I continue to grow and learn with each new project.</p>",
       "servicesText": "<p>I give professional services on <strong>frontend</strong>, <strong>backend</strong>, <strong>seo</strong> and more. You can look my services.</p>",
@@ -163,7 +163,7 @@
     "defaultTitle": "Baris Yasar - Full Stack Developer",
     "titleTemplate": "%s | Baris Yasar",
     "defaultDescription": "Full Stack Developer specializing in modern web technologies, building scalable and performant applications.",
-    "siteName": "Baris Yasar"
+    "siteName": "Baris Yasar - Full Stack Developer"
   },
   "NotFoundPage": {
     "title": "Page Not Found",

@@ -19,8 +19,8 @@
   },
   "HomePage": {
     "recap": {
-      "A Quick Recap": "Kısa Bir Özet",
-      "summaryText": "4 yıllık yazılım deneyimim ve 2 yılı aşkın profesyonel çalışma geçmişimle bir <strong>full-stack developer</strong> olarak kariyerime devam ediyorum. <strong>JavaScript</strong> ve <strong>TypeScript</strong> konularında derin bir bilgi birikimine sahibim. Şu anda projelerimi <strong>Next.js</strong> ve <strong>Node.js</strong> ile geliştiriyorum.",
+      "A Quick Recap": "Barış Yaşar Kimdir?",
+      "summaryText": "<strong>Barış Yaşar</strong>, <strong>4 yılı aşkın yazılım tecrübesine</strong> ve <strong>3 yılı aşkın profesyonel iş deneyimine</strong> sahip bir <strong>Full-Stack Developer</strong>'dır. <strong>JavaScript</strong> ve <strong>TypeScript</strong> teknolojilerinde derin bilgi sahibidir. Güncel olarak projelerini <strong>Next.js</strong> ve <strong>Node.js</strong> kullanarak geliştirmektedir.",
       "learnMore": "Daha fazlası"
     },
     "experiences": {
@@ -41,7 +41,7 @@
       "getInTouchNow": "İletişime geç"
     },
     "metadata": {
-      "title": "Anasayfa | Barış Yaşar",
+      "title": "Anasayfa",
       "description": "Modern web teknolojileri konusunda uzmanlaşmış Full Stack Developer. Dijital vizyonunuzu hayata geçirmek için portfolyomu inceleyin."
     }
   },
@@ -49,7 +49,7 @@
     "recap": {
       "webEnthusiast": "Web Meraklısı",
       "lifelongLearner": "Araştırmacı",
-      "summary": "<p>Ted Üniversitesi bilgisayar mühendisliği mezunu olarak, kariyerime yazılım alanında yön verdim. Eğitim sürecimde iki uzun dönem staj yaptım; bunlardan ilki <strong>Altima</strong>, diğeri ise <strong>Osi</strong> şirketinde gerçekleşti. Stajlarımın ardından, <strong>Osi</strong> bünyesinde <strong>full-stack developer</strong> olarak 2 yılı aşkın bir süre görev yaptım ve bu süreçte önemli projelerde yer aldım.</p><p>Şu anda <strong>Oak Technology</strong> şirketinde <strong>frontend developer</strong> olarak çalışıyor ve modern teknolojileri kullanarak kullanıcı odaklı çözümler geliştiriyorum.</p>",
+      "summary": "<p>Ted Üniversitesi bilgisayar mühendisliği mezunu olarak, kariyerime full-stack development alanında yön verdim. Eğitim sürecimde iki uzun dönem staj yaptım; bunlardan ilki <strong>Altima</strong>, diğeri ise <strong>Osi</strong> şirketinde gerçekleşti. Stajlarımın ardından, <strong>Osi</strong> bünyesinde <strong>full-stack developer</strong> olarak 2 yılı aşkın bir süre görev yaptım ve bu süreçte önemli projelerde yer aldım.</p><p>Şu anda <strong>Oak Technology</strong> şirketinde <strong>frontend developer</strong> olarak çalışıyor ve modern teknolojileri kullanarak kullanıcı odaklı çözümler geliştiriyorum.</p>",
       "title2": "Yazılım Yolculuğum",
       "description2": "<p>Yazılım geliştirme kariyerim boyunca, <strong>frontend</strong>, <strong>backend</strong> ve <strong>seo</strong> alanlarında önemli sorumluluklar üstlendim. Bu projelerden edindiğim deneyimle, <strong>kullanıcı dostu web siteleri</strong> ve <strong>yüksek performanslı uygulamalar</strong> geliştirdim. <strong>Modern yazılım teknolojilerini</strong> yakından takip ediyor ve tüm projelerimde en yeni ve en iyi çözümleri uyguluyorum.</p> <p>Amacım, müşterilerimin ihtiyaçlarını en iyi şekilde karşılayan <strong>kaliteli ve sürdürülebilir</strong> projeler üretmek. Her yeni projeyle birlikte büyümeye ve öğrenmeye devam ediyorum.</p>",
       "servicesText": "<p><strong>Frontend</strong>, <strong>backend</strong> ve <strong>seo</strong> konularında profesyonel hizmetler veriyorum. Hizmetlerime göz atabilirsiniz.</p>",
@@ -76,7 +76,7 @@
       "contact": "İletişim"
     },
     "techStack": {
-      "title": "Teknoloji Yığını",
+      "title": "Kullandığım Araçlar",
       "description": "Full-stack geliştirici olarak birçok kütüphane ve araç kullanıyorum. İşte en çok kullandıklarım.",
       "all": "Tümü",
       "frontend": "Frontend",
@@ -165,7 +165,7 @@
     "defaultTitle": "Barış Yaşar - Full Stack Geliştirici",
     "titleTemplate": "%s | Barış Yaşar",
     "defaultDescription": "Modern web teknolojileri konusunda uzmanlaşmış, ölçeklenebilir ve performanslı uygulamalar geliştiren Full Stack Developer.",
-    "siteName": "Barış Yaşar"
+    "siteName": "Barış Yaşar - Full Stack Geliştirici"
   },
   "NotFoundPage": {
     "title": "Sayfa Bulunamadı",
