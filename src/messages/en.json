@@ -20,7 +20,7 @@
   "HomePage": {
     "recap": {
       "A Quick Recap": "Who is Barış Yaşar?",
-      "summaryText": "<strong>Barış Yaşar</strong> is a <strong>Full-Stack Developer</strong> with <strong>over 4 years of software development experience</strong> and <strong>more than 3 years of professional work background</strong>. He has deep knowledge of <strong>JavaScript</strong> and <strong>TypeScript</strong> technologies. Currently, he develops his projects using <strong>Next.js</strong> and <strong>Node.js</strong>. By leveraging <strong>modern web technologies</strong>.",
+      "summaryText": "<strong>Barış Yaşar</strong> is a <strong>Full-Stack Developer</strong> with <strong>over 4 years of software development experience</strong> and <strong>more than 3 years of professional work background</strong>. He has deep knowledge of <strong>JavaScript</strong> and <strong>TypeScript</strong> technologies. Currently, he develops his projects using <strong>Next.js</strong> and <strong>Node.js</strong>.",
       "learnMore": "Learn more"
     },
     "experiences": {

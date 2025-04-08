@@ -20,7 +20,7 @@
   "HomePage": {
     "recap": {
       "A Quick Recap": "Barış Yaşar Kimdir?",
-      "summaryText": "<strong>Barış Yaşar</strong>, <strong>4 yılı aşkın yazılım tecrübesine</strong> ve <strong>3 yılı aşkın profesyonel iş deneyimine</strong> sahip bir <strong>Full-Stack Developer</strong>'dır. <strong>JavaScript</strong> ve <strong>TypeScript</strong> teknolojilerinde derin bilgi sahibidir. Güncel olarak projelerini <strong>Next.js</strong> ve <strong>Node.js</strong> kullanarak geliştirmektedir.",
+      "summaryText": "<strong>Barış Yaşar</strong>, <strong>4 yılı aşkın yazılım tecrübesine</strong> ve <strong>3 yılı aşkın profesyonel iş deneyimine</strong> sahip bir <strong>Full-Stack Developer</strong>'dır. <strong>JavaScript</strong> ve <strong>TypeScript</strong> teknolojilerinde bilgi sahibidir. Güncel olarak projelerini <strong>Next.js</strong> ve <strong>Node.js</strong> kullanarak geliştirmektedir.",
       "learnMore": "Daha fazlası"
     },
     "experiences": {
