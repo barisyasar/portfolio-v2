@@ -42,7 +42,7 @@
     },
     "metadata": {
       "title": "Anasayfa",
-      "description": "Modern web teknolojileri konusunda uzmanlaşmış Full Stack Developer. Dijital vizyonunuzu hayata geçirmek için portfolyomu inceleyin."
+      "description": "Next.js, Node.js ve TypeScript ile ölçeklenebilir web uygulamaları geliştiren Full Stack Developer. Hakkımda bilgi edinin."
     }
   },
   "AboutPage": {
@@ -58,7 +58,7 @@
 
     "metadata": {
       "title": "Hakkımda",
-      "description": "Modern web teknolojileri konusunda uzmanlaşmış bir Full Stack Developer olarak yolculuğum, yeteneklerim ve deneyimlerim hakkında daha fazla bilgi edinin."
+      "description": "Full Stack Developer olarak kariyerim, yeteneklerim ve deneyimlerim hakkında daha fazla bilgi edinin."
     }
   },
   "ServicesPage": {
@@ -164,7 +164,7 @@
   "Metadata": {
     "defaultTitle": "Barış Yaşar - Full Stack Geliştirici",
     "titleTemplate": "%s | Barış Yaşar",
-    "defaultDescription": "Modern web teknolojileri konusunda uzmanlaşmış, ölçeklenebilir ve performanslı uygulamalar geliştiren Full Stack Developer.",
+    "defaultDescription": "Next.js, Node.js ve TypeScript ile ölçeklenebilir web uygulamaları geliştiren Full Stack Developer. Hakkımda bilgi edinin.",
     "siteName": "Barış Yaşar - Full Stack Geliştirici"
   },
   "NotFoundPage": {
