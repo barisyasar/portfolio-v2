@@ -51,7 +51,6 @@ export async function generateMetadata({
       type: 'website',
       locale: locale === 'tr' ? 'tr_TR' : 'en_US',
       url: process.env.NEXT_PUBLIC_SITE_URL,
-      siteName: t('siteName'),
       title: t('defaultTitle'),
       description: t('defaultDescription'),
       images: [
