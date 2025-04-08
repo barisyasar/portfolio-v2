@@ -9,7 +9,7 @@
     "en": "English"
   },
   "Menu": {
-    "barisyasar": "<span>Barış</span>&nbsp;<span>Yaşar</span>",
+    "barisyasar": "<span class='font-extrabold'>Barış</span>&nbsp;<span class='font-light'>Yaşar</span>",
     "menu": "Menü",
     "home": "Anasayfa",
     "about": "Hakkımda",
