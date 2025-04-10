@@ -25,7 +25,7 @@ async function FooterXs() {
     <Card className="md:hidden">
       <CardHeader>
         <CardTitle>
-          <Link href="/" className="text-2xl font-medium">
+          <Link prefetch={false} href="/" className="text-2xl font-medium">
             Barış Yaşar
           </Link>
         </CardTitle>

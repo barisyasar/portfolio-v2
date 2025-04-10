@@ -93,7 +93,7 @@ async function Experiences() {
         <CardFooter className="flex-col items-start gap-2">
           <p className="text-muted-foreground">{t('servicesText')}</p>
           <Button asChild>
-            <Link href="/services">
+            <Link href="/services" prefetch={false}>
               {t('services')}{' '}
               <ChevronRight className="animate-bounce-horizontal" />
             </Link>

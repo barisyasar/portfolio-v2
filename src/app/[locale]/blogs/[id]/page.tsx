@@ -81,7 +81,7 @@ async function BlogDetailPage({ params }: BlogDetailPageProps) {
   return (
     <main className="container">
       <Button asChild className="mb-4">
-        <Link href="/blogs">
+        <Link href="/blogs" prefetch={false}>
           <ChevronLeft className="mr-2 animate-bounce-horizontal" />
           {t('backToBlogs')}
         </Link>

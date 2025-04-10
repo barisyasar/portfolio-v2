@@ -23,6 +23,7 @@ function FooterLink({
   };
   return (
     <Link
+      prefetch={false}
       className={cn(
         'relative px-2 py-1',
         isActive(href) ? 'text-primary' : 'text-foreground',

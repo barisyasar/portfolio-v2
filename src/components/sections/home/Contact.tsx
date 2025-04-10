@@ -27,7 +27,7 @@ async function Contact() {
             className="shadow-[0_0px_10px] shadow-primary"
             size="lg"
           >
-            <Link href="/contact">
+            <Link href="/contact" prefetch={false}>
               {t('getInTouchNow')}{' '}
               <ChevronRight className="animate-bounce-horizontal" />
             </Link>

@@ -25,6 +25,7 @@ function HeaderLink({
   };
   return (
     <Link
+      prefetch={false}
       className={cn(
         'relative z-0 p-2',
         className,

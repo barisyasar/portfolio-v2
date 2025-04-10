@@ -20,7 +20,7 @@ async function HeaderXs() {
   return (
     <Card className="md:hidden">
       <CardContent className="flex items-center justify-between">
-        <Link href="/" className="text-3xl font-extrabold">
+        <Link href="/" prefetch={false} className="text-3xl font-extrabold">
           <span className="font-extrabold">Barış</span>&nbsp;
           <span className="font-light">Yaşar</span>
         </Link>

@@ -46,6 +46,7 @@ export default function BlogGrid({
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {blogs?.map((blog) => (
             <Link
+              prefetch={false}
               href={{
                 pathname: '/blogs/[id]',
                 params: { id: blog.id },

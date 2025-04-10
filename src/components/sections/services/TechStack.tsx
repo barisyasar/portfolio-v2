@@ -35,7 +35,7 @@ async function TechStack() {
             className="shadow-[0_0px_10px] shadow-primary"
             size="lg"
           >
-            <Link href="/contact">
+            <Link href="/contact" prefetch={false}>
               {t('contact')}{' '}
               <ChevronRight className="animate-bounce-horizontal" />
             </Link>

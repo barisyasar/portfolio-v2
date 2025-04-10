@@ -28,7 +28,7 @@ async function Recap() {
           </CardHeader>
           <CardFooter>
             <Button asChild>
-              <Link href="/about">
+              <Link href="/about" prefetch={false}>
                 {t('learnMore')}{' '}
                 <ChevronRight className="animate-bounce-horizontal" />
               </Link>

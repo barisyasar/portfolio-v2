@@ -19,7 +19,7 @@ function FooterLg() {
         <div className="flex justify-between">
           <div>
             <CardTitle>
-              <Link href="/" className="text-xl font-medium">
+              <Link prefetch={false} href="/" className="text-xl font-medium">
                 Barış Yaşar
               </Link>
             </CardTitle>

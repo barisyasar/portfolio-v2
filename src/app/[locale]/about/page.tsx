@@ -117,7 +117,7 @@ async function About(props: { params: Params }) {
               dangerouslySetInnerHTML={{ __html: t.raw('servicesText') }}
             />
             <Button asChild>
-              <Link href="/services">
+              <Link href="/services" prefetch={false}>
                 {t('services')}{' '}
                 <ChevronRight className="animate-bounce-horizontal" />
               </Link>
