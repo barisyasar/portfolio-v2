@@ -21,7 +21,7 @@ export async function generateMetadata({
       canonical: '/services',
       languages: {
         en: '/en/services',
-        tr: '/tr/services',
+        tr: '/tr/hizmetler',
       },
     },
     openGraph: {

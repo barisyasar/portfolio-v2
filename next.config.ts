@@ -9,10 +9,10 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  expermental: {
+  experimental: {
     staleTimes: {
       dynamic: 300,
-      static: 240,
+      static: 300,
     },
   },
 };

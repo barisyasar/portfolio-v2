@@ -34,7 +34,7 @@ export async function generateMetadata({
       canonical: '/about',
       languages: {
         en: '/en/about',
-        tr: '/tr/about',
+        tr: '/tr/hakkimda',
       },
     },
     openGraph: {

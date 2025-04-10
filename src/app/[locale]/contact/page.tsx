@@ -27,7 +27,7 @@ export async function generateMetadata({
       canonical: '/contact',
       languages: {
         en: '/en/contact',
-        tr: '/tr/contact',
+        tr: '/tr/iletisim',
       },
     },
     openGraph: {
