@@ -9,6 +9,12 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  expermental: {
+    staleTimes: {
+      dynamic: 300,
+      static: 240,
+    },
+  },
 };
 
 module.exports = withNextIntl(nextConfig);
