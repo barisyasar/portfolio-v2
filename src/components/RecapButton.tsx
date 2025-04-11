@@ -1,5 +1,6 @@
 'use client';
 import { Button } from '@/components/ui/button';
+import { sendGAEvent } from '@next/third-parties/google';
 import { ChevronsDown } from 'lucide-react';
 
 function RecapButton() {
@@ -8,6 +9,9 @@ function RecapButton() {
       onClick={() => {
         const recap = document.getElementById('recap');
         recap?.scrollIntoView({ behavior: 'smooth' });
+        sendGAEvent('event', 'button-clicked', {
+          value: 'recap',
+        });
       }}
       variant={'link'}
       className="block h-12 w-12 p-0"

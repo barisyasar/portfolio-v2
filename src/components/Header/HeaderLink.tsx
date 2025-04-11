@@ -37,7 +37,7 @@ function HeaderLink({
         <motion.span
           layoutId={layoutId}
           className="absolute left-0 top-0 z-0 h-full w-full rounded-md bg-foreground/10"
-          transition={{ type: 'spring', duration: 0.6 }}
+          transition={{ type: 'spring', duration: 0.6, bounce: 0 }}
         />
       )}
       {text === 'barisyasar' ? (
