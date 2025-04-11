@@ -9,7 +9,7 @@ function RecapButton() {
       onClick={() => {
         const recap = document.getElementById('recap');
         recap?.scrollIntoView({ behavior: 'smooth' });
-        sendGAEvent('event', 'button-clicked', {
+        sendGAEvent('event', 'button_clicked', {
           value: 'recap',
         });
       }}
