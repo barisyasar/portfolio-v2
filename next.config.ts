@@ -14,21 +14,6 @@ const config: NextConfig = {
       static: 300,
     },
   },
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.barisyasar.com',
-          },
-        ],
-        destination: 'https://barisyasar.com/:path*',
-        permanent: true,
-      },
-    ];
-  },
 };
 
 export default withNextIntl(config);
