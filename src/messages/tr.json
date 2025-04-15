@@ -9,7 +9,7 @@
     "en": "English"
   },
   "Menu": {
-    "barisyasar": "<span class='font-extrabold'>Barış</span>&nbsp;<span class='font-light'>Yaşar</span>",
+    "barisyasar": "<span class='font-extrabold'>Barış</span>&nbsp;<span class='font-light'>YAŞAR</span>",
     "menu": "Menü",
     "home": "Anasayfa",
     "about": "Hakkımda",
@@ -19,8 +19,8 @@
   },
   "HomePage": {
     "recap": {
-      "A Quick Recap": "Barış Yaşar Kimdir?",
-      "summaryText": "<strong>Barış Yaşar</strong>, <strong>4 yılı aşkın yazılım tecrübesine</strong> ve <strong>3 yılı aşkın profesyonel iş deneyimine</strong> sahip bir <strong>Full-Stack Developer</strong>'dır. <strong>JavaScript</strong> ve <strong>TypeScript</strong> teknolojilerinde bilgi sahibidir. Güncel olarak projelerini <strong>Next.js</strong> ve <strong>Node.js</strong> kullanarak geliştirmektedir.",
+      "A Quick Recap": "Barış YAŞAR Kimdir?",
+      "summaryText": "<strong>Barış YAŞAR</strong>, <strong>4 yılı aşkın yazılım tecrübesine</strong> ve <strong>3 yılı aşkın profesyonel iş deneyimine</strong> sahip bir <strong>Full-Stack Developer</strong>'dır. <strong>JavaScript</strong> ve <strong>TypeScript</strong> teknolojilerinde bilgi sahibidir. Güncel olarak projelerini <strong>Next.js</strong> ve <strong>Node.js</strong> kullanarak geliştirmektedir.",
       "learnMore": "Daha fazlası"
     },
     "experiences": {
@@ -41,8 +41,8 @@
       "getInTouchNow": "İletişime geç"
     },
     "metadata": {
-      "title": "Anasayfa",
-      "description": "Next.js, Node.js ve TypeScript ile ölçeklenebilir web uygulamaları geliştiren Full Stack Developer. Hakkımda bilgi edinin."
+      "title": "Full-Stack Developer | Barış YAŞAR",
+      "description": "Barış YAŞAR, Next.js, Node.js ve TypeScript ile ölçeklenebilir web uygulamaları geliştiren Full Stack Developer olarak hizmet vermektedir."
     }
   },
   "AboutPage": {
@@ -57,7 +57,7 @@
     },
 
     "metadata": {
-      "title": "Hakkımda",
+      "title": "Barış YAŞAR Kimdir?",
       "description": "Full Stack Developer olarak kariyerim, yeteneklerim ve deneyimlerim hakkında daha fazla bilgi edinin."
     }
   },
@@ -162,17 +162,17 @@
     "socialMedia": "Sosyal Medya"
   },
   "Metadata": {
-    "defaultTitle": "Barış Yaşar - Full Stack Geliştirici",
-    "titleTemplate": "%s | Barış Yaşar",
-    "defaultDescription": "Next.js, Node.js ve TypeScript ile ölçeklenebilir web uygulamaları geliştiren Full Stack Developer. Hakkımda bilgi edinin.",
-    "siteName": "Barış Yaşar - Full Stack Geliştirici"
+    "defaultTitle": "Barış YAŞAR - Full Stack Geliştirici",
+    "titleTemplate": "%s | Barış YAŞAR",
+    "defaultDescription": "Barış YAŞAR, Next.js, Node.js ve TypeScript ile ölçeklenebilir web uygulamaları geliştiren Full Stack Developer olarak hizmet vermektedir.",
+    "siteName": "Barış YAŞAR - Full Stack Developer"
   },
   "NotFoundPage": {
     "title": "Sayfa Bulunamadı",
     "description": "Aradığınız sayfa mevcut değil veya taşınmış.",
     "goHome": "Anasayfaya Dön",
     "metadata": {
-      "title": "404 | Barış Yaşar",
+      "title": "404 | Barış YAŞAR",
       "description": "Sayfa bulunamadı. İstenen sayfa mevcut değil veya taşınmış."
     }
   }

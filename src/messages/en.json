@@ -41,8 +41,8 @@
       "getInTouchNow": "Get in touch now"
     },
     "metadata": {
-      "title": "Home",
-      "description": "Full Stack Developer specializing in modern web technologies. Explore my portfolio and see how I can help bring your digital vision to life."
+      "title": "Full-Stack Developer | Baris YASAR",
+      "description": "Baris Yasar, Next.js, Node.he serves as a Full Stack Developer who develops scalable web applications with js and TypeScript."
     }
   },
   "AboutPage": {
@@ -56,7 +56,7 @@
       "services": "Services"
     },
     "metadata": {
-      "title": "About",
+      "title": "Who is Baris YASAR?",
       "description": "Learn more about my journey, skills, and experience as a Full Stack Developer with expertise in modern web technologies."
     }
   },
@@ -160,17 +160,17 @@
     "socialMedia": "Social Media"
   },
   "Metadata": {
-    "defaultTitle": "Baris Yasar - Full Stack Developer",
-    "titleTemplate": "%s | Baris Yasar",
-    "defaultDescription": "Full Stack Developer specializing in modern web technologies, building scalable and performant applications.",
-    "siteName": "Baris Yasar - Full Stack Developer"
+    "defaultTitle": "Baris YASAR - Full Stack Developer",
+    "titleTemplate": "%s | Baris YASAR",
+    "defaultDescription": "Baris Yasar, Next.js, Node.he serves as a Full Stack Developer who develops scalable web applications with js and TypeScript.",
+    "siteName": "Baris YASAR - Full Stack Developer"
   },
   "NotFoundPage": {
     "title": "Page Not Found",
     "description": "The page you're looking for doesn't exist or has been moved.",
     "goHome": "Go Home",
     "metadata": {
-      "title": "404 | Baris Yasar",
+      "title": "404 | Baris YASAR",
       "description": "Page not found. The requested page doesn't exist or has been moved."
     }
   }
