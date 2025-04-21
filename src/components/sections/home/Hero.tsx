@@ -18,7 +18,7 @@ function Hero() {
           <div className="card--5 mx-auto size-60 rounded-full p-3 xs:size-72 xl:size-96">
             <Image
               src={PROFILE_IMG}
-              alt="Barış Yaşar"
+              alt="Barış YAŞAR"
               priority
               quality={80}
               className="rounded-full"
@@ -32,7 +32,7 @@ function Hero() {
           </div>
           <CardHeader>
             <CardTitle>
-              <h1 className="text-center text-4xl xs:text-5xl">Barış Yaşar</h1>
+              <h1 className="text-center text-4xl xs:text-5xl">Barış YAŞAR</h1>
             </CardTitle>
             <CardDescription className="text-center text-lg xs:text-2xl">
               Full-Stack Developer

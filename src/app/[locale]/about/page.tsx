@@ -61,7 +61,7 @@ async function About(props: { params: Params }) {
           <div className="card--5 float-right size-32 rounded p-1 2xs:size-36 xs:size-40 sm:size-48 md:ms-3 md:size-64 md:p-3">
             <Image
               src={PROFILE_IMG_3}
-              alt="Barış Yaşar"
+              alt="Barış YAŞAR"
               priority
               quality={100}
               className="rounded"
@@ -74,7 +74,7 @@ async function About(props: { params: Params }) {
           </div>
           <CardHeader>
             <CardTitle>
-              <h1 className="xs:text-3xl lg:text-4xl">Barış Yaşar</h1>
+              <h1 className="xs:text-3xl lg:text-4xl">Barış YAŞAR</h1>
             </CardTitle>
             <CardDescription>
               <WordRotate
@@ -95,7 +95,7 @@ async function About(props: { params: Params }) {
           <div className="card--5 float-left me-3 aspect-video w-32 rounded p-1 2xs:w-36 xs:w-40 sm:w-48 md:w-64 md:p-3">
             <Image
               src={PROFILE_IMG_2}
-              alt="Barış Yaşar"
+              alt="Barış YAŞAR"
               priority
               quality={100}
               className="rounded"

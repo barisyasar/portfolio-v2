@@ -66,6 +66,8 @@
     "description": "<p>Yazılım alanında çalıştığım süre boyunca, <strong>10'dan fazla başarılı projede</strong> yer aldım ve her birinde <strong>frontend</strong>, <strong>backend</strong> ve <strong>seo</strong> konularında önemli görevler üstlendim. Bu projelerde edindiğim tecrübe ile <strong>kullanıcı dostu web siteleri</strong> ve <strong>hızlı çalışan uygulamalar</strong> geliştirdim. <strong>Modern yazılım teknolojilerini</strong> yakından takip ediyor, her projeme en yeni ve en iyi çözümleri katıyorum.</p> <p>Amacım, müşterilerimin ihtiyaçlarını en iyi şekilde karşılayan, <strong>kaliteli ve uzun ömürlü</strong> projeler üretmek. Her yeni projede kendimi geliştirmeye ve öğrenmeye devam ediyorum.</p>",
     "servicesGrid": {
       "title": "Sizin İçin Neler Yapabilirim?",
+      "fullstackDevelopment": "Full-Stack Development",
+      "fullstackDevelopmentDescription": "<p>Kullanıcıların kolaylıkla erişebileceği, ölçeklenebilir web uygulamaları geliştiriyorum. Hem <strong>frontend</strong> hem de <strong>backend</strong> teknolojileri kullanarak etkili çözümler üretiyorum. Projelerim, <strong>yüksek trafikleri</strong> rahatlıkla karşılayacak şekilde tasarlandı ve kullanıcılar için hızlı, akıcı bir deneyim sunmayı hedefliyor.</p>",
       "frontendDevelopment": "Frontend Geliştirme",
       "frontendDevelopmentDescription": "<p><strong>Kullanıcı dostu web siteleri</strong> geliştiriyorum. Çözümlerim <strong>10.000'den fazla kullanıcı</strong> tarafından test edilmiş olup, <strong>Next.js</strong> ve <strong>React</strong> gibi modern teknolojiler kullanarak hızlı yükleme süreleri ve sorunsuz etkileşimler sağlıyor.</p>",
       "backendDevelopment": "Backend Geliştirme",
@@ -79,11 +81,16 @@
       "title": "Kullandığım Araçlar",
       "description": "Full-stack geliştirici olarak birçok kütüphane ve araç kullanıyorum. İşte en çok kullandıklarım.",
       "all": "Tümü",
+      "fullstack": "Full-Stack",
       "frontend": "Frontend",
       "backend": "Backend",
       "other": "Diğer",
       "visitContact": "Projenizi hayata geçirmeye hazır mısınız?",
-      "contact": "İletişim"
+      "contact": "İletişim",
+      "descriptionSeo": "Web sitelerini arama motorlarında daha iyi görünürlük ve performans için optimize etmekte kullandığım temel SEO araçları ve teknolojileri.",
+      "descriptionFrontend": "Kullanıcı dostu ve etkileşimli web arayüzleri oluşturmak için kullandığım modern frontend araçları.",
+      "descriptionFullstack": "Kullanıcı arayüzünden sunucu tarafı işlemlerine kadar, uçtan uca web uygulamaları geliştirmek için kullandığım araçlar.",
+      "descriptionBackend": "Güçlü, güvenli ve ölçeklenebilir uygulama arka planları oluşturmak için kullandığım sunucu tarafı teknolojileri ve araçları."
     },
     "metadata": {
       "title": "Hizmetler",
@@ -174,6 +181,65 @@
     "metadata": {
       "title": "404 | Barış YAŞAR",
       "description": "Sayfa bulunamadı. İstenen sayfa mevcut değil veya taşınmış."
+    }
+  },
+  "ServicesFullStackDevelopment": {
+    "introduction": {
+      "title": "Full-Stack Development",
+      "description": "<p>Full-stack geliştirici olarak, modern teknolojileri kullanarak kapsamlı web uygulamaları geliştiriyorum. Frontend tarafında, <strong>React</strong> ve <strong>Next.js</strong> kullanarak tüm cihazlarda mükemmel kullanıcı deneyimi sunan <strong>duyarlı ve etkileşimli arayüzler</strong> oluşturuyorum. Frontend çözümlerim, <strong>modern tasarım prensiplerini</strong>, <strong>çağdaş animasyonları</strong> ve <strong>optimize edilmiş performansı</strong> bir araya getirerek kusursuz bir kullanıcı deneyimi sunuyor.</p><p>Backend tarafında ise <strong>Node.js</strong> ve <strong>Express</strong> kullanarak <strong>güçlü ve ölçeklenebilir sunucu çözümleri</strong> geliştiriyorum. <strong>Güvenli kimlik doğrulama sistemleri</strong>, <strong>verimli veritabanı yönetimi</strong> ve yüksek trafiği kaldırabilen <strong>RESTful API'ler</strong> oluşturuyorum. Full-stack yaklaşımım, frontend ve backend arasında kusursuz bir entegrasyon sağlayarak, hem güçlü hem de sürdürülebilir <strong>yüksek performanslı uygulamalar</strong> ortaya çıkarıyor.</p>"
+    },
+    "metadata": {
+      "title": "Full-Stack Development",
+      "description": "Modern teknolojiler kullanarak uçtan uca web uygulaması geliştirme. Frontend ve backend'in güçlü, ölçeklenebilir çözümler için kusursuz entegrasyonu."
+    }
+  },
+  "ServicesFrontendDevelopment": {
+    "introduction": {
+      "title": "Frontend Development",
+      "description": "<p>Frontend development yaklaşımım, modern teknolojilerle <strong>kullanıcı deneyimleri</strong> yaratmaya odaklanıyor. <strong>Next.js</strong> ve <strong>React</strong> kullanarak <strong>user-friendly</strong> arayüzler oluşturma konusunda uzmanlaştım ve <strong>TailwindCSS</strong> ile piksel perfect tasarımlar sunuyorum. Her projemde <strong>optimize edilmiş performans</strong>, <strong>erişilebilirlik standartlarına uygunluk</strong> ve <strong>cross platform</strong> özellikleri bulunuyor.</p><p>Uygulamaların hızlı ve tepkisel hissetmesini sağlayan <strong>akıcı animasyonlar</strong>, <strong>durum yönetimi çözümleri</strong> ve <strong>verimli veri çekme stratejileri</strong> uygulamak benim için bir gurur kaynağı. Frontend kodlarım, <strong>bileşen yeniden kullanılabilirliği</strong>, <strong>TypeScript tip güvenliği</strong> ve <strong>kapsamlı testler</strong> gibi en iyi uygulamaları kullanarak uzun vadeli başarıyı garanti etmek için <strong>sürdürülebilirlik</strong> ve <strong>ölçeklenebilirlik</strong> göz önünde bulundurularak oluşturulmuştur.</p>"
+    },
+    "metadata": {
+      "title": "Frontend Development",
+      "description": "Modern teknolojiler ile etkileyici, duyarlı kullanıcı arayüzleri oluşturun. Olağanüstü kullanıcı deneyimleri için uzman React ve Next.js geliştirme."
+    }
+  },
+  "ServicesBackendDevelopment": {
+    "introduction": {
+      "title": "Backend Geliştirme",
+      "description": "<p>Yüksek performanslı web uygulamalarının temelini oluşturan <strong>güçlü ve ölçeklenebilir backend sistemleri</strong> geliştiriyorum. <strong>Node.js</strong> ve <strong>Express</strong> kullanarak oluşturduğum backend çözümlerim, <strong>güvenli RESTful API'ler</strong>, <strong>verimli veritabanı tasarımı</strong> ve yüksek trafik yüklerini minimum gecikmeyle işlemek için <strong>optimize edilmiş sorgu performansı</strong> içeriyor.</p><p>Backend geliştirme sürecimde güvenlik en önemli önceliğim olup, <strong>kapsamlı kimlik doğrulama sistemleri</strong>, <strong>veri doğrulama</strong> ve <strong>yaygın güvenlik açıklarına karşı koruma</strong> uygulamaları sunuyorum. Ayrıca, uygulama yeteneklerini genişletmek için <strong>sorunsuz üçüncü taraf entegrasyonları</strong>, <strong>ödeme geçitleri</strong> ve <strong>bulut hizmeti uygulamaları</strong> oluşturma konusunda uzmanlaştım. Tüm backend çözümlerim, üretim ortamlarında güvenilirliği sağlamak için <strong>sürdürülebilirlik</strong>, <strong>ölçeklenebilirlik</strong> ve <strong>kapsamlı hata yönetimi</strong> ile oluşturulmuştur.</p>"
+    },
+    "metadata": {
+      "title": "Backend Development",
+      "description": "Node.js ve Express ile güçlü sunucu taraflı çözümler geliştirin. Performans ve güvenilirlik için tasarlanmış güvenli, ölçeklenebilir backend sistemleri."
+    }
+  },
+  "ServicesSEO": {
+    "introduction": {
+      "title": "Arama Motoru Optimizasyonu",
+      "description": "<p>Web sitenizin görünürlüğünü artırmak ve organik trafik sağlamak için tasarlanmış kapsamlı <strong>arama motoru optimizasyonu</strong> hizmetleri sunuyorum. Yaklaşımım, iyi sıralamaya sahip ve ziyaretçileri dönüştüren web siteleri oluşturmak için <strong>teknik SEO temelleri</strong>, <strong>içerik optimizasyon stratejileri</strong> ve <strong>kullanıcı deneyimi iyileştirmeleri</strong>ni bir araya getiriyor.</p><p>SEO sürecim, <strong>Semrush</strong> ve <strong>Ahrefs</strong> gibi profesyonel araçlar kullanarak kapsamlı <strong>anahtar kelime araştırması</strong>, <strong>rakip analizi</strong> ve <strong>site denetimlerini</strong> içerir. Arama motoru sıralamalarını iyileştirmek için <strong>yapılandırılmış veri işaretlemesi</strong>, <strong>optimize edilmiş meta etiketleri</strong> ve <strong>performans iyileştirmeleri</strong> uyguluyorum. Ek olarak, hedef kitlenize özel <strong>içerik stratejileri</strong> geliştiriyor ve arama sonuçlarında sürekli başarı sağlamak için <strong>sürekli performans izleme</strong> hizmeti sunuyorum.</p>"
+    },
+    "metadata": {
+      "title": "Arama Motoru Optimizasyonu",
+      "description": "Uzman SEO hizmetleri ile çevrimiçi görünürlüğünüzü artırın. Veri odaklı stratejilerle sıralamaları iyileştirin, organik trafik sağlayın ve rakiplerinizden öne geçin."
+    }
+  },
+  "ServicesMarquee": {
+    "title": "Check Out My Other Services",
+    "fullStack": {
+      "title": "Full-Stack Development",
+      "description": "Hem frontend hem de backend geliştirme teknolojilerine hakim."
+    },
+    "frontend": {
+      "title": "Frontend Development",
+      "description": "Web siteleri için kullanıcı arayüzü tasarımı ve geliştirme."
+    },
+    "backend": {
+      "title": "Backend Development",
+      "description": "Sunucu tarafı mantığı, veritabanı yönetimi ve uygulama optimizasyonu."
+    },
+    "seo": {
+      "title": "Search Engine Optimization",
+      "description": "Web sitesi görünürlüğünü artırma, sıralamaları iyileştirme, organik trafik sağlama."
     }
   }
 }

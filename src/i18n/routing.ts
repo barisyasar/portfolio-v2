@@ -14,6 +14,22 @@ export const routing = defineRouting({
       tr: '/hizmetler',
       en: '/services',
     },
+    '/services/full-stack-development': {
+      tr: '/hizmetler/full-stack-development',
+      en: '/services/full-stack-development',
+    },
+    '/services/frontend-development': {
+      tr: '/hizmetler/frontend-development',
+      en: '/services/frontend-development',
+    },
+    '/services/backend-development': {
+      tr: '/hizmetler/backend-development',
+      en: '/services/backend-development',
+    },
+    '/services/search-engine-optimization': {
+      tr: '/hizmetler/arama-motoru-optimizasyonu',
+      en: '/services/search-engine-optimization',
+    },
     '/blogs': '/blogs',
     '/blogs/[id]': {
       tr: '/blogs/[id]',

@@ -22,7 +22,7 @@ async function HeaderXs() {
       <CardContent className="flex items-center justify-between">
         <Link href="/" prefetch={false} className="text-3xl font-extrabold">
           <span className="font-extrabold">Barış</span>&nbsp;
-          <span className="font-light">Yaşar</span>
+          <span className="font-light">YAŞAR</span>
         </Link>
         <Sheet>
           <SheetTrigger>

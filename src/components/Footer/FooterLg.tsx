@@ -20,7 +20,7 @@ function FooterLg() {
           <div>
             <CardTitle>
               <Link prefetch={false} href="/" className="text-xl font-medium">
-                Barış Yaşar
+                Barış YAŞAR
               </Link>
             </CardTitle>
             <CardDescription className="text-sm">
@@ -56,7 +56,7 @@ function FooterLg() {
       </CardContent>
       <CardFooter className="flex flex-col items-center gap-2">
         <SocialMedia className="[&_svg]:size-8" />
-        <p className="text-sm text-muted-foreground">© 2025 Barış Yaşar</p>
+        <p className="text-sm text-muted-foreground">© 2025 Barış YAŞAR</p>
       </CardFooter>
     </Card>
   );

@@ -7,12 +7,19 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
-function TechStackTabList() {
+function TechStackTabList({
+  defaultActiveCategory = 'all',
+  withFiltering = true,
+}: {
+  defaultActiveCategory?: string;
+  withFiltering?: boolean;
+}) {
   const t = useTranslations('ServicesPage.techStack');
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState(defaultActiveCategory);
 
   const categories = [
     { id: 'all', label: t('all') },
+    { id: 'fullstack', label: t('fullstack') },
     { id: 'frontend', label: t('frontend') },
     { id: 'backend', label: t('backend') },
     { id: 'seo', label: 'SEO' },
@@ -27,49 +34,51 @@ function TechStackTabList() {
   return (
     <div className="space-y-2 sm:space-y-3">
       {/* Filter Buttons */}
-      <div className="no-scrollbar relative overflow-x-auto">
-        <div className="card--5 inline-flex gap-2 whitespace-nowrap rounded-lg border p-1">
-          {categories.map((category) => (
-            <div key={category.id} className="relative">
-              <button
-                onClick={() => {
-                  setActiveCategory(category.id);
-                  const button = document.querySelector(
-                    `[data-category="${category.id}"]`,
-                  );
-                  button?.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'nearest',
-                    inline: 'center',
-                  });
-                }}
-                data-category={category.id}
-                className={cn(
-                  'relative z-20 whitespace-nowrap rounded-md px-4 py-2 text-sm font-medium transition-colors',
-                  activeCategory === category.id
-                    ? 'text-primary-foreground'
-                    : 'hover:text-primary',
+      {withFiltering && (
+        <div className="no-scrollbar relative overflow-x-auto">
+          <div className="card--5 inline-flex gap-2 whitespace-nowrap rounded-lg border p-1">
+            {categories.map((category) => (
+              <div key={category.id} className="relative">
+                <button
+                  onClick={() => {
+                    setActiveCategory(category.id);
+                    const button = document.querySelector(
+                      `[data-category="${category.id}"]`,
+                    );
+                    button?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'nearest',
+                      inline: 'center',
+                    });
+                  }}
+                  data-category={category.id}
+                  className={cn(
+                    'relative z-20 whitespace-nowrap rounded-md px-4 py-2 text-sm font-medium transition-colors',
+                    activeCategory === category.id
+                      ? 'text-primary-foreground'
+                      : 'hover:text-primary',
+                  )}
+                >
+                  {category.label}
+                </button>
+                {activeCategory === category.id && (
+                  <motion.div
+                    layoutId="activeTab"
+                    className="absolute inset-0 z-10 rounded-md bg-primary"
+                    transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
+                  />
                 )}
-              >
-                {category.label}
-              </button>
-              {activeCategory === category.id && (
-                <motion.div
-                  layoutId="activeTab"
-                  className="absolute inset-0 z-10 rounded-md bg-primary"
-                  transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-                />
-              )}
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Tech Grid */}
       <div>
-        <div className="grid grid-cols-2 gap-2 2xs:grid-cols-3 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 [&_svg]:mx-auto [&_svg]:size-12">
+        <ul className="grid grid-cols-2 gap-2 2xs:grid-cols-3 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 [&_svg]:mx-auto [&_svg]:size-12">
           {filteredTechs.map((tech) => (
-            <motion.div
+            <motion.li
               key={tech.name}
               layout
               initial={{ opacity: 0, scale: 0.8 }}
@@ -89,9 +98,9 @@ function TechStackTabList() {
                   </CardTitle>
                 </CardHeader>
               </Card>
-            </motion.div>
+            </motion.li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );

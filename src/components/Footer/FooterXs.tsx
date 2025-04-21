@@ -26,7 +26,7 @@ async function FooterXs() {
       <CardHeader>
         <CardTitle>
           <Link prefetch={false} href="/" className="text-2xl font-medium">
-            Barış Yaşar
+            Barış YAŞAR
           </Link>
         </CardTitle>
       </CardHeader>
@@ -38,39 +38,19 @@ async function FooterXs() {
               <nav className="flex-1">
                 <ul className="flex flex-col gap-2">
                   <li>
-                    <FooterLink
-                      href="/"
-                      text={'home'}
-                      layoutId="footer-link-active-xs"
-                    />
+                    <FooterLink href="/" text={'home'} />
                   </li>
                   <li>
-                    <FooterLink
-                      href="/about"
-                      text={'about'}
-                      layoutId="footer-link-active-xs"
-                    />
+                    <FooterLink href="/about" text={'about'} />
                   </li>
                   <li>
-                    <FooterLink
-                      href="/services"
-                      text={'services'}
-                      layoutId="footer-link-active-xs"
-                    />
+                    <FooterLink href="/services" text={'services'} />
                   </li>
                   <li>
-                    <FooterLink
-                      href="/blogs"
-                      text={'blogs'}
-                      layoutId="footer-link-active-xs"
-                    />
+                    <FooterLink href="/blogs" text={'blogs'} />
                   </li>
                   <li>
-                    <FooterLink
-                      href="/contact"
-                      text={'contact'}
-                      layoutId="footer-link-active-xs"
-                    />
+                    <FooterLink href="/contact" text={'contact'} />
                   </li>
                 </ul>
               </nav>
@@ -89,7 +69,7 @@ async function FooterXs() {
           <ThemeToggle />
           <LanguageSelect />
         </div>
-        <div className="text-sm text-muted-foreground">© 2025 Barış Yaşar</div>
+        <div className="text-sm text-muted-foreground">© 2025 Barış YAŞAR</div>
       </CardFooter>
     </Card>
   );

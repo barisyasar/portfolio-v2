@@ -35,37 +35,37 @@ export const ALL_TECHS = [
   {
     name: 'Next',
     icon: NextIcon,
-    categories: ['frontend'],
+    categories: ['fullstack', 'frontend'],
   },
   {
     name: 'React',
     icon: ReactIcon,
-    categories: ['frontend'],
+    categories: ['fullstack', 'frontend'],
   },
   {
     name: 'Redux',
     icon: ReduxIcon,
-    categories: ['frontend'],
+    categories: ['fullstack', 'frontend'],
   },
   {
     name: 'TypeScript',
     icon: TypeScriptIcon,
-    categories: ['frontend', 'backend'],
+    categories: ['fullstack', 'frontend', 'backend'],
   },
   {
     name: 'Express',
     icon: ExpressIcon,
-    categories: ['backend'],
+    categories: ['fullstack', 'backend'],
   },
   {
     name: 'Apollo',
     icon: ApolloIcon,
-    categories: ['frontend', 'backend'],
+    categories: ['fullstack', 'frontend', 'backend'],
   },
   {
     name: 'AWS',
     icon: AwsIcon,
-    categories: ['backend'],
+    categories: ['fullstack', 'backend'],
   },
   {
     name: 'MongoDB',
@@ -80,22 +80,22 @@ export const ALL_TECHS = [
   {
     name: 'Node',
     icon: NodeIcon,
-    categories: ['backend'],
+    categories: ['fullstack', 'backend'],
   },
   {
     name: 'SWR',
     icon: SwrIcon,
-    categories: ['frontend'],
+    categories: ['fullstack', 'frontend'],
   },
   {
     name: 'ReactQuery',
     icon: ReactQueryIcon,
-    categories: ['frontend'],
+    categories: ['fullstack', 'frontend'],
   },
   {
     name: 'GraphQL',
     icon: GraphQlIcon,
-    categories: ['frontend'],
+    categories: ['fullstack', 'frontend'],
   },
   {
     name: 'Git',
@@ -110,42 +110,42 @@ export const ALL_TECHS = [
   {
     name: 'Framer',
     icon: FramerMotionIcon,
-    categories: ['frontend'],
+    categories: ['fullstack', 'frontend'],
   },
   {
     name: 'Tailwind',
     icon: TailwindIcon,
-    categories: ['frontend'],
+    categories: ['fullstack', 'frontend'],
   },
   {
     name: 'Sass',
     icon: SassIcon,
-    categories: ['frontend'],
+    categories: ['fullstack', 'frontend'],
   },
   {
     name: 'Material UI',
     icon: MaterialUiIcon,
-    categories: ['frontend'],
+    categories: ['fullstack', 'frontend'],
   },
   {
     name: 'ShadCN',
     icon: ShadcnIcon,
-    categories: ['frontend'],
+    categories: ['fullstack', 'frontend'],
   },
   {
     name: 'PayPal',
     icon: PaypalIcon,
-    categories: ['backend'],
+    categories: ['fullstack', 'backend'],
   },
   {
     name: 'Stripe',
     icon: StripeIcon,
-    categories: ['backend'],
+    categories: ['fullstack', 'backend'],
   },
   {
     name: 'Iyzico',
     icon: IyzicoIcon,
-    categories: ['backend'],
+    categories: ['fullstack', 'backend'],
   },
   {
     name: 'Semrush',
