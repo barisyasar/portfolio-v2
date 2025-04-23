@@ -20,7 +20,11 @@ export async function generateMetadata({
     title: t('title'),
     description: t('description'),
     alternates: {
-      canonical: '/services/search-engine-optimization',
+      canonical:
+        locale === 'en'
+          ? '/services/search-engine-optimization'
+          : '/hizmetler/arama-motoru-optimizasyonu',
+
       languages: {
         en: '/en/services/search-engine-optimization',
         tr: '/tr/hizmetler/search-engine-optimization',

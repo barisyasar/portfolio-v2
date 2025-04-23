@@ -34,7 +34,7 @@ export async function generateMetadata({
     description: t('description'),
 
     alternates: {
-      canonical: '/about',
+      canonical: locale === 'en' ? '/about' : '/hakkimda',
       languages: {
         en: '/en/about',
         tr: '/tr/hakkimda',

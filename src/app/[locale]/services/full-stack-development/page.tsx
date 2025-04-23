@@ -25,7 +25,11 @@ export async function generateMetadata({
     title: t('title'),
     description: t('description'),
     alternates: {
-      canonical: '/services/full-stack-development',
+      canonical:
+        locale === 'en'
+          ? '/services/full-stack-development'
+          : '/hizmetler/full-stack-development',
+
       languages: {
         en: '/en/services/full-stack-development',
         tr: '/tr/hizmetler/full-stack-development',

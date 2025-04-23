@@ -25,7 +25,11 @@ export async function generateMetadata({
     title: t('title'),
     description: t('description'),
     alternates: {
-      canonical: '/services/backend-development',
+      canonical:
+        locale === 'en'
+          ? '/services/backend-development'
+          : '/hizmetler/backend-development',
+
       languages: {
         en: '/en/services/backend-development',
         tr: '/tr/hizmetler/backend-development',

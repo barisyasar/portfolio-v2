@@ -79,7 +79,7 @@
     },
     "techStack": {
       "title": "Kullandığım Araçlar",
-      "description": "Full-stack geliştirici olarak birçok kütüphane ve araç kullanıyorum. İşte en çok kullandıklarım.",
+      "description": "Full-stack developer olarak birçok kütüphane ve araç kullanıyorum. İşte en çok kullandıklarım.",
       "all": "Tümü",
       "fullstack": "Full-Stack",
       "frontend": "Frontend",
@@ -186,17 +186,17 @@
   "ServicesFullStackDevelopment": {
     "introduction": {
       "title": "Full-Stack Development",
-      "description": "<p>Full-stack geliştirici olarak, modern teknolojileri kullanarak kapsamlı web uygulamaları geliştiriyorum. Frontend tarafında, <strong>React</strong> ve <strong>Next.js</strong> kullanarak tüm cihazlarda mükemmel kullanıcı deneyimi sunan <strong>duyarlı ve etkileşimli arayüzler</strong> oluşturuyorum. Frontend çözümlerim, <strong>modern tasarım prensiplerini</strong>, <strong>çağdaş animasyonları</strong> ve <strong>optimize edilmiş performansı</strong> bir araya getirerek kusursuz bir kullanıcı deneyimi sunuyor.</p><p>Backend tarafında ise <strong>Node.js</strong> ve <strong>Express</strong> kullanarak <strong>güçlü ve ölçeklenebilir sunucu çözümleri</strong> geliştiriyorum. <strong>Güvenli kimlik doğrulama sistemleri</strong>, <strong>verimli veritabanı yönetimi</strong> ve yüksek trafiği kaldırabilen <strong>RESTful API'ler</strong> oluşturuyorum. Full-stack yaklaşımım, frontend ve backend arasında kusursuz bir entegrasyon sağlayarak, hem güçlü hem de sürdürülebilir <strong>yüksek performanslı uygulamalar</strong> ortaya çıkarıyor.</p>"
+      "description": "<p>Full-stack developer olarak, modern teknolojileri kullanarak kapsamlı web uygulamaları geliştiriyorum. Frontend tarafında <strong>React</strong> ve <strong>Next.js</strong> kullanarak tüm cihazlarla uyumlu <strong>user-friendly</strong> websiteleri geliştiriyorum. Websitelerimin <strong>modern, minimal</strong> ve <strong>yüksek performanslı</strong> olmasına özen gösteriyorum.</p><p>Backend tarafında ise <strong>Node.js</strong> ve <strong>Express</strong> kullanarak <strong>scalable</strong> çözümler üretiyorum. <strong>Güvenli, yüksek trafik kaldırabilen ve hızlı</strong> backendler geliştiriyorum. Full-stack yaklaşımım, frontend ve backend arasında kusursuz bir entegrasyon sağlayarak, hem güçlü hem de sürdürülebilir <strong>yüksek performanslı uygulamalar</strong> ortaya çıkarıyor.</p>"
     },
     "metadata": {
       "title": "Full-Stack Development",
-      "description": "Modern teknolojiler kullanarak uçtan uca web uygulaması geliştirme. Frontend ve backend'in güçlü, ölçeklenebilir çözümler için kusursuz entegrasyonu."
+      "description": "Modern teknolojiler kullanarak uçtan uca web uygulaması geliştirme. User-friendly tasarımlar, ölçeklenebilir ve hızlı backendler."
     }
   },
   "ServicesFrontendDevelopment": {
     "introduction": {
       "title": "Frontend Development",
-      "description": "<p>Frontend development yaklaşımım, modern teknolojilerle <strong>kullanıcı deneyimleri</strong> yaratmaya odaklanıyor. <strong>Next.js</strong> ve <strong>React</strong> kullanarak <strong>user-friendly</strong> arayüzler oluşturma konusunda uzmanlaştım ve <strong>TailwindCSS</strong> ile piksel perfect tasarımlar sunuyorum. Her projemde <strong>optimize edilmiş performans</strong>, <strong>erişilebilirlik standartlarına uygunluk</strong> ve <strong>cross platform</strong> özellikleri bulunuyor.</p><p>Uygulamaların hızlı ve tepkisel hissetmesini sağlayan <strong>akıcı animasyonlar</strong>, <strong>durum yönetimi çözümleri</strong> ve <strong>verimli veri çekme stratejileri</strong> uygulamak benim için bir gurur kaynağı. Frontend kodlarım, <strong>bileşen yeniden kullanılabilirliği</strong>, <strong>TypeScript tip güvenliği</strong> ve <strong>kapsamlı testler</strong> gibi en iyi uygulamaları kullanarak uzun vadeli başarıyı garanti etmek için <strong>sürdürülebilirlik</strong> ve <strong>ölçeklenebilirlik</strong> göz önünde bulundurularak oluşturulmuştur.</p>"
+      "description": "<p>Frontend development yaklaşımım, modern teknolojilerle <strong>kullanıcı deneyimleri</strong> yaratmaya odaklanıyor. <strong>Next.js</strong> ve <strong>React</strong> kullanarak <strong>user-friendly</strong> arayüzler oluşturuyorum ve <strong>TailwindCSS</strong> ile piksel perfect tasarımlar sunuyorum. Her projemde <strong>optimize edilmiş performans</strong>, <strong>erişilebilirlik standartlarına uygunluk</strong> ve <strong>cross platform</strong> özellikleri bulunuyor.</p><p> Kullanıcı etkileşimlerine <strong>anında tepki veren, yüksek performanslı animasyonlar</strong>; <strong>tutarlı ve ölçeklenebilir durum yönetimi çözümleri</strong>; ayrıca <strong>minimum gecikmeyle veri getiren verimli fetch stratejileri</strong> uygulamak benim için öncelikli. Frontend mimarimi, <strong>yeniden kullanılabilir bileşen yapıları</strong>, <strong>TypeScript ile sağlanan statik tip kontrolü</strong> ve <strong>kapsamlı testlerle</strong> destekleyerek <strong>sürdürülebilirlik</strong> ve <strong>ölçeklenebilirliği</strong> merkeze alarak inşa ediyorum. </p>"
     },
     "metadata": {
       "title": "Frontend Development",
@@ -206,7 +206,7 @@
   "ServicesBackendDevelopment": {
     "introduction": {
       "title": "Backend Geliştirme",
-      "description": "<p>Yüksek performanslı web uygulamalarının temelini oluşturan <strong>güçlü ve ölçeklenebilir backend sistemleri</strong> geliştiriyorum. <strong>Node.js</strong> ve <strong>Express</strong> kullanarak oluşturduğum backend çözümlerim, <strong>güvenli RESTful API'ler</strong>, <strong>verimli veritabanı tasarımı</strong> ve yüksek trafik yüklerini minimum gecikmeyle işlemek için <strong>optimize edilmiş sorgu performansı</strong> içeriyor.</p><p>Backend geliştirme sürecimde güvenlik en önemli önceliğim olup, <strong>kapsamlı kimlik doğrulama sistemleri</strong>, <strong>veri doğrulama</strong> ve <strong>yaygın güvenlik açıklarına karşı koruma</strong> uygulamaları sunuyorum. Ayrıca, uygulama yeteneklerini genişletmek için <strong>sorunsuz üçüncü taraf entegrasyonları</strong>, <strong>ödeme geçitleri</strong> ve <strong>bulut hizmeti uygulamaları</strong> oluşturma konusunda uzmanlaştım. Tüm backend çözümlerim, üretim ortamlarında güvenilirliği sağlamak için <strong>sürdürülebilirlik</strong>, <strong>ölçeklenebilirlik</strong> ve <strong>kapsamlı hata yönetimi</strong> ile oluşturulmuştur.</p>"
+      "description": "<p><strong>Node.js ve Express</strong> ile <strong>güçlü ve ölçeklenebilir backend sistemleri</strong> geliştiriyorum. Backend çözümlerim <strong>veritabanı tasarımı</strong> ve <strong>yüksek trafik altında düşük gecikmeli sorgular</strong> üzerine kurulu. </p> <p>Geliştirme sürecinde <strong>kimlik doğrulama</strong>, <strong>veri doğrulama</strong> ve <strong>güvenlik önlemleri</strong> önceliğim. Ayrıca <strong>ödeme sistemleri</strong> ve <strong>bulut hizmetleri</strong>yle uygulamaları sorunsuz şekilde genişletiyorum. </p>"
     },
     "metadata": {
       "title": "Backend Development",
