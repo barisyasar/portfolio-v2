@@ -66,7 +66,7 @@ async function BackendDevelopment({ params }: { params: Params }) {
               icon: <ExpressIcon />,
             },
             {
-              title: 'React',
+              title: 'PostgreSQL',
               icon: <PostgreIcon />,
             },
           ]}
