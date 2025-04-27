@@ -10,6 +10,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { en: '/about/', tr: '/hakkimda/' },
     { en: '/blogs/', tr: '/blog/' },
     { en: '/services/', tr: '/hizmetler/' },
+    { en: '/services/', tr: '/hizmetler/' },
+    {
+      en: '/services/full-stack-development/',
+      tr: '/hizmetler/full-stack-development/',
+    },
+    {
+      en: '/services/frontend-development/',
+      tr: '/hizmetler/frontend-development/',
+    },
+    {
+      en: '/services/backend-development/',
+      tr: '/hizmetler/backend-development/',
+    },
+    {
+      en: '/services/search-engine-optimization/',
+      tr: '/hizmetler/arama-motoru-optimizasyonu/',
+    },
     { en: '/contact/', tr: '/iletisim/' },
   ];
 

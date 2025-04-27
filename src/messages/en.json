@@ -227,9 +227,7 @@
   },
   "Metadata": {
     "defaultTitle": "Baris YASAR - Full Stack Developer",
-    "titleTemplate": "%s | Baris YASAR",
-    "defaultDescription": "Baris Yasar, Next.js, Node.he serves as a Full Stack Developer who develops scalable web applications with js and TypeScript.",
-    "siteName": "Baris YASAR - Full Stack Developer"
+    "defaultDescription": "Baris Yasar, Next.js, Node.he serves as a Full Stack Developer who develops scalable web applications with js and TypeScript."
   },
   "NotFoundPage": {
     "title": "Page Not Found",

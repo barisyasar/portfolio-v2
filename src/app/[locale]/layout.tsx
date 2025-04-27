@@ -13,6 +13,7 @@ import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import MailButton from '@/components/MailButton';
 
 type Params = Promise<{ locale: string }>;
 const roboto = Roboto({
@@ -34,10 +35,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {
-    title: {
-      default: t('defaultTitle'),
-      template: t('titleTemplate'),
-    },
+    title: t('defaultTitle'),
     description: t('defaultDescription'),
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL! + '/' + locale),
     alternates: {
@@ -110,6 +108,7 @@ export default async function LocaleLayout({
               {children}
 
               <Footer />
+              <MailButton />
               <ScrollToTop />
               <Toaster />
             </NextIntlClientProvider>

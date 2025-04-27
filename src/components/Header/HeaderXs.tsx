@@ -1,8 +1,10 @@
+'use client';
 import { AlignJustify } from 'lucide-react';
 import { Card, CardContent } from '../ui/card';
 import {
   Sheet,
   SheetContent,
+  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -10,12 +12,20 @@ import {
 import { Button } from '../ui/button';
 import ThemeToggle from '../ThemeToggle';
 import LanguageSelect from '../LanguageSelect';
-import { getTranslations } from 'next-intl/server';
 import HeaderLink from './HeaderLink';
 import { Link } from '@/i18n/routing';
+import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 
-async function HeaderXs() {
-  const t = await getTranslations('Menu');
+function HeaderXs() {
+  const t = useTranslations('Menu');
+  const [open, setOpen] = useState(false);
+
+  const pathname = usePathname();
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   return (
     <Card className="md:hidden">
@@ -24,7 +34,8 @@ async function HeaderXs() {
           <span className="font-extrabold">Barış</span>&nbsp;
           <span className="font-light">YAŞAR</span>
         </Link>
-        <Sheet>
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetDescription className="sr-only">Menu</SheetDescription>
           <SheetTrigger>
             <Button
               name="menu-button"

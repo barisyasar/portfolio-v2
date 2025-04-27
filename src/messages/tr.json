@@ -20,7 +20,7 @@
   "HomePage": {
     "recap": {
       "A Quick Recap": "Barış YAŞAR Kimdir?",
-      "summaryText": "<strong>Barış YAŞAR</strong>, <strong>4 yılı aşkın yazılım tecrübesine</strong> ve <strong>3 yılı aşkın profesyonel iş deneyimine</strong> sahip bir <strong>Full-Stack Developer</strong>'dır. <strong>JavaScript</strong> ve <strong>TypeScript</strong> teknolojilerinde bilgi sahibidir. Güncel olarak projelerini <strong>Next.js</strong> ve <strong>Node.js</strong> kullanarak geliştirmektedir.",
+      "summaryText": "<strong>Barış YAŞAR</strong>, <strong>4 yılı aşkın yazılım tecrübesine</strong> ve <strong>3 yılı aşan profesyonel iş deneyimine</strong> sahip bir <strong>Full-Stack Developer</strong>'dır. <strong>JavaScript</strong> ve <strong>TypeScript</strong> teknolojilerinde bilgi sahibidir. Güncel olarak projelerini <strong>Next.js</strong> ve <strong>Node.js</strong> kullanarak geliştirmektedir.",
       "learnMore": "Daha fazlası"
     },
     "experiences": {
@@ -169,10 +169,8 @@
     "socialMedia": "Sosyal Medya"
   },
   "Metadata": {
-    "defaultTitle": "Barış YAŞAR - Full Stack Geliştirici",
-    "titleTemplate": "%s | Barış YAŞAR",
-    "defaultDescription": "Barış YAŞAR, Next.js, Node.js ve TypeScript ile ölçeklenebilir web uygulamaları geliştiren Full Stack Developer olarak hizmet vermektedir.",
-    "siteName": "Barış YAŞAR - Full Stack Developer"
+    "defaultTitle": "Barış YAŞAR - Full Stack Developer",
+    "defaultDescription": "Barış YAŞAR, Next.js, Node.js ve TypeScript ile ölçeklenebilir web uygulamaları geliştiren Full Stack Developer olarak hizmet vermektedir."
   },
   "NotFoundPage": {
     "title": "Sayfa Bulunamadı",
@@ -224,7 +222,7 @@
     }
   },
   "ServicesMarquee": {
-    "title": "Check Out My Other Services",
+    "title": "Diğer Hizmetlerime Göz Atın",
     "fullStack": {
       "title": "Full-Stack Development",
       "description": "Hem frontend hem de backend geliştirme teknolojilerine hakim."

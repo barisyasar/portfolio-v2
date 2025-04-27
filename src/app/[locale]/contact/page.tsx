@@ -9,6 +9,8 @@ import {
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { ReCaptchaProvider } from 'next-recaptcha-v3';
 import { Metadata } from 'next';
+import SocialMedia from '@/components/SocialMedia';
+import { MapPin } from 'lucide-react';
 
 type Params = Promise<{ locale: string }>;
 
@@ -51,10 +53,17 @@ async function Contact({ params }: { params: Params }) {
       <main className="container">
         <Card className="section">
           <div className="mx-auto max-w-screen-md space-y-5">
-            <CardHeader>
+            <CardHeader className="space-y-4">
               <CardTitle>
                 <h1>{t('title')}</h1>
               </CardTitle>
+              <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+                <div className="flex items-center gap-1">
+                  <MapPin />
+                  <div className="text-sm">Ankara/Türkiye</div>
+                </div>
+                <SocialMedia className="justify-start sm:justify-normal" />
+              </div>
               <CardDescription>{t('description')}</CardDescription>
             </CardHeader>
             <CardContent>

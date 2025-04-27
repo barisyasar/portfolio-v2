@@ -14,6 +14,9 @@ const config: NextConfig = {
       static: 300,
     },
   },
+  devIndicators: {
+    position: 'top-left',
+  },
 };
 
 export default withNextIntl(config);
