@@ -4,14 +4,29 @@ import { cn } from '@/lib/utils';
 
 import { useTranslations } from 'next-intl';
 
-function FooterLink({ href, text }: { href: string; text: string }) {
+function FooterLink({
+  href,
+  text,
+}: {
+  href:
+    | '/'
+    | '/about'
+    | '/services'
+    | '/services/full-stack-development'
+    | '/services/backend-development'
+    | '/services/frontend-development'
+    | '/services/search-engine-optimization'
+    | '/blogs'
+    | '/contact';
+  text: string;
+}) {
   const t = useTranslations('footer');
   const pathname = usePathname();
   const isActive = (path: string) => {
     if (path === '/') {
       return path === pathname;
     }
-    return pathname.startsWith(path);
+    return pathname.endsWith(path);
   };
   return (
     <Link
@@ -22,7 +37,7 @@ function FooterLink({ href, text }: { href: string; text: string }) {
           ? 'rounded-md bg-foreground/10 text-primary'
           : 'text-foreground',
       )}
-      href={href as '/' | '/about' | '/services' | '/blogs' | '/contact'}
+      href={href}
     >
       {t(text)}
     </Link>

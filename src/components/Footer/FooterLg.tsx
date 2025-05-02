@@ -35,15 +35,49 @@ function FooterLg() {
       </CardHeader>
       <CardContent>
         <nav>
-          <ul className="flex justify-center gap-12 text-sm">
+          <ul className="flex flex-wrap justify-center gap-x-12 gap-y-4 text-sm">
             <li>
-              <FooterLink href="/" text="home" />
+              <ul className="space-y-2">
+                <li>
+                  <FooterLink href="/" text="home" />
+                </li>
+                <li>
+                  <FooterLink href="/about" text="about" />
+                </li>
+              </ul>
             </li>
             <li>
-              <FooterLink href="/about" text="about" />
-            </li>
-            <li>
-              <FooterLink href="/services" text="services" />
+              <ul>
+                <li>
+                  <FooterLink href="/services" text="services" />
+                  <ul className="mt-2 space-y-2">
+                    <li>
+                      <FooterLink
+                        href="/services/full-stack-development"
+                        text="fullStackDevelopment"
+                      />
+                    </li>
+                    <li>
+                      <FooterLink
+                        href="/services/frontend-development"
+                        text="frontendDevelopment"
+                      />
+                    </li>
+                    <li>
+                      <FooterLink
+                        href="/services/backend-development"
+                        text="backendDevelopment"
+                      />
+                    </li>
+                    <li>
+                      <FooterLink
+                        href="/services/search-engine-optimization"
+                        text="seo"
+                      />
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
             <li>
               <FooterLink href="/blogs" text="blogs" />
@@ -55,7 +89,7 @@ function FooterLg() {
         </nav>
       </CardContent>
       <CardFooter className="flex flex-col items-center gap-2">
-        <SocialMedia className="[&_svg]:size-8" />
+        <SocialMedia className="mt-2 [&_svg]:size-8" />
         <p className="text-sm text-muted-foreground">© 2025 Barış YAŞAR</p>
       </CardFooter>
     </Card>

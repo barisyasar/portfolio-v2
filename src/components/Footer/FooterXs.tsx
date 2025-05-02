@@ -47,6 +47,30 @@ async function FooterXs() {
                     <FooterLink href="/services" text={'services'} />
                   </li>
                   <li>
+                    <FooterLink
+                      href="/services/full-stack-development"
+                      text={'fullStackDevelopment'}
+                    />
+                  </li>
+                  <li>
+                    <FooterLink
+                      href="/services/frontend-development"
+                      text={'frontendDevelopment'}
+                    />
+                  </li>
+                  <li>
+                    <FooterLink
+                      href="/services/backend-development"
+                      text={'backendDevelopment'}
+                    />
+                  </li>
+                  <li>
+                    <FooterLink
+                      href="/services/search-engine-optimization"
+                      text={'seo'}
+                    />
+                  </li>
+                  <li>
                     <FooterLink href="/blogs" text={'blogs'} />
                   </li>
                   <li>

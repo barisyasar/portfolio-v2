@@ -21,7 +21,7 @@ function HeaderLink({
     if (path === '/') {
       return path === pathname;
     }
-    return pathname.startsWith(path);
+    return pathname.endsWith(path);
   };
   return (
     <Link

@@ -221,6 +221,10 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
+    "frontendDevelopment": "Frontend Development",
+    "backendDevelopment": "Backend Development",
+    "fullStackDevelopment": "Full-Stack Development",
+    "seo": "Search Engine Optimization (SEO)",
     "blogs": "Blogs",
     "contact": "Contact",
     "socialMedia": "Social Media"
