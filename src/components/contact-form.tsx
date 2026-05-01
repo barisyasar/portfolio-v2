@@ -1,12 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useReCaptcha } from 'next-recaptcha-v3';
-import { useTranslations } from 'next-intl';
-import type { ContactFormType } from '@/lib/schemas/contact';
-import { getContactFormSchema } from '@/lib/schemas/contact';
+import { submitContact } from '@/actions/contact';
+import BlurFade from '@/components/ui/blur-fade';
 import { Button } from '@/components/ui/button';
 import {
   Form,
@@ -18,9 +13,14 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { submitContact } from '@/actions/contact';
 import { useToast } from '@/hooks/use-toast';
-import BlurFade from '@/components/ui/blur-fade';
+import type { ContactFormType } from '@/lib/schemas/contact';
+import { getContactFormSchema } from '@/lib/schemas/contact';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useTranslations } from 'next-intl';
+import { useReCaptcha } from 'next-recaptcha-v3';
+import { useRef } from 'react';
+import { useForm } from 'react-hook-form';
 
 export function ContactForm() {
   const t = useTranslations('ContactPage.form');
@@ -72,7 +72,6 @@ export function ContactForm() {
 
       form.reset();
     } catch (error) {
-      console.error('Contact form error:', error);
       toast({
         variant: 'destructive',
         title: t('error'),
