@@ -1,4 +1,8 @@
+import { Link } from '@/i18n/routing';
 import { getTranslations } from 'next-intl/server';
+import LanguageSelect from '../LanguageSelect';
+import SocialMedia from '../SocialMedia';
+import ThemeToggle from '../ThemeToggle';
 import {
   Accordion,
   AccordionContent,
@@ -12,10 +16,6 @@ import {
   CardHeader,
   CardTitle,
 } from '../ui/card';
-import { Link } from '@/i18n/routing';
-import SocialMedia from '../SocialMedia';
-import ThemeToggle from '../ThemeToggle';
-import LanguageSelect from '../LanguageSelect';
 import FooterLink from './FooterLink';
 
 async function FooterXs() {
@@ -69,9 +69,6 @@ async function FooterXs() {
                       href="/services/search-engine-optimization"
                       text={'seo'}
                     />
-                  </li>
-                  <li>
-                    <FooterLink href="/blogs" text={'blogs'} />
                   </li>
                   <li>
                     <FooterLink href="/contact" text={'contact'} />

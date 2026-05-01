@@ -14,7 +14,6 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "blogs": "Blogs",
     "contact": "Contact"
   },
   "HomePage": {
@@ -49,7 +48,7 @@
     "recap": {
       "webEnthusiast": "Web Enthusiast",
       "lifelongLearner": "Lifelong Learner",
-      "summary": "<p>As a graduate of the Computer Engineering program at <strong>Ted University</strong>, I have focused my career on full-stack development. During my education, I completed two long-term internships; the first was at <strong>Altima</strong>, and the second was at <strong>Osi</strong>. Following my internships, I worked at <strong>Osi</strong> as a <strong>full-stack developer</strong> for over 2 years, contributing to significant experiences during that time.</p> <p>Currently, I am working at <strong>Oak Technology</strong> as a <strong>frontend developer</strong>, where I leverage modern technologies to develop user-focused solutions.</p>",
+      "summary": "<p>As a graduate of the Computer Engineering program at <strong>Ted University</strong>, I have focused my career on full-stack development. During my education, I completed two long-term internships; the first was at <strong>Altima</strong>, and the second was at <strong>Osi</strong>. Following my internships, I worked at <strong>Osi</strong> as a <strong>full-stack developer</strong> for over 2 years, contributing to significant experiences during that time.</p> <p>I have worked 1 and a half year at <strong>Oak Technology</strong> as a <strong>frontend developer</strong>. Nowadays I am working as a freelancer.</p>",
       "title2": "My Software Journey",
       "description2": "<p>Throughout my career in software development, I have taken on significant responsibilities in <strong>frontend</strong>, <strong>backend</strong>, and <strong>seo</strong>. With the experience gained from these projects, I have developed <strong>user-friendly websites</strong> and <strong>high-performance applications</strong>. I closely follow <strong>modern software technologies</strong> and implement the latest and best solutions in all my projects.</p> <p>My goal is to create <strong>high-quality and sustainable</strong> projects that best meet my clients' needs. I continue to grow and learn with each new project.</p>",
       "servicesText": "<p>I give professional services on <strong>frontend</strong>, <strong>backend</strong>, <strong>seo</strong> and more. You can look my services.</p>",
@@ -155,28 +154,6 @@
       "description": "Enhancing website visibility, improving rankings, driving organic traffic growth."
     }
   },
-  "BlogPage": {
-    "description": "Welcome to my blog! Here, I share my thoughts, experiences, and learnings about web development and technology. Whether you're a fellow developer or just curious about what I'm up to, you're in the right place.",
-    "share": "Share this post",
-    "backToBlogs": "Back to blogs",
-    "totalBlogs": "{count} articles in total",
-    "postsPerPage": "Posts per page",
-    "sortBy": "Sort by",
-    "newest": "Newest First",
-    "oldest": "Oldest First",
-    "category": "Category",
-    "categories": {
-      "all": "All Categories",
-      "nextjs": "Next",
-      "reactjs": "React",
-      "typescript": "TypeScript",
-      "javascript": "JavaScript"
-    },
-    "metadata": {
-      "title": "Blog",
-      "description": "Insights and articles about web development, modern technologies, and software engineering best practices."
-    }
-  },
   "ContactPage": {
     "title": "Get in Touch",
     "description": "Feel free to reach out! Whether you have questions, feedback, or need assistance, I'm here to help. Send me a message, and I'll get back to you as soon as possible.",
@@ -225,7 +202,6 @@
     "backendDevelopment": "Backend Development",
     "fullStackDevelopment": "Full-Stack Development",
     "seo": "Search Engine Optimization (SEO)",
-    "blogs": "Blogs",
     "contact": "Contact",
     "socialMedia": "Social Media"
   },

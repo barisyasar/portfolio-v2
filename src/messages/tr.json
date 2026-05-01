@@ -14,7 +14,6 @@
     "home": "Anasayfa",
     "about": "Hakkımda",
     "services": "Hizmetler",
-    "blogs": "Blog",
     "contact": "İletişim"
   },
   "HomePage": {
@@ -49,7 +48,7 @@
     "recap": {
       "webEnthusiast": "Web Meraklısı",
       "lifelongLearner": "Araştırmacı",
-      "summary": "<p>Ted Üniversitesi bilgisayar mühendisliği mezunu olarak, kariyerime full-stack development alanında yön verdim. Eğitim sürecimde iki uzun dönem staj yaptım; bunlardan ilki <strong>Altima</strong>, diğeri ise <strong>Osi</strong> şirketinde gerçekleşti. Stajlarımın ardından, <strong>Osi</strong> bünyesinde <strong>full-stack developer</strong> olarak 2 yılı aşkın bir süre görev yaptım ve bu süreçte önemli projelerde yer aldım.</p><p>Şu anda <strong>Oak Technology</strong> şirketinde <strong>frontend developer</strong> olarak çalışıyor ve modern teknolojileri kullanarak kullanıcı odaklı çözümler geliştiriyorum.</p>",
+      "summary": "<p>Ted Üniversitesi bilgisayar mühendisliği mezunu olarak, kariyerime full-stack development alanında yön verdim. Eğitim sürecimde iki uzun dönem staj yaptım; bunlardan ilki <strong>Altima</strong>, diğeri ise <strong>Osi</strong> şirketinde gerçekleşti. Stajlarımın ardından, <strong>Osi</strong> bünyesinde <strong>full-stack developer</strong> olarak 2 yılı aşkın bir süre görev yaptım ve bu süreçte önemli projelerde yer aldım.</p><p>1.5 sene boyunca <strong>Oak Technology</strong> şirketinde <strong>frontend developer</strong> olarak çalıştım. Şu anda serbest olarak çalışıyorum.</p>",
       "title2": "Yazılım Yolculuğum",
       "description2": "<p>Yazılım geliştirme kariyerim boyunca, <strong>frontend</strong>, <strong>backend</strong> ve <strong>seo</strong> alanlarında önemli sorumluluklar üstlendim. Bu projelerden edindiğim deneyimle, <strong>kullanıcı dostu web siteleri</strong> ve <strong>yüksek performanslı uygulamalar</strong> geliştirdim. <strong>Modern yazılım teknolojilerini</strong> yakından takip ediyor ve tüm projelerimde en yeni ve en iyi çözümleri uyguluyorum.</p> <p>Amacım, müşterilerimin ihtiyaçlarını en iyi şekilde karşılayan <strong>kaliteli ve sürdürülebilir</strong> projeler üretmek. Her yeni projeyle birlikte büyümeye ve öğrenmeye devam ediyorum.</p>",
       "servicesText": "<p><strong>Frontend</strong>, <strong>backend</strong> ve <strong>seo</strong> konularında profesyonel hizmetler veriyorum. Hizmetlerime göz atabilirsiniz.</p>",
@@ -95,28 +94,6 @@
     "metadata": {
       "title": "Hizmetler",
       "description": "Frontend tasarımı, backend geliştirme ve SEO optimizasyonu dahil profesyonel web geliştirme hizmetleri. Birlikte harika bir şeyler inşa edelim."
-    }
-  },
-  "BlogPage": {
-    "description": "Bloguma hoş geldiniz! Burada web geliştirme ve teknoloji hakkındaki düşüncelerimi, deneyimlerimi ve öğrendiklerimi paylaşıyorum. İster bir geliştirici olun, ister sadece neler yaptığımı merak edin, doğru yerdesiniz.",
-    "share": "Bu yazıyı paylaş",
-    "backToBlogs": "Bloglara dön",
-    "totalBlogs": "Toplam {count} makale",
-    "postsPerPage": "Gönderi Sayısı",
-    "sortBy": "Sıralama",
-    "newest": "Yeniler Önce",
-    "oldest": "Eskiler Önce",
-    "category": "Kategori",
-    "categories": {
-      "all": "Tümü",
-      "nextjs": "Next.js",
-      "reactjs": "React",
-      "typescript": "TypeScript",
-      "javascript": "JavaScript"
-    },
-    "metadata": {
-      "title": "Blog",
-      "description": "Web geliştirme, modern teknolojiler ve yazılım mühendisliği en iyi uygulamaları hakkında içgörüler ve makaleler."
     }
   },
   "ContactPage": {

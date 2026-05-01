@@ -1,5 +1,5 @@
-import { defineRouting } from 'next-intl/routing';
 import { createNavigation } from 'next-intl/navigation';
+import { defineRouting } from 'next-intl/routing';
 
 export const routing = defineRouting({
   locales: ['en', 'tr'],
@@ -29,11 +29,6 @@ export const routing = defineRouting({
     '/services/search-engine-optimization': {
       tr: '/hizmetler/arama-motoru-optimizasyonu',
       en: '/services/search-engine-optimization',
-    },
-    '/blogs': '/blogs',
-    '/blogs/[id]': {
-      tr: '/blogs/[id]',
-      en: '/blogs/[id]',
     },
     '/contact': {
       tr: '/iletisim',

@@ -1,5 +1,12 @@
 'use client';
+import { Link } from '@/i18n/routing';
 import { AlignJustify } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import LanguageSelect from '../LanguageSelect';
+import ThemeToggle from '../ThemeToggle';
+import { Button } from '../ui/button';
 import { Card, CardContent } from '../ui/card';
 import {
   Sheet,
@@ -9,14 +16,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '../ui/sheet';
-import { Button } from '../ui/button';
-import ThemeToggle from '../ThemeToggle';
-import LanguageSelect from '../LanguageSelect';
 import HeaderLink from './HeaderLink';
-import { Link } from '@/i18n/routing';
-import { useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
-import { usePathname } from 'next/navigation';
 
 function HeaderXs() {
   const t = useTranslations('Menu');
@@ -70,13 +70,6 @@ function HeaderXs() {
                   <HeaderLink
                     href="/services"
                     text="services"
-                    layoutId="header-link-active-xs"
-                  />
-                </li>
-                <li>
-                  <HeaderLink
-                    href="/blogs"
-                    text="blogs"
                     layoutId="header-link-active-xs"
                   />
                 </li>

@@ -16,7 +16,6 @@ function FooterLink({
     | '/services/backend-development'
     | '/services/frontend-development'
     | '/services/search-engine-optimization'
-    | '/blogs'
     | '/contact';
   text: string;
 }) {

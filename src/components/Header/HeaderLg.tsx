@@ -1,6 +1,6 @@
-import { Card, CardContent } from '../ui/card';
-import ThemeToggle from '../ThemeToggle';
 import LanguageSelect from '../LanguageSelect';
+import ThemeToggle from '../ThemeToggle';
+import { Card, CardContent } from '../ui/card';
 import HeaderLink from './HeaderLink';
 
 export default function HeaderLg() {
@@ -20,9 +20,6 @@ export default function HeaderLg() {
             </li>
             <li>
               <HeaderLink href="/services" text="services" />
-            </li>
-            <li>
-              <HeaderLink href="/blogs" text="blogs" />
             </li>
             <li>
               <HeaderLink href="/contact" text="contact" />

@@ -1,3 +1,5 @@
+import { Link } from '@/i18n/routing';
+import { ChevronRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import {
   AhrefsIcon,
@@ -8,12 +10,13 @@ import {
   PostgreIcon,
   ReactIcon,
   ReactQueryIcon,
-  SeoIcon,
   SemrushIcon,
+  SeoIcon,
   StripeIcon,
   TailwindIcon,
   TypeScriptIcon,
 } from './Icons';
+import { Button } from './ui/button';
 import {
   Card,
   CardContent,
@@ -21,25 +24,13 @@ import {
   CardHeader,
   CardTitle,
 } from './ui/card';
-import HoverGrid from './ui/hover-grid';
-import { Button } from './ui/button';
-import { Link } from '@/i18n/routing';
-import { ChevronRight } from 'lucide-react';
 
 export async function ServicesGridList() {
   const t = await getTranslations('ServicesPage.servicesGrid');
   return (
-    <HoverGrid
-      className="grid gap-2 lg:grid-cols-2"
-      childrenClassNames={[
-        'col-span-2 lg:col-span-1',
-        'col-span-2 lg:col-span-1',
-        'col-span-2 lg:col-span-1',
-        'col-span-2 lg:col-span-1',
-      ]}
-    >
+    <div className="grid gap-2 lg:grid-cols-2">
       <Link href="/services/full-stack-development" prefetch={false}>
-        <Card className="bg-card/100">
+        <Card className="card--5">
           <CardHeader>
             <CardTitle className="flex justify-between text-xl font-bold">
               <h3>{t('fullstackDevelopment')}</h3>
@@ -64,7 +55,7 @@ export async function ServicesGridList() {
         </Card>
       </Link>
       <Link href="/services/frontend-development" prefetch={false}>
-        <Card className="flex h-full flex-col justify-between bg-card/100">
+        <Card className="card--5 flex h-full flex-col justify-between">
           <CardHeader>
             <CardTitle className="flex justify-between text-xl font-bold">
               <h3>{t('frontendDevelopment')}</h3>
@@ -89,7 +80,7 @@ export async function ServicesGridList() {
         </Card>
       </Link>
       <Link href="/services/backend-development" prefetch={false}>
-        <Card className="flex h-full flex-col justify-between bg-card/100">
+        <Card className="card--5 flex h-full flex-col justify-between">
           <CardHeader className="flex-grow">
             <CardTitle className="flex justify-between text-xl font-bold">
               <h3>{t('backendDevelopment')}</h3>
@@ -112,7 +103,7 @@ export async function ServicesGridList() {
         </Card>
       </Link>
       <Link href="/services/search-engine-optimization" prefetch={false}>
-        <Card className="flex h-full flex-col justify-between bg-card/100">
+        <Card className="card--5 flex h-full flex-col justify-between">
           <CardHeader className="flex-grow">
             <CardTitle className="flex justify-between text-xl font-bold">
               <h3>{t('seo')}</h3>
@@ -132,6 +123,6 @@ export async function ServicesGridList() {
           </CardContent>
         </Card>
       </Link>
-    </HoverGrid>
+    </div>
   );
 }

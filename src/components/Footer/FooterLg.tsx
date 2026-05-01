@@ -1,3 +1,7 @@
+import { Link } from '@/i18n/routing';
+import LanguageSelect from '../LanguageSelect';
+import SocialMedia from '../SocialMedia';
+import ThemeToggle from '../ThemeToggle';
 import {
   Card,
   CardContent,
@@ -6,11 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from '../ui/card';
-import SocialMedia from '../SocialMedia';
-import ThemeToggle from '../ThemeToggle';
-import LanguageSelect from '../LanguageSelect';
 import FooterLink from './FooterLink';
-import { Link } from '@/i18n/routing';
 
 function FooterLg() {
   return (
@@ -78,9 +78,6 @@ function FooterLg() {
                   </ul>
                 </li>
               </ul>
-            </li>
-            <li>
-              <FooterLink href="/blogs" text="blogs" />
             </li>
             <li>
               <FooterLink href="/contact" text="contact" />
