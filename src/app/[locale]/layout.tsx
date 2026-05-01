@@ -1,19 +1,21 @@
-import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
-import '../globals.css';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import MailButton from '@/components/MailButton';
+import ScrollToTop from '@/components/ScrollToTop';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import { notFound } from 'next/navigation';
 import { Locale, routing } from '@/i18n/routing';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import ScrollToTop from '@/components/ScrollToTop';
-import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import MailButton from '@/components/MailButton';
+import type { Metadata } from 'next';
+import { NextIntlClientProvider } from 'next-intl';
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from 'next-intl/server';
+import { Roboto } from 'next/font/google';
+import { notFound } from 'next/navigation';
+import '../globals.css';
 
 type Params = Promise<{ locale: string }>;
 const roboto = Roboto({
@@ -101,19 +103,17 @@ export default async function LocaleLayout({
           scrollbarGutter: 'stable',
         }}
       >
-        <NuqsAdapter>
-          <ThemeProvider attribute="class" defaultTheme="system">
-            <NextIntlClientProvider messages={messages}>
-              <Header />
-              {children}
+        <ThemeProvider attribute="class" defaultTheme="system">
+          <NextIntlClientProvider messages={messages}>
+            <Header />
+            {children}
 
-              <Footer />
-              <MailButton />
-              <ScrollToTop />
-              <Toaster />
-            </NextIntlClientProvider>
-          </ThemeProvider>
-        </NuqsAdapter>
+            <Footer />
+            <MailButton />
+            <ScrollToTop />
+            <Toaster />
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
