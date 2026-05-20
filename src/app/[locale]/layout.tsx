@@ -15,6 +15,7 @@ import {
 } from 'next-intl/server';
 import { Roboto } from 'next/font/google';
 import { notFound } from 'next/navigation';
+import NextTopLoader from 'nextjs-toploader';
 import '../globals.css';
 
 type Params = Promise<{ locale: string }>;
@@ -104,6 +105,11 @@ export default async function LocaleLayout({
         }}
       >
         <ThemeProvider attribute="class" defaultTheme="system">
+          <NextTopLoader
+            color={'hsl(var(--foreground))'}
+            height={3}
+            showSpinner={false}
+          />
           <NextIntlClientProvider messages={messages}>
             <Header />
             {children}
