@@ -1,7 +1,6 @@
 'use client';
 
 import { submitContact } from '@/actions/contact';
-import BlurFade from '@/components/ui/blur-fade';
 import { Button } from '@/components/ui/button';
 import {
   Form,
@@ -90,83 +89,73 @@ export function ContactForm() {
         }}
         className="space-y-4"
       >
-        <BlurFade delay={0 * 0.15} className="space-y-4">
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('name.label')}</FormLabel>
-                <FormControl>
-                  <Input placeholder={t('name.placeholder')} {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </BlurFade>
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('name.label')}</FormLabel>
+              <FormControl>
+                <Input placeholder={t('name.placeholder')} {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-        <BlurFade delay={1 * 0.15} className="space-y-4">
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('email.label')}</FormLabel>
-                <FormControl>
-                  <Input
-                    placeholder={t('email.placeholder')}
-                    type="email"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </BlurFade>
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('email.label')}</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder={t('email.placeholder')}
+                  type="email"
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-        <BlurFade delay={2 * 0.15} className="space-y-4">
-          <FormField
-            control={form.control}
-            name="subject"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('subject.label')}</FormLabel>
-                <FormControl>
-                  <Input placeholder={t('subject.placeholder')} {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </BlurFade>
+        <FormField
+          control={form.control}
+          name="subject"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('subject.label')}</FormLabel>
+              <FormControl>
+                <Input placeholder={t('subject.placeholder')} {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-        <BlurFade delay={3 * 0.15} className="space-y-4">
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('message.label')}</FormLabel>
-                <FormControl>
-                  <Textarea
-                    placeholder={t('message.placeholder')}
-                    className="min-h-[120px]"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </BlurFade>
+        <FormField
+          control={form.control}
+          name="message"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('message.label')}</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder={t('message.placeholder')}
+                  className="min-h-[120px]"
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-        <BlurFade delay={4 * 0.15}>
-          <Button type="submit" disabled={isSubmitting} className="w-full">
-            {isSubmitting ? t('submit.sending') : t('submit.send')}
-          </Button>
-        </BlurFade>
+        <Button type="submit" disabled={isSubmitting} className="w-full">
+          {isSubmitting ? t('submit.sending') : t('submit.send')}
+        </Button>
       </form>
     </Form>
   );

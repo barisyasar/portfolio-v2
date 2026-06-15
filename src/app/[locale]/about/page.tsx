@@ -1,3 +1,5 @@
+import Experiences from '@/components/sections/home/Experinces';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -6,16 +8,13 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { Link } from '@/i18n/routing';
+import { ChevronRight } from 'lucide-react';
+import { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import PROFILE_IMG_2 from '../../../../public/profile_2.webp';
 import PROFILE_IMG_3 from '../../../../public/profile_3.webp';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import WordRotate from '@/components/ui/word-rotate';
-import { Button } from '@/components/ui/button';
-import { Link } from '@/i18n/routing';
-import { ChevronRight } from 'lucide-react';
-import Experiences from '@/components/sections/home/Experinces';
-import { Metadata } from 'next';
 
 type Params = Promise<{ locale: string }>;
 
@@ -76,12 +75,7 @@ async function About(props: { params: Params }) {
             <CardTitle>
               <h1 className="xs:text-3xl lg:text-4xl">Barış YAŞAR</h1>
             </CardTitle>
-            <CardDescription>
-              <WordRotate
-                duration={3000}
-                words={[t('webEnthusiast'), t('lifelongLearner')]}
-              />
-            </CardDescription>
+            <CardDescription>{t('lifelongLearner')}</CardDescription>
           </CardHeader>
           <CardContent
             className="mt-3"

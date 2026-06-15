@@ -1,16 +1,6 @@
-import { getTranslations } from 'next-intl/server';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '../../ui/card';
 import { Link } from '@/i18n/routing';
-import { Button } from '../../ui/button';
 import { ChevronRight } from 'lucide-react';
-import BlurFade from '../../ui/blur-fade';
+import { getTranslations } from 'next-intl/server';
 import {
   FramerMotionIcon,
   NextIcon,
@@ -21,6 +11,15 @@ import {
   StripeIcon,
   TailwindIcon,
 } from '../../Icons';
+import { Button } from '../../ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '../../ui/card';
 
 async function Experiences() {
   const t = await getTranslations('HomePage.experiences');
@@ -36,59 +35,47 @@ async function Experiences() {
           />
         </CardHeader>
         <CardContent className="grid grid-cols-1 grid-rows-2 place-items-stretch gap-4 space-y-0 md:grid-cols-2">
-          <BlurFade delay={0.25} direction="right" className="row-span-2">
-            <Card className="card--5 flex min-h-full flex-col">
-              <CardHeader className="flex-1">
-                <CardTitle>
-                  <h3>{t('ecommerceTitle')}</h3>
-                </CardTitle>
-                <CardDescription>{t('ecommerceText')}</CardDescription>
-              </CardHeader>
+          <Card className="card--5 row-span-2 flex min-h-full flex-col">
+            <CardHeader className="flex-1">
+              <CardTitle>
+                <h3>{t('ecommerceTitle')}</h3>
+              </CardTitle>
+              <CardDescription>{t('ecommerceText')}</CardDescription>
+            </CardHeader>
 
-              <CardFooter className="gap-3">
-                <StripeIcon />
-                <PaypalIcon />
-                <NodeIcon />
-              </CardFooter>
-            </Card>
-          </BlurFade>
-          <BlurFade
-            delay={0.25}
-            direction="left"
-            className="col-span-1 row-span-1"
-          >
-            <Card className="card--5 flex min-h-full flex-col">
-              <CardHeader className="flex-1">
-                <CardTitle>
-                  <h3>{t('landingWebPageTitle')}</h3>
-                </CardTitle>
-                <CardDescription>{t('landingWebPage')}</CardDescription>
-              </CardHeader>
-              <CardFooter className="gap-3">
-                <NextIcon />
-                <FramerMotionIcon />
-                <SassIcon />
-              </CardFooter>
-            </Card>
-          </BlurFade>
-          <BlurFade
-            delay={0.25}
-            direction="up"
-            className="col-span-1 row-span-1"
-          >
-            <Card className="card--5 flex min-h-full flex-col">
-              <CardHeader className="flex-1">
-                <CardTitle>
-                  <h3>{t('webpToApplicationTitle')}</h3>
-                </CardTitle>
-                <CardDescription>{t('webpToApplication')}</CardDescription>
-              </CardHeader>
-              <CardFooter className="gap-3">
-                <ReactIcon />
-                <TailwindIcon />
-              </CardFooter>
-            </Card>
-          </BlurFade>
+            <CardFooter className="gap-3">
+              <StripeIcon />
+              <PaypalIcon />
+              <NodeIcon />
+            </CardFooter>
+          </Card>
+
+          <Card className="card--5 col-span-1 row-span-1 flex min-h-full flex-col">
+            <CardHeader className="flex-1">
+              <CardTitle>
+                <h3>{t('landingWebPageTitle')}</h3>
+              </CardTitle>
+              <CardDescription>{t('landingWebPage')}</CardDescription>
+            </CardHeader>
+            <CardFooter className="gap-3">
+              <NextIcon />
+              <FramerMotionIcon />
+              <SassIcon />
+            </CardFooter>
+          </Card>
+
+          <Card className="card--5 col-span-1 row-span-1 flex min-h-full flex-col">
+            <CardHeader className="flex-1">
+              <CardTitle>
+                <h3>{t('webpToApplicationTitle')}</h3>
+              </CardTitle>
+              <CardDescription>{t('webpToApplication')}</CardDescription>
+            </CardHeader>
+            <CardFooter className="gap-3">
+              <ReactIcon />
+              <TailwindIcon />
+            </CardFooter>
+          </Card>
         </CardContent>
         <CardFooter className="flex-col items-start gap-2">
           <p className="text-muted-foreground">{t('servicesText')}</p>
