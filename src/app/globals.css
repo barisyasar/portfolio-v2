@@ -92,7 +92,7 @@ body {
 
 @layer components {
   .section {
-    @apply scroll-mt-2 md:scroll-mt-4;
+    @apply scroll-mt-2 p-4 md:scroll-mt-4;
   }
   .section + .section {
     @apply mt-2 md:mt-4;
@@ -107,19 +107,19 @@ body {
 
 @theme inline {
   @keyframes marquee {
-  from {
-    transform: translateX(0);
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
   @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+    from {
+      transform: translateY(0);
     }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
     }
   }
 }
