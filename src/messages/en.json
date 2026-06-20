@@ -158,6 +158,7 @@
   "ProjectsPage": {
     "title": "Projects",
     "description": "I have developed and contributed a lot of projects here are some of them.",
+    "coming_soon": "Coming Soon",
     "metadata": {
       "title": "Projects",
       "description": "Check out my projects that I developed or contributed."
