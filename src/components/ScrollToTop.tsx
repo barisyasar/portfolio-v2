@@ -1,10 +1,10 @@
 'use client';
 
-import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
-import { ChevronUp } from 'lucide-react';
 import { motion, useScroll } from 'framer-motion';
+import { ChevronUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { Button } from './ui/button';
 
 export default function ScrollToTop() {
   const { scrollY } = useScroll();

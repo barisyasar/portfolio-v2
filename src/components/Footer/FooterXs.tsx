@@ -71,6 +71,9 @@ async function FooterXs() {
                     />
                   </li>
                   <li>
+                    <FooterLink href="/projects" text={'projects'} />
+                  </li>
+                  <li>
                     <FooterLink href="/contact" text={'contact'} />
                   </li>
                 </ul>

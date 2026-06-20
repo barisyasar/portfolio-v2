@@ -80,6 +80,39 @@ function FooterLg() {
               </ul>
             </li>
             <li>
+              <ul>
+                <li>
+                  <FooterLink href="/projects" text="projects" />
+                  <ul className="mt-2 space-y-2">
+                    <li>
+                      <FooterLink
+                        href="/services/full-stack-development"
+                        text="fullStackDevelopment"
+                      />
+                    </li>
+                    <li>
+                      <FooterLink
+                        href="/services/frontend-development"
+                        text="frontendDevelopment"
+                      />
+                    </li>
+                    <li>
+                      <FooterLink
+                        href="/services/backend-development"
+                        text="backendDevelopment"
+                      />
+                    </li>
+                    <li>
+                      <FooterLink
+                        href="/services/search-engine-optimization"
+                        text="seo"
+                      />
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
               <FooterLink href="/contact" text="contact" />
             </li>
           </ul>

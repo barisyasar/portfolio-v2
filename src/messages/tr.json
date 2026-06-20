@@ -14,6 +14,7 @@
     "home": "Anasayfa",
     "about": "Hakkımda",
     "services": "Hizmetler",
+    "projects": "Projeler",
     "contact": "İletişim"
   },
   "HomePage": {
@@ -96,6 +97,14 @@
       "description": "Frontend tasarımı, backend geliştirme ve SEO optimizasyonu dahil profesyonel web geliştirme hizmetleri. Birlikte harika bir şeyler inşa edelim."
     }
   },
+  "ProjectsPage": {
+    "title": "Projler",
+    "description": "Full-stack developer olarak çeşitli projeler geliştirim ve projelere katkıda bulundum. Bunlardan bazılarına göz atın.",
+    "metadata": {
+      "title": "Projeler",
+      "description": "Geliştirdiğim veya katkıda bulunduğum projelere göz atın."
+    }
+  },
   "ContactPage": {
     "title": "İletişime Geç",
     "description": "Aklınıza takılan bir soru mu var? Ya da birlikte çalışmak istediğiniz bir proje? Formu doldurarak bana ulaşabilirsiniz. Mesajınızı aldığım gibi size dönüş yapacağım.",
@@ -144,6 +153,7 @@
     "frontendDevelopment": "Frontend Development",
     "backendDevelopment": "Backend Development",
     "fullStackDevelopment": "Full-Stack Development",
+    "projects": "Projeler",
     "seo": "Arama Motoru Optimizasyonu (SEO)",
     "contact": "İletişim",
     "socialMedia": "Sosyal Medya"
@@ -219,5 +229,9 @@
       "title": "Search Engine Optimization",
       "description": "Web sitesi görünürlüğünü artırma, sıralamaları iyileştirme, organik trafik sağlama."
     }
+  },
+  "ProjectCard": {
+    "personal": "bireysel",
+    "team": "ekip"
   }
 }

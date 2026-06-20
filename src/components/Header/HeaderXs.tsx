@@ -75,6 +75,13 @@ function HeaderXs() {
                 </li>
                 <li>
                   <HeaderLink
+                    href="/projects"
+                    text="projects"
+                    layoutId="header-link-active-xs"
+                  />
+                </li>
+                <li>
+                  <HeaderLink
                     href="/contact"
                     text="contact"
                     layoutId="header-link-active-xs"

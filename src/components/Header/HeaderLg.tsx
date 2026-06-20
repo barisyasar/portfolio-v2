@@ -22,6 +22,9 @@ export default function HeaderLg() {
               <HeaderLink href="/services" text="services" />
             </li>
             <li>
+              <HeaderLink href="/projects" text="projects" />
+            </li>
+            <li>
               <HeaderLink href="/contact" text="contact" />
             </li>
           </ul>

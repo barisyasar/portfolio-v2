@@ -31,7 +31,7 @@ function HeaderLink({
         className,
         isActive(href) ? 'text-primary' : 'text-foreground',
       )}
-      href={href as '/' | '/about' | '/services' | '/contact'}
+      href={href as '/' | '/about' | '/services' | '/contact' | '/projects'}
     >
       {isActive(href) && (
         <motion.span

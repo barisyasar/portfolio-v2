@@ -14,6 +14,7 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
+    "projects": "Projects",
     "contact": "Contact"
   },
   "HomePage": {
@@ -154,6 +155,14 @@
       "description": "Enhancing website visibility, improving rankings, driving organic traffic growth."
     }
   },
+  "ProjectsPage": {
+    "title": "Projects",
+    "description": "I have developed and contributed a lot of projects here are some of them.",
+    "metadata": {
+      "title": "Projects",
+      "description": "Check out my projects that I developed or contributed."
+    }
+  },
   "ContactPage": {
     "title": "Get in Touch",
     "description": "Feel free to reach out! Whether you have questions, feedback, or need assistance, I'm here to help. Send me a message, and I'll get back to you as soon as possible.",
@@ -201,6 +210,7 @@
     "frontendDevelopment": "Frontend Development",
     "backendDevelopment": "Backend Development",
     "fullStackDevelopment": "Full-Stack Development",
+    "projects": "Projects",
     "seo": "Search Engine Optimization (SEO)",
     "contact": "Contact",
     "socialMedia": "Social Media"
@@ -217,5 +227,9 @@
       "title": "404 | Baris YASAR",
       "description": "Page not found. The requested page doesn't exist or has been moved."
     }
+  },
+  "ProjectCard": {
+    "personal": "personal",
+    "team": "team"
   }
 }
