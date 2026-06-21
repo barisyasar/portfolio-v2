@@ -35,6 +35,16 @@ export const PROJECTS: Project[] = [
           "<p>Training House No: 4, bir mobil spor uygulamasıdır. İçerisinde fitness, kardiyo ve esneme programları bulunmaktadır.</p><p>İstanbul'da bulunan spor salonumuzun mobil bir yüzü olarak kullanılmaktadır.</p><p>Web sitesi de bulunan bir mobil uyuglamadır.</p>",
         logoAlt: 'Training House No: 4 Logo',
       },
+      {
+        locale: {
+          code: 'en',
+        },
+        name: 'Training House No: 4',
+        storyTitle: 'What is Training House No: 4',
+        story:
+          '<p>Training House No: 4 is a sport application. It contains fitness, cardio, and stretching workouts</p><p>It is a digital face of our studio located in Istanbul</p><p>It also has a website</p>',
+        logoAlt: 'Training House No: 4 Logo',
+      },
     ],
     tech_stack: [
       'JavaScript',
@@ -127,7 +137,7 @@ export const PROJECTS: Project[] = [
     ],
     platforms: [],
   },
-  /* {
+  {
     project_id: '643f1c9b-4188-4b5d-9f49-056d4f50f59e',
     slug: 'pulse-house',
     logo: 'pulse-house.webp',
@@ -139,14 +149,14 @@ export const PROJECTS: Project[] = [
             code: 'tr',
           },
           title: 'Pulse House',
-          description: 'Güç, dayanıklılık ve esneme antrenmanları',
+          description: 'Proje yönetim paneli',
         },
         {
           locale: {
             code: 'en',
           },
           title: 'Pulse House',
-          description: 'Strength, endurance, and flexibility trainings',
+          description: 'Project management dashboard',
         },
       ],
     },
@@ -156,11 +166,32 @@ export const PROJECTS: Project[] = [
           code: 'tr',
         },
         name: 'Pulse House',
-        story: 'lorem10',
+        storyTitle: 'Pulse House Nedir?',
+        story:
+          '<p>Şu ana kadar geliştirdiğim projelerimi yönetmek için kullandığım bir yönetim panelidir.</p><p>Clerk sayesinde projelerimi organizasyonlara ayırarak rahatça yönetebiliyorum.</p>',
+        logoAlt: 'Pulse House Logo',
+      },
+      {
+        locale: {
+          code: 'en',
+        },
+        name: 'Pulse House',
+        storyTitle: 'What is Pulse House?',
+        story:
+          '<p>Pulse House is a project management dashboard. I use to manage projects I have developed so far.</p><p>Thanks to Clerk, authorization and authentication is very easy.</p>',
         logoAlt: 'Pulse House Logo',
       },
     ],
-    tech_stack: ['react', 'next'],
+    tech_stack: [
+      'JavaScript',
+      'TypeScript',
+      'React',
+      'Next',
+      'Tailwind',
+      'TanStack Query',
+      'Clerk',
+    ],
+    platforms: [],
   },
   {
     project_id: '24fb9599-af91-406f-a3ae-da0dada500ca',
@@ -173,15 +204,16 @@ export const PROJECTS: Project[] = [
           locale: {
             code: 'tr',
           },
-          title: 'Portfolio',
-          description: 'Güç, dayanıklılık ve esneme antrenmanları',
+          title: 'Portfolyo',
+          description:
+            'Full-Stack Developer olarak kendimi anlattığım websitem',
         },
         {
           locale: {
             code: 'en',
           },
           title: 'Portfolio',
-          description: 'Strength, endurance, and flexibility trainings',
+          description: 'Telling myself as a Full-Stack Developer',
         },
       ],
     },
@@ -190,32 +222,30 @@ export const PROJECTS: Project[] = [
         locale: {
           code: 'tr',
         },
+        name: 'Portfolyo',
+        storyTitle: 'Portfolyo Sitem',
+        story:
+          '<p>Şu ana kadar geliştirdiğim projelerimi yönetmek için kullandığım bir yönetim panelidir.</p><p>Clerk sayesinde projelerimi organizasyonlara ayırarak rahatça yönetebiliyorum.</p>',
+        logoAlt: 'Vercel Logo',
+      },
+      {
+        locale: {
+          code: 'en',
+        },
         name: 'Portfolio',
-        story: 'lorem10',
+        storyTitle: 'My Portfolio Website',
+        story:
+          '<p>Pulse House is a project management dashboard. I use to manage projects I have developed so far.</p><p>Thanks to Clerk, authorization and authentication is very easy.</p>',
         logoAlt: 'Vercel Logo',
       },
     ],
-    tech_stack: ['react', 'next'],
-    stores: [
+    tech_stack: ['JavaScript', 'TypeScript', 'React', 'Next', 'Tailwind'],
+    platforms: [
       {
-        name: 'app-store',
-        link: 'https://apps.apple.com/tr/app/no-4/id6749334969',
-      },
-      {
-        name: 'google-play',
-        link: 'https://play.google.com/store/apps/details?id=com.anonymous.TrainingHouseNo4&hl=en',
+        name: 'web',
+        url: 'https://barisyasar.com',
       },
     ],
-    social: {
-      web: {
-        url: 'https://no4.barisyasar.com/',
-        name: 'Web',
-      },
-      instagram: {
-        url: 'https://www.instagram.com/traininghouseno4/',
-        name: 'traininghouseno4',
-      },
-    },
   },
   {
     project_id: 'b85def92-8245-4b0f-ad11-8d2741821a4c',
@@ -229,14 +259,16 @@ export const PROJECTS: Project[] = [
             code: 'tr',
           },
           title: 'Smart Chatbot AI',
-          description: 'Güç, dayanıklılık ve esneme antrenmanları',
+          description:
+            'Gelişmiş chatbot platformumuzla yapay zekanın potansiyelini ortaya çıkarın. Daha akıllı çözümlerle etkileşim kurun, yaratın ve keşfedin.',
         },
         {
           locale: {
             code: 'en',
           },
           title: 'Smart Chatbot AI',
-          description: 'Strength, endurance, and flexibility trainings',
+          description:
+            'Unleash the potential of AI with our advanced chatbot platform. Interact, create, and explore smarter solutions at your fingertips.',
         },
       ],
     },
@@ -246,32 +278,39 @@ export const PROJECTS: Project[] = [
           code: 'tr',
         },
         name: 'Smart Chatbot AI',
-        story: 'lorem10',
+        storyTitle: 'Smart Chatbot AI Nedir?',
+        story:
+          "<p>Yapay zekanın trend olduğu bu dönemde çalıştığm şirkette verilen karar doğrutulsunda bu uygulamayı geliştirdik.</p><p>Çeşitli LLM'ler kullanarak kullanıcıya metin, görsel vb. ürettirmeyi amaçladık.</p>",
+        logoAlt: 'Smart Chatbot AI Logo',
+      },
+      {
+        locale: {
+          code: 'en',
+        },
+        name: 'Smart Chatbot AI',
+        storyTitle: 'Smart Chatbot AI',
+        story:
+          '<p>During this period when artificial intelligence is trending, we developed this application in line with a decision made by the company I work for.</p> <p>Our goal was to enable users to generate text, images, and other types of content using various LLMs.</p>',
         logoAlt: 'Smart Chatbot AI Logo',
       },
     ],
-    tech_stack: ['react', 'next'],
-    stores: [
+    tech_stack: [
+      'JavaScript',
+      'TypeScript',
+      'React',
+      'Tailwind',
+      'TanStack Query',
+      'Docker',
+      'Paddle',
+    ],
+    platforms: [
       {
-        name: 'app-store',
-        link: 'https://apps.apple.com/tr/app/no-4/id6749334969',
-      },
-      {
-        name: 'google-play',
-        link: 'https://play.google.com/store/apps/details?id=com.anonymous.TrainingHouseNo4&hl=en',
+        name: 'web',
+        url: 'https://smartchatbot.io',
       },
     ],
-    social: {
-      web: {
-        url: 'https://no4.barisyasar.com/',
-        name: 'Web',
-      },
-      instagram: {
-        url: 'https://www.instagram.com/traininghouseno4/',
-        name: 'traininghouseno4',
-      },
-    },
   },
+  /*
   {
     project_id: '96b81660-d93c-49e4-b330-b12d46b56073',
     slug: 'customizable-onboarding-builder',

@@ -28,8 +28,11 @@ import {
   TypeScriptIcon,
 } from '@/components/Icons';
 import AdmobIcon from '@/components/icons/admob-icon';
+import ClerkIcon from '@/components/icons/clerk-icon';
+import DockerIcon from '@/components/icons/docker-icon';
 import ExpoIcon from '@/components/icons/expo-icon';
 import JavascriptIcon from '@/components/icons/javascript-icon';
+import PaddleIcon from '@/components/icons/paddle-icon';
 import PostgresqlIcon from '@/components/icons/postgresql-icon';
 import ReactNativeIcon from '@/components/icons/react-native-icon';
 import SupabaseIcon from '@/components/icons/supabase-icon';
@@ -81,6 +84,11 @@ export const ALL_TECHS = [
   {
     name: 'GraphQL',
     icon: GraphQlIcon,
+    categories: ['fullstack', 'frontend'],
+  },
+  {
+    name: 'SWR',
+    icon: SwrIcon,
     categories: ['fullstack', 'frontend'],
   },
   {
@@ -138,13 +146,11 @@ export const ALL_TECHS = [
     icon: NodeIcon,
     categories: ['fullstack', 'backend'],
   },
-
   {
-    name: 'SWR',
-    icon: SwrIcon,
-    categories: ['fullstack', 'frontend'],
+    name: 'Docker',
+    icon: DockerIcon,
+    categories: ['fu llstack', 'backend'],
   },
-
   {
     name: 'Git',
     icon: GitIcon,
@@ -177,6 +183,11 @@ export const ALL_TECHS = [
     categories: ['fullstack', 'backend'],
   },
   {
+    name: 'Paddle',
+    icon: PaddleIcon,
+    categories: ['fullstack', 'backend'],
+  },
+  {
     name: 'Semrush',
     icon: SemrushIcon,
     categories: ['seo'],
@@ -199,6 +210,11 @@ export const ALL_TECHS = [
   {
     name: 'Vercel',
     icon: VercelIcon,
+    categories: ['other'],
+  },
+  {
+    name: 'Clerk',
+    icon: ClerkIcon,
     categories: ['other'],
   },
   {

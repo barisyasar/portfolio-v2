@@ -82,7 +82,7 @@ function TechStackTabList({
 
       {/* Tech Grid */}
       <div>
-        <ul className="grid grid-cols-2 gap-2 2xs:grid-cols-3 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 [&_svg]:mx-auto [&_svg]:size-12">
+        <ul className="grid grid-cols-2 gap-2 2xs:grid-cols-3 sm:grid-cols-4 sm:gap-3 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-8 [&_svg]:mx-auto [&_svg]:size-12">
           {filteredTechs.map((tech) => (
             <motion.li
               key={tech.name}
@@ -94,12 +94,12 @@ function TechStackTabList({
                 opacity: { duration: 0 },
               }}
             >
-              <Card className="card--5 xs:px-0 xs:py-3">
+              <Card className="card--5 px-0 xs:py-3">
                 <CardContent>
                   <tech.icon />
                 </CardContent>
                 <CardHeader>
-                  <CardTitle className="text-center text-sm">
+                  <CardTitle className="w-full text-center text-sm">
                     {tech.name}
                   </CardTitle>
                 </CardHeader>
