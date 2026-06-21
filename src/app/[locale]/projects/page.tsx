@@ -1,3 +1,5 @@
+import ProjectList from '@/components/project-list';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -37,8 +39,7 @@ async function Projects({ params }: { params: Params }) {
   const t = await getTranslations('ProjectsPage');
   return (
     <main className="container">
-      {t('coming_soon')}
-      {/* <Card className="section">
+      <Card className="section">
         <div className="mx-auto max-w-screen-md space-y-5">
           <CardHeader className="space-y-4">
             <CardTitle>
@@ -47,10 +48,10 @@ async function Projects({ params }: { params: Params }) {
             <CardContent>{t.raw('description')}</CardContent>
           </CardHeader>
           <CardContent>
-            <ProjectsList className="md:grid-cols-2" />
+            <ProjectList className="md:grid-cols-2" />
           </CardContent>
         </div>
-      </Card> */}
+      </Card>
     </main>
   );
 }

@@ -1,3 +1,4 @@
+import TailwindIcon from '@/components/icons/tailwind-icon';
 import { Link } from '@/i18n/routing';
 import { ChevronRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
@@ -9,7 +10,6 @@ import {
   ReactIcon,
   SassIcon,
   StripeIcon,
-  TailwindIcon,
 } from '../../Icons';
 import { Button } from '../../ui/button';
 import {

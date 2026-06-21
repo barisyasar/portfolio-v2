@@ -1,16 +1,18 @@
 'use client';
 
 import { ALL_TECHS } from '@/constants/techStack';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
 import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
+import { useState } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 
 function TechStackTabList({
+  techs,
   defaultActiveCategory = 'all',
   withFiltering = true,
 }: {
+  techs?: string[];
   defaultActiveCategory?: string;
   withFiltering?: boolean;
 }) {
@@ -26,7 +28,11 @@ function TechStackTabList({
     { id: 'other', label: t('other') },
   ];
 
-  const filteredTechs = ALL_TECHS.filter((tech) => {
+  const currentTechs = techs
+    ? ALL_TECHS.filter((tech) => techs.includes(tech.name))
+    : ALL_TECHS;
+
+  const filteredTechs = currentTechs.filter((tech) => {
     if (activeCategory === 'all') return true;
     return tech.categories.includes(activeCategory);
   });
@@ -88,12 +94,12 @@ function TechStackTabList({
                 opacity: { duration: 0 },
               }}
             >
-              <Card className="card--5 2xs:p-3">
+              <Card className="card--5 xs:px-1 xs:py-3">
                 <CardContent>
                   <tech.icon />
                 </CardContent>
                 <CardHeader>
-                  <CardTitle className="text-center text-base font-light">
+                  <CardTitle className="text-center text-sm">
                     {tech.name}
                   </CardTitle>
                 </CardHeader>

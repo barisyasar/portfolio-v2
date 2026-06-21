@@ -9,6 +9,7 @@ const config: NextConfig = {
   devIndicators: {
     position: 'top-left',
   },
+  cacheComponents: true,
 };
 
 export default withNextIntl(config);

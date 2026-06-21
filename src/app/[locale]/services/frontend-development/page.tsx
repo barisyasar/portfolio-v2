@@ -1,15 +1,11 @@
-import {
-  FrontendIcon,
-  NextIcon,
-  ReactIcon,
-  ReactQueryIcon,
-} from '@/components/Icons';
-import ServiceDetailDescription from '@/components/sections/services/ServiceDetailDescription';
-import ServicesMarquee from '@/components/sections/services/OtherServices';
-import TechStack from '@/components/sections/services/TechStack';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Metadata } from 'next';
+import { FrontendIcon, NextIcon, ReactIcon } from '@/components/Icons';
 import { ServicesBeamInner } from '@/components/ServicesBeamInner';
+import TanstackQueryIcon from '@/components/icons/tanstack-query-icon';
+import ServicesMarquee from '@/components/sections/services/OtherServices';
+import ServiceDetailDescription from '@/components/sections/services/ServiceDetailDescription';
+import TechStack from '@/components/sections/services/TechStack';
+import { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type Params = Promise<{ locale: string }>;
 
@@ -66,8 +62,8 @@ async function FrontendDevelopment({ params }: { params: Params }) {
               icon: <ReactIcon />,
             },
             {
-              title: 'ReactQuery',
-              icon: <ReactQueryIcon />,
+              title: 'TanStack Query',
+              icon: <TanstackQueryIcon />,
             },
           ]}
         />

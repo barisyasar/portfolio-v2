@@ -4,21 +4,23 @@ import MailButton from '@/components/MailButton';
 import ScrollToTop from '@/components/ScrollToTop';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
-import { Locale, routing } from '@/i18n/routing';
+import { routing } from '@/i18n/config';
+import { Locale } from '@/i18n/routing';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import {
+  getLocale,
   getMessages,
   getTranslations,
   setRequestLocale,
 } from 'next-intl/server';
+import { cacheLife } from 'next/cache';
 import { Roboto } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import NextTopLoader from 'nextjs-toploader';
 import '../globals.css';
 
-type Params = Promise<{ locale: string }>;
 const roboto = Roboto({
   weight: ['300', '400', '500', '700', '900'],
   subsets: ['latin'],
@@ -32,7 +34,7 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const locale = (await params).locale;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
@@ -78,12 +80,13 @@ export async function generateMetadata({
 
 export default async function LocaleLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: Params;
 }) {
-  const { locale } = await params;
+  'use cache';
+  cacheLife('max');
+
+  const locale = await getLocale();
   if (!locale || !routing.locales.includes(locale as Locale)) notFound();
   const messages = await getMessages();
   setRequestLocale(locale);
@@ -96,6 +99,7 @@ export default async function LocaleLayout({
         scrollBehavior: 'smooth',
         scrollbarGutter: 'stable',
       }}
+      translate="no"
     >
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GTM_ID!} />
       <body
@@ -104,13 +108,14 @@ export default async function LocaleLayout({
           scrollbarGutter: 'stable',
         }}
       >
-        <ThemeProvider attribute="class" defaultTheme="system">
-          <NextTopLoader
-            color={'hsl(var(--foreground))'}
-            height={3}
-            showSpinner={false}
-          />
-          <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider attribute="class" defaultTheme="system">
+            <NextTopLoader
+              color={'hsl(var(--foreground))'}
+              height={3}
+              showSpinner={false}
+            />
+
             <Header />
             {children}
 
@@ -118,8 +123,8 @@ export default async function LocaleLayout({
             <MailButton />
             <ScrollToTop />
             <Toaster />
-          </NextIntlClientProvider>
-        </ThemeProvider>
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

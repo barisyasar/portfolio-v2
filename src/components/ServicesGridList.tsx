@@ -7,15 +7,15 @@ import {
   LightHouseIcon,
   NextIcon,
   NodeIcon,
-  PostgreIcon,
   ReactIcon,
-  ReactQueryIcon,
   SemrushIcon,
   SeoIcon,
   StripeIcon,
-  TailwindIcon,
   TypeScriptIcon,
 } from './Icons';
+import PostgresqlIcon from './icons/postgresql-icon';
+import TailwindIcon from './icons/tailwind-icon';
+import TanstackQueryIcon from './icons/tanstack-query-icon';
 import { Button } from './ui/button';
 import {
   Card,
@@ -73,7 +73,7 @@ export async function ServicesGridList() {
           <CardContent className="flex gap-3 space-y-0">
             <NextIcon />
             <ReactIcon />
-            <ReactQueryIcon />
+            <TanstackQueryIcon />
             <TailwindIcon />
             <TypeScriptIcon />
           </CardContent>
@@ -97,7 +97,7 @@ export async function ServicesGridList() {
           <CardContent className="flex gap-3 space-y-0">
             <NodeIcon />
             <ExpressIcon />
-            <PostgreIcon />
+            <PostgresqlIcon />
             <StripeIcon />
           </CardContent>
         </Card>

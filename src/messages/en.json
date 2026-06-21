@@ -232,5 +232,12 @@
   "ProjectCard": {
     "personal": "personal",
     "team": "team"
+  },
+  "ProjectDetail": {
+    "Projects": "Projects",
+    "personal": "personal",
+    "team": "team",
+    "tech_stack": "Tech Stack",
+    "Platforms": "Platforms"
   }
 }

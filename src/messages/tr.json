@@ -98,7 +98,7 @@
     }
   },
   "ProjectsPage": {
-    "title": "Projler",
+    "title": "Projeler",
     "description": "Full-stack developer olarak çeşitli projeler geliştirim ve projelere katkıda bulundum. Bunlardan bazılarına göz atın.",
     "coming_soon": "Çok Yakında",
     "metadata": {
@@ -234,5 +234,12 @@
   "ProjectCard": {
     "personal": "bireysel",
     "team": "ekip"
+  },
+  "ProjectDetail": {
+    "Projects": "Projeler",
+    "personal": "bireysel",
+    "team": "ekip",
+    "tech_stack": "Kullanılan Teknolojiler",
+    "Platforms": "Platformlar"
   }
 }

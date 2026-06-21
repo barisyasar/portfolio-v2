@@ -1,4 +1,5 @@
 import {
+  AhrefsIcon,
   ApolloIcon,
   AsanaIcon,
   AwsIcon,
@@ -9,14 +10,13 @@ import {
   GraphQlIcon,
   IyzicoIcon,
   JiraIcon,
+  LightHouseIcon,
   MaterialUiIcon,
   MongoIcon,
   NextIcon,
   NodeIcon,
   PaypalIcon,
-  PostgreIcon,
   ReactIcon,
-  ReactQueryIcon,
   ReduxIcon,
   SassIcon,
   SemrushIcon,
@@ -25,27 +25,23 @@ import {
   SlackIcon,
   StripeIcon,
   SwrIcon,
-  TailwindIcon,
   TypeScriptIcon,
-  LightHouseIcon,
-  AhrefsIcon,
 } from '@/components/Icons';
+import AdmobIcon from '@/components/icons/admob-icon';
+import ExpoIcon from '@/components/icons/expo-icon';
+import JavascriptIcon from '@/components/icons/javascript-icon';
+import PostgresqlIcon from '@/components/icons/postgresql-icon';
+import ReactNativeIcon from '@/components/icons/react-native-icon';
+import SupabaseIcon from '@/components/icons/supabase-icon';
+import Tailwind from '@/components/icons/tailwind-icon';
+import TanstackQueryIcon from '@/components/icons/tanstack-query-icon';
+import VercelIcon from '@/components/icons/vercel-icon';
 
 export const ALL_TECHS = [
   {
-    name: 'Next',
-    icon: NextIcon,
-    categories: ['fullstack', 'frontend'],
-  },
-  {
-    name: 'React',
-    icon: ReactIcon,
-    categories: ['fullstack', 'frontend'],
-  },
-  {
-    name: 'Redux',
-    icon: ReduxIcon,
-    categories: ['fullstack', 'frontend'],
+    name: 'JavaScript',
+    icon: JavascriptIcon,
+    categories: ['fullstack', 'frontend', 'backend'],
   },
   {
     name: 'TypeScript',
@@ -53,43 +49,33 @@ export const ALL_TECHS = [
     categories: ['fullstack', 'frontend', 'backend'],
   },
   {
-    name: 'Express',
-    icon: ExpressIcon,
-    categories: ['fullstack', 'backend'],
-  },
-  {
-    name: 'Apollo',
-    icon: ApolloIcon,
-    categories: ['fullstack', 'frontend', 'backend'],
-  },
-  {
-    name: 'AWS',
-    icon: AwsIcon,
-    categories: ['fullstack', 'backend'],
-  },
-  {
-    name: 'MongoDB',
-    icon: MongoIcon,
-    categories: ['backend'],
-  },
-  {
-    name: 'PostgreSQL',
-    icon: PostgreIcon,
-    categories: ['backend'],
-  },
-  {
-    name: 'Node',
-    icon: NodeIcon,
-    categories: ['fullstack', 'backend'],
-  },
-  {
-    name: 'SWR',
-    icon: SwrIcon,
+    name: 'React',
+    icon: ReactIcon,
     categories: ['fullstack', 'frontend'],
   },
   {
-    name: 'ReactQuery',
-    icon: ReactQueryIcon,
+    name: 'Next',
+    icon: NextIcon,
+    categories: ['fullstack', 'frontend'],
+  },
+  {
+    name: 'React Native',
+    icon: ReactNativeIcon,
+    categories: ['frontend'],
+  },
+  {
+    name: 'Expo',
+    icon: ExpoIcon,
+    categories: ['frontend'],
+  },
+  {
+    name: 'Redux',
+    icon: ReduxIcon,
+    categories: ['fullstack', 'frontend'],
+  },
+  {
+    name: 'TanStack Query',
+    icon: TanstackQueryIcon,
     categories: ['fullstack', 'frontend'],
   },
   {
@@ -98,23 +84,8 @@ export const ALL_TECHS = [
     categories: ['fullstack', 'frontend'],
   },
   {
-    name: 'Git',
-    icon: GitIcon,
-    categories: ['other'],
-  },
-  {
-    name: 'GitHub',
-    icon: GithubIcon,
-    categories: ['other'],
-  },
-  {
-    name: 'Framer',
-    icon: FramerMotionIcon,
-    categories: ['fullstack', 'frontend'],
-  },
-  {
     name: 'Tailwind',
-    icon: TailwindIcon,
+    icon: Tailwind,
     categories: ['fullstack', 'frontend'],
   },
   {
@@ -132,6 +103,64 @@ export const ALL_TECHS = [
     icon: ShadcnIcon,
     categories: ['fullstack', 'frontend'],
   },
+  {
+    name: 'Express',
+    icon: ExpressIcon,
+    categories: ['fullstack', 'backend'],
+  },
+  {
+    name: 'Apollo',
+    icon: ApolloIcon,
+    categories: ['fullstack', 'frontend', 'backend'],
+  },
+  {
+    name: 'AWS',
+    icon: AwsIcon,
+    categories: ['fullstack', 'backend'],
+  },
+  {
+    name: 'Supabase',
+    icon: SupabaseIcon,
+    categories: ['backend'],
+  },
+  {
+    name: 'MongoDB',
+    icon: MongoIcon,
+    categories: ['backend'],
+  },
+  {
+    name: 'PostgreSQL',
+    icon: PostgresqlIcon,
+    categories: ['backend'],
+  },
+  {
+    name: 'Node',
+    icon: NodeIcon,
+    categories: ['fullstack', 'backend'],
+  },
+
+  {
+    name: 'SWR',
+    icon: SwrIcon,
+    categories: ['fullstack', 'frontend'],
+  },
+
+  {
+    name: 'Git',
+    icon: GitIcon,
+    categories: ['other'],
+  },
+  {
+    name: 'GitHub',
+    icon: GithubIcon,
+    categories: ['other'],
+  },
+  {
+    name: 'Framer',
+    icon: FramerMotionIcon,
+    categories: ['fullstack', 'frontend'],
+  },
+
   {
     name: 'PayPal',
     icon: PaypalIcon,
@@ -166,6 +195,16 @@ export const ALL_TECHS = [
     name: 'Lighthouse',
     icon: LightHouseIcon,
     categories: ['seo'],
+  },
+  {
+    name: 'Vercel',
+    icon: VercelIcon,
+    categories: ['other'],
+  },
+  {
+    name: 'AdMob',
+    icon: AdmobIcon,
+    categories: ['other'],
   },
   {
     name: 'Jira',

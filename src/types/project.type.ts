@@ -15,30 +15,23 @@ export default interface Project {
   };
   translations: ProjectTranslation[];
   tech_stack: string[];
-  stores: {
-    name: string;
-    link: string;
-  }[];
-  social: {
-    web: {
-      url: string;
-      name: string;
-    };
-    instagram: {
-      url: string;
-      name: string;
-    };
-  };
+  platforms: ProjectPlatform[];
 }
 
 export type ProjectOwnership = 'personal' | 'team';
 export type ProjectCategory = 'frontend' | 'mobile' | 'backend';
+
+export type ProjectPlatform = {
+  name: 'web' | 'instagram' | 'google-play' | 'app-store';
+  url: string;
+};
 
 export interface ProjectTranslation {
   locale: {
     code: string;
   };
   name: string;
+  storyTitle: string;
   story: string;
   logoAlt: string;
 }

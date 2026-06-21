@@ -1,15 +1,11 @@
-import {
-  BackendIcon,
-  ExpressIcon,
-  NodeIcon,
-  PostgreIcon,
-} from '@/components/Icons';
-import ServiceDetailDescription from '@/components/sections/services/ServiceDetailDescription';
-import OtherServices from '@/components/sections/services/OtherServices';
-import TechStack from '@/components/sections/services/TechStack';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Metadata } from 'next';
+import { BackendIcon, ExpressIcon, NodeIcon } from '@/components/Icons';
 import { ServicesBeamInner } from '@/components/ServicesBeamInner';
+import PostgresqlIcon from '@/components/icons/postgresql-icon';
+import OtherServices from '@/components/sections/services/OtherServices';
+import ServiceDetailDescription from '@/components/sections/services/ServiceDetailDescription';
+import TechStack from '@/components/sections/services/TechStack';
+import { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type Params = Promise<{ locale: string }>;
 
@@ -67,7 +63,7 @@ async function BackendDevelopment({ params }: { params: Params }) {
             },
             {
               title: 'PostgreSQL',
-              icon: <PostgreIcon />,
+              icon: <PostgresqlIcon />,
             },
           ]}
         />

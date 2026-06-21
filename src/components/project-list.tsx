@@ -2,14 +2,15 @@ import { PROJECTS } from '@/constants/projects';
 import { cn } from '@/lib/utils';
 import ProjectCard from './project-card';
 
-function ProjectsList({ className }: { className?: string }) {
+function ProjectList({ className }: { className?: string }) {
   return (
     <div className={cn('grid gap-4', className)}>
-      {[...PROJECTS, ...PROJECTS].map((project) => (
+      {PROJECTS.slice(0, 2).map((project) => (
         <ProjectCard key={project.project_id} project={project} />
       ))}
+      I am coding rest of all 😊
     </div>
   );
 }
 
-export default ProjectsList;
+export default ProjectList;
