@@ -94,7 +94,7 @@ function TechStackTabList({
                 opacity: { duration: 0 },
               }}
             >
-              <Card className="card--5 xs:px-1 xs:py-3">
+              <Card className="card--5 xs:px-0 xs:py-3">
                 <CardContent>
                   <tech.icon />
                 </CardContent>

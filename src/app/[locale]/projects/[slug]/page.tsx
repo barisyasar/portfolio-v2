@@ -71,7 +71,6 @@ export default async function ProjectDetail({
     project.translations,
   ) as ProjectTranslation;
 
-  // Group platforms by name
   const platforms = project.platforms.reduce<PlatformMap>((acc, platform) => {
     acc[platform.name] = platform;
     return acc;
@@ -86,8 +85,8 @@ export default async function ProjectDetail({
 
   return (
     <main className="container">
-      <Card className="mx-auto max-w-screen-lg">
-        <div className="space-y-8 p-6 md:p-10">
+      <Card>
+        <div className="mx-auto max-w-screen-lg space-y-8 p-6 md:p-10">
           {/* Header */}
           <div className="flex items-center gap-4">
             <Image
@@ -111,7 +110,6 @@ export default async function ProjectDetail({
             </div>
           </div>
 
-          {/* Story */}
           <div className="space-y-3">
             <h2 className="text-2xl font-semibold">{translation.storyTitle}</h2>
             <div
@@ -120,7 +118,6 @@ export default async function ProjectDetail({
             />
           </div>
 
-          {/* Tech Stack */}
           <div className="space-y-3">
             <h2 className="text-2xl font-semibold">{t('tech_stack')}</h2>
             <TechStackTabList
@@ -129,7 +126,6 @@ export default async function ProjectDetail({
             />
           </div>
 
-          {/* Platforms */}
           {project.platforms.length > 0 && (
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold">{t('Platforms')}</h2>
@@ -140,7 +136,7 @@ export default async function ProjectDetail({
                     <Link
                       target="_blank"
                       href={web.url}
-                      className="inline-flex items-center gap-2 text-lg hover:underline"
+                      className="inline-flex items-center gap-2 text-lg"
                     >
                       <b>Web:</b> {web.url.replace(/^https?:\/\//, '')}
                     </Link>
@@ -152,7 +148,7 @@ export default async function ProjectDetail({
                     <Link
                       target="_blank"
                       href={instagram.url}
-                      className="inline-flex items-center gap-2 text-lg hover:underline"
+                      className="inline-flex items-center gap-2 text-lg"
                     >
                       <b>Instagram:</b>{' '}
                       {instagram.url.match(/instagram\.com\/([^/?#]+)/)?.[1] ||

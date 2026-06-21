@@ -1,3 +1,5 @@
+import { PROJECTS } from '@/constants/projects'; // adjust path as needed
+import Project from '@/types/project.type';
 import type { MetadataRoute } from 'next';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -6,7 +8,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routeMappings = [
     { en: '', tr: '' },
     { en: '/about/', tr: '/hakkimda/' },
-    { en: '/services/', tr: '/hizmetler/' },
     { en: '/services/', tr: '/hizmetler/' },
     {
       en: '/services/full-stack-development/',
@@ -25,8 +26,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       tr: '/hizmetler/arama-motoru-optimizasyonu/',
     },
     { en: '/contact/', tr: '/iletisim/' },
+    { en: '/projects/', tr: '/projeler/' },
   ];
 
+  // Static main pages
   const mainPages = routeMappings.flatMap((routes) => [
     {
       url: `${baseUrl}/en${routes.en}`,
@@ -54,5 +57,40 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]);
 
-  return mainPages;
+  // Dynamic Project pages
+  const projectPages = PROJECTS.flatMap((project: Project) => {
+    const enSlug = project.slug;
+    const trSlug = project.slug; // assuming same slug for both languages
+
+    return [
+      // English version
+      {
+        url: `${baseUrl}/en/projects/${enSlug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+        alternates: {
+          languages: {
+            en: `${baseUrl}/en/projects/${enSlug}`,
+            tr: `${baseUrl}/tr/projeler/${trSlug}`,
+          },
+        },
+      },
+      // Turkish version
+      {
+        url: `${baseUrl}/tr/projeler/${trSlug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+        alternates: {
+          languages: {
+            en: `${baseUrl}/en/projects/${enSlug}`,
+            tr: `${baseUrl}/tr/projeler/${trSlug}`,
+          },
+        },
+      },
+    ];
+  });
+
+  return [...mainPages, ...projectPages];
 }
