@@ -88,7 +88,7 @@ export default async function ProjectDetail({
       <Card>
         <div className="mx-auto max-w-screen-lg space-y-8 p-6 md:p-10">
           {/* Header */}
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
             <Image
               src={`/projects/${project.logo}`}
               width={72}

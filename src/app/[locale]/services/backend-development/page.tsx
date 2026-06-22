@@ -1,5 +1,7 @@
-import { BackendIcon, ExpressIcon, NodeIcon } from '@/components/Icons';
+import { BackendIcon } from '@/components/Icons';
 import { ServicesBeamInner } from '@/components/ServicesBeamInner';
+import ExpressIcon from '@/components/icons/express-icon';
+import NodeIcon from '@/components/icons/node-icon';
 import PostgresqlIcon from '@/components/icons/postgresql-icon';
 import OtherServices from '@/components/sections/services/OtherServices';
 import ServiceDetailDescription from '@/components/sections/services/ServiceDetailDescription';

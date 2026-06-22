@@ -3,16 +3,16 @@ import { ChevronRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import {
   AhrefsIcon,
-  ExpressIcon,
   LightHouseIcon,
   NextIcon,
-  NodeIcon,
   ReactIcon,
   SemrushIcon,
   SeoIcon,
   StripeIcon,
   TypeScriptIcon,
 } from './Icons';
+import ExpressIcon from './icons/express-icon';
+import NodeIcon from './icons/node-icon';
 import PostgresqlIcon from './icons/postgresql-icon';
 import TailwindIcon from './icons/tailwind-icon';
 import TanstackQueryIcon from './icons/tanstack-query-icon';

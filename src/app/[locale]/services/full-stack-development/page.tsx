@@ -1,15 +1,11 @@
-import {
-  NextIcon,
-  NodeIcon,
-  StripeIcon,
-  TypeScriptIcon,
-} from '@/components/Icons';
-import ServiceDetailDescription from '@/components/sections/services/ServiceDetailDescription';
-import ServicesMarquee from '@/components/sections/services/OtherServices';
-import TechStack from '@/components/sections/services/TechStack';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Metadata } from 'next';
+import { NextIcon, StripeIcon, TypeScriptIcon } from '@/components/Icons';
 import { ServicesBeamInner } from '@/components/ServicesBeamInner';
+import NodeIcon from '@/components/icons/node-icon';
+import ServicesMarquee from '@/components/sections/services/OtherServices';
+import ServiceDetailDescription from '@/components/sections/services/ServiceDetailDescription';
+import TechStack from '@/components/sections/services/TechStack';
+import { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type Params = Promise<{ locale: string }>;
 

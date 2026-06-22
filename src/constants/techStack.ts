@@ -2,8 +2,6 @@ import {
   AhrefsIcon,
   ApolloIcon,
   AsanaIcon,
-  AwsIcon,
-  ExpressIcon,
   FramerMotionIcon,
   GithubIcon,
   GitIcon,
@@ -11,10 +9,7 @@ import {
   IyzicoIcon,
   JiraIcon,
   LightHouseIcon,
-  MaterialUiIcon,
-  MongoIcon,
   NextIcon,
-  NodeIcon,
   PaypalIcon,
   ReactIcon,
   ReduxIcon,
@@ -28,13 +23,20 @@ import {
   TypeScriptIcon,
 } from '@/components/Icons';
 import AdmobIcon from '@/components/icons/admob-icon';
+import AwsEc2Icon from '@/components/icons/aws-ec2-icon';
+import AwsS3Icon from '@/components/icons/aws-s3-icon';
 import ClerkIcon from '@/components/icons/clerk-icon';
 import DockerIcon from '@/components/icons/docker-icon';
 import ExpoIcon from '@/components/icons/expo-icon';
+import ExpressIcon from '@/components/icons/express-icon';
 import JavascriptIcon from '@/components/icons/javascript-icon';
+import MaterialUIIcon from '@/components/icons/material-ui-icon';
+import MongoDBIcon from '@/components/icons/mongodb-icon';
+import NodeIcon from '@/components/icons/node-icon';
 import PaddleIcon from '@/components/icons/paddle-icon';
 import PostgresqlIcon from '@/components/icons/postgresql-icon';
 import ReactNativeIcon from '@/components/icons/react-native-icon';
+import SentryIcon from '@/components/icons/sentry-icon';
 import SupabaseIcon from '@/components/icons/supabase-icon';
 import Tailwind from '@/components/icons/tailwind-icon';
 import TanstackQueryIcon from '@/components/icons/tanstack-query-icon';
@@ -103,7 +105,7 @@ export const ALL_TECHS = [
   },
   {
     name: 'Material UI',
-    icon: MaterialUiIcon,
+    icon: MaterialUIIcon,
     categories: ['fullstack', 'frontend'],
   },
   {
@@ -112,18 +114,28 @@ export const ALL_TECHS = [
     categories: ['fullstack', 'frontend'],
   },
   {
-    name: 'Express',
-    icon: ExpressIcon,
-    categories: ['fullstack', 'backend'],
-  },
-  {
     name: 'Apollo',
     icon: ApolloIcon,
     categories: ['fullstack', 'frontend', 'backend'],
   },
   {
-    name: 'AWS',
-    icon: AwsIcon,
+    name: 'Node',
+    icon: NodeIcon,
+    categories: ['fullstack', 'backend'],
+  },
+  {
+    name: 'Express',
+    icon: ExpressIcon,
+    categories: ['fullstack', 'backend'],
+  },
+  {
+    name: 'AWS EC2',
+    icon: AwsEc2Icon,
+    categories: ['fullstack', 'backend'],
+  },
+  {
+    name: 'AWS S3',
+    icon: AwsS3Icon,
     categories: ['fullstack', 'backend'],
   },
   {
@@ -132,24 +144,19 @@ export const ALL_TECHS = [
     categories: ['backend'],
   },
   {
+    name: 'Docker',
+    icon: DockerIcon,
+    categories: ['fu llstack', 'backend'],
+  },
+  {
     name: 'MongoDB',
-    icon: MongoIcon,
+    icon: MongoDBIcon,
     categories: ['backend'],
   },
   {
     name: 'PostgreSQL',
     icon: PostgresqlIcon,
     categories: ['backend'],
-  },
-  {
-    name: 'Node',
-    icon: NodeIcon,
-    categories: ['fullstack', 'backend'],
-  },
-  {
-    name: 'Docker',
-    icon: DockerIcon,
-    categories: ['fu llstack', 'backend'],
   },
   {
     name: 'Git',
@@ -215,6 +222,11 @@ export const ALL_TECHS = [
   {
     name: 'Clerk',
     icon: ClerkIcon,
+    categories: ['other'],
+  },
+  {
+    name: 'Sentry',
+    icon: SentryIcon,
     categories: ['other'],
   },
   {

@@ -130,6 +130,7 @@ export const PROJECTS: Project[] = [
       'React',
       'Next',
       'Tailwind',
+      'ShadCN',
       'Supabase',
       'TanStack Query',
       'PostgreSQL',
@@ -188,6 +189,7 @@ export const PROJECTS: Project[] = [
       'React',
       'Next',
       'Tailwind',
+      'ShadCN',
       'TanStack Query',
       'Clerk',
     ],
@@ -225,7 +227,7 @@ export const PROJECTS: Project[] = [
         name: 'Portfolyo',
         storyTitle: 'Portfolyo Sitem',
         story:
-          '<p>Şu ana kadar geliştirdiğim projelerimi yönetmek için kullandığım bir yönetim panelidir.</p><p>Clerk sayesinde projelerimi organizasyonlara ayırarak rahatça yönetebiliyorum.</p>',
+          '<p>Şu ana kadar geliştirdiğim projelerimi ve full-stack developer yolcuğumu gösterdiğim Next.js tabanlı bir websitesidir</p>',
         logoAlt: 'Vercel Logo',
       },
       {
@@ -235,11 +237,18 @@ export const PROJECTS: Project[] = [
         name: 'Portfolio',
         storyTitle: 'My Portfolio Website',
         story:
-          '<p>Pulse House is a project management dashboard. I use to manage projects I have developed so far.</p><p>Thanks to Clerk, authorization and authentication is very easy.</p>',
+          '<p>This is a Next.js based website that I show my full-stack developer journey and my projects.</p>',
         logoAlt: 'Vercel Logo',
       },
     ],
-    tech_stack: ['JavaScript', 'TypeScript', 'React', 'Next', 'Tailwind'],
+    tech_stack: [
+      'JavaScript',
+      'TypeScript',
+      'React',
+      'Next',
+      'Tailwind',
+      'ShadCN',
+    ],
     platforms: [
       {
         name: 'web',
@@ -288,7 +297,7 @@ export const PROJECTS: Project[] = [
           code: 'en',
         },
         name: 'Smart Chatbot AI',
-        storyTitle: 'Smart Chatbot AI',
+        storyTitle: 'What is Smart Chatbot AI?',
         story:
           '<p>During this period when artificial intelligence is trending, we developed this application in line with a decision made by the company I work for.</p> <p>Our goal was to enable users to generate text, images, and other types of content using various LLMs.</p>',
         logoAlt: 'Smart Chatbot AI Logo',
@@ -299,6 +308,7 @@ export const PROJECTS: Project[] = [
       'TypeScript',
       'React',
       'Tailwind',
+      'ShadCN',
       'TanStack Query',
       'Docker',
       'Paddle',
@@ -310,7 +320,6 @@ export const PROJECTS: Project[] = [
       },
     ],
   },
-  /*
   {
     project_id: '96b81660-d93c-49e4-b330-b12d46b56073',
     slug: 'customizable-onboarding-builder',
@@ -323,14 +332,15 @@ export const PROJECTS: Project[] = [
             code: 'tr',
           },
           title: 'Customizable Onboarding Builder',
-          description: 'Güç, dayanıklılık ve esneme antrenmanları',
+          description:
+            'Kullancıları web sitesi üzerinden mobil uygulamaya yönlendiren bir uygulamadır.',
         },
         {
           locale: {
             code: 'en',
           },
           title: 'Customizable Onboarding Builder',
-          description: 'Strength, endurance, and flexibility trainings',
+          description: 'Handles users onboarding flow via web to app.',
         },
       ],
     },
@@ -340,31 +350,40 @@ export const PROJECTS: Project[] = [
           code: 'tr',
         },
         name: 'Customizable Onboarding Builder',
-        story: 'lorem10',
+        storyTitle: 'Customizable Onboarding Builder Nedir?',
+        story:
+          '<p>Eskiden çalıştığım şirkette mobil uygulamalar geliştiriyorduk. Bu uygulamalara organik kullanıcı çekmek için 15-20 sorudan oluşan dinamik akışlar (question flows) tasarladık.</p><p>Kullanıcı bu akışları tamamladıktan sonra otomatik hesap oluşturma ve ödeme alma süreçlerini uçtan uca entegre ettik.</p>',
+        logoAlt: 'Vercel Logo',
+      },
+      {
+        locale: {
+          code: 'en',
+        },
+        name: 'Customizable Onboarding Builder',
+        storyTitle: 'What is Customizable Onboarding Builder?',
+        story:
+          '<p>At my previous company, we developed mobile applications. To attract organic users to these apps, we designed dynamic question flows consisting of 15-20 questions.</p><p>After users completed these flows, we fully integrated automated account creation and payment processes end-to-end.</p>',
         logoAlt: 'Vercel Logo',
       },
     ],
-    tech_stack: ['react', 'next'],
-    stores: [
+    tech_stack: [
+      'JavaScript',
+      'TypeScript',
+      'React',
+      'Next',
+      'Tailwind',
+      'ShadCN',
+      'SWR',
+      'Docker',
+      'Paddle',
+      'Sentry',
+    ],
+    platforms: [
       {
-        name: 'app-store',
-        link: 'https://apps.apple.com/tr/app/no-4/id6749334969',
-      },
-      {
-        name: 'google-play',
-        link: 'https://play.google.com/store/apps/details?id=com.anonymous.TrainingHouseNo4&hl=en',
+        name: 'web',
+        url: 'https://home-fit.oceanfloatmobile.com/flow?id=base',
       },
     ],
-    social: {
-      web: {
-        url: 'https://no4.barisyasar.com/',
-        name: 'Web',
-      },
-      instagram: {
-        url: 'https://www.instagram.com/traininghouseno4/',
-        name: 'traininghouseno4',
-      },
-    },
   },
   {
     project_id: '263c1005-5f1a-4fec-ab87-76585e2f9cb9',
@@ -395,32 +414,35 @@ export const PROJECTS: Project[] = [
           code: 'tr',
         },
         name: 'Burs Uygulaması',
-        story: 'lorem10',
-        logoAlt: 'Vercel Logo',
-      },
-    ],
-    tech_stack: ['react', 'next'],
-    stores: [
-      {
-        name: 'app-store',
-        link: 'https://apps.apple.com/tr/app/no-4/id6749334969',
+        storyTitle: 'Burs Uygulaması Ne İşe Yarar?',
+        story:
+          "Burs adaylarının başvuru süreçlerini baştan sona yöneten bir platformdur. 5000'den fazla kişi bu platformu kullanmaktadır.",
+        logoAlt: 'Logo',
       },
       {
-        name: 'google-play',
-        link: 'https://play.google.com/store/apps/details?id=com.anonymous.TrainingHouseNo4&hl=en',
+        locale: {
+          code: 'en',
+        },
+        name: 'Scholarship Application',
+        storyTitle: 'What Does Scholarship Application Do?',
+        story:
+          'It is a platform that manages the entire application process for scholarship candidates. More than 5000 people use this platform.',
+        logoAlt: 'Logo',
       },
     ],
-    social: {
-      web: {
-        url: 'https://no4.barisyasar.com/',
-        name: 'Web',
-      },
-      instagram: {
-        url: 'https://www.instagram.com/traininghouseno4/',
-        name: 'traininghouseno4',
-      },
-    },
+    tech_stack: [
+      'JavaScript',
+      'React',
+      'Material UI',
+      'Node',
+      'AWS EC2',
+      'AWS S3',
+      'Express',
+      'MongoDB',
+    ],
+    platforms: [],
   },
+  /*
   {
     project_id: '7e8c2a4b-d992-4a49-a3b5-0173507fa3fe',
     slug: 'internal-dashboard',

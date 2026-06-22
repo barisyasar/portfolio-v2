@@ -1,3 +1,4 @@
+import NodeIcon from '@/components/icons/node-icon';
 import TailwindIcon from '@/components/icons/tailwind-icon';
 import { Link } from '@/i18n/routing';
 import { ChevronRight } from 'lucide-react';
@@ -5,7 +6,6 @@ import { getTranslations } from 'next-intl/server';
 import {
   FramerMotionIcon,
   NextIcon,
-  NodeIcon,
   PaypalIcon,
   ReactIcon,
   SassIcon,
