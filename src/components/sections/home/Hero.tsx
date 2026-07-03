@@ -7,15 +7,17 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import PROFILE_IMG_4 from '../../../../public/profile_4.webp';
 
-function Hero() {
+async function Hero() {
+  const t = await getTranslations('HomePage.recap');
   return (
     <Card className="section flex min-h-[calc(100svh-66px-2.5rem)] flex-col md:min-h-[calc(100svh-66px-4rem)]">
       <div className="flex flex-1 flex-col items-center justify-center">
-        <div className="max-w-screen-sm space-y-3">
-          <div className="card--5 mx-auto size-60 rounded-full p-3 xs:size-72 xl:size-96">
+        <div className="max-w-screen-sm space-y-6">
+          <div className="card--5 mx-auto size-60 shrink-0 rounded-full p-3 xs:size-72 xl:size-96">
             <Image
               src={PROFILE_IMG_4}
               alt="Barış YAŞAR"
@@ -30,11 +32,14 @@ function Hero() {
           </div>
           <CardHeader>
             <CardTitle>
-              <h1 className="text-center text-4xl xs:text-5xl">Barış YAŞAR</h1>
+              <h1 className="text-center text-4xl xs:text-5xl">
+                {t('A Quick Recap')}
+              </h1>
             </CardTitle>
-            <CardDescription className="text-center text-lg xs:text-2xl">
-              Full-Stack Developer
-            </CardDescription>
+            <CardDescription
+              className="text-center"
+              dangerouslySetInnerHTML={{ __html: t.raw('summaryText') }}
+            />
           </CardHeader>
           <CardContent>
             <SocialMedia />

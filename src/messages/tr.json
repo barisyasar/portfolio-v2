@@ -25,15 +25,14 @@
     },
     "experiences": {
       "title": "Deneyimler",
-      "text": "Full-stack developer olarak, <strong>10'dan fazla projede baştan sona yer alarak</strong> hem frontend hem de backendde deneyim kazandım. İşte bunlardan bazıları.",
+      "text": "Full-stack developer olarak, <strong>10'dan fazla projede baştan sona yer alarak</strong> hem frontend hem de backendde deneyim kazandım. İşte bu deneyimlerimden bazıları.",
       "landingWebPageTitle": "Tanıtım Siteleri",
       "landingWebPage": "Farklı şirketler için özgün web siteleri tasarlıyorum. Bu projelerde, ilgi çekici ve kullanıcı dostu tasarımlar oluşturmayı hedefliyorum.",
       "webpToApplicationTitle": "Web'den Uygulamaya",
       "webpToApplication": "Kullanıcıları bir web sayfasından mobil uygulamaya taşıyan projeler. Kayıt olduktan sonra, kullanıcılar uygulamaya giriş yapabilir ve hizmetten yararlanmaya başlayabilir.",
       "ecommerceTitle": "E-Ticaret",
       "ecommerceText": "Farklı ülkelerde satış yapan müşterilerim için geliştirdiğim e-ticaret platformları. Çoklu dil desteği, güvenli ödeme sistemleri ve kolay yönetilebilir stok takibi ile işletmelerin online satış süreçlerini basitleştirdim.",
-      "servicesText": "Bu alanlarda profesyonel hizmetler sunuyorum. Daha fazlası için hizmetlerime göz atabilirsiniz.",
-      "services": "Hizmetler"
+      "learnMore": "Daha fazlası"
     },
     "contact": {
       "title": "Gördüklerinizi beğendiniz mi?",
@@ -48,7 +47,6 @@
   "AboutPage": {
     "recap": {
       "webEnthusiast": "Web Meraklısı",
-      "lifelongLearner": "Araştırmacı",
       "summary": "<p>Ted Üniversitesi bilgisayar mühendisliği mezunu olarak, kariyerime full-stack development alanında yön verdim. Eğitim sürecimde iki uzun dönem staj yaptım; bunlardan ilki <strong>Altima</strong>, diğeri ise <strong>Osi</strong> şirketinde gerçekleşti. Stajlarımın ardından, <strong>Osi</strong> bünyesinde <strong>full-stack developer</strong> olarak 2 yılı aşkın bir süre görev yaptım ve bu süreçte önemli projelerde yer aldım.</p><p>1.5 sene boyunca <strong>Oak Technology</strong> şirketinde <strong>frontend developer</strong> olarak çalıştım. Şu anda serbest olarak çalışıyorum.</p>",
       "title2": "Yazılım Yolculuğum",
       "description2": "<p>Yazılım geliştirme kariyerim boyunca, <strong>frontend</strong>, <strong>backend</strong> ve <strong>seo</strong> alanlarında önemli sorumluluklar üstlendim. Bu projelerden edindiğim deneyimle, <strong>kullanıcı dostu web siteleri</strong> ve <strong>yüksek performanslı uygulamalar</strong> geliştirdim. <strong>Modern yazılım teknolojilerini</strong> yakından takip ediyor ve tüm projelerimde en yeni ve en iyi çözümleri uyguluyorum.</p> <p>Amacım, müşterilerimin ihtiyaçlarını en iyi şekilde karşılayan <strong>kaliteli ve sürdürülebilir</strong> projeler üretmek. Her yeni projeyle birlikte büyümeye ve öğrenmeye devam ediyorum.</p>",
@@ -57,7 +55,7 @@
     },
 
     "metadata": {
-      "title": "Barış YAŞAR Kimdir?",
+      "title": "Barış YAŞAR Hakkında",
       "description": "Full Stack Developer olarak kariyerim, yeteneklerim ve deneyimlerim hakkında daha fazla bilgi edinin."
     }
   },
@@ -85,8 +83,8 @@
       "frontend": "Frontend",
       "backend": "Backend",
       "other": "Diğer",
-      "visitContact": "Projenizi hayata geçirmeye hazır mısınız?",
-      "contact": "İletişim",
+      "visitProjects": "Bu araçları kullandığım projelere göz atın.",
+      "projects": "Projeler",
       "descriptionSeo": "Web sitelerini arama motorlarında daha iyi görünürlük ve performans için optimize etmekte kullandığım temel SEO araçları ve teknolojileri.",
       "descriptionFrontend": "Kullanıcı dostu ve etkileşimli web arayüzleri oluşturmak için kullandığım modern frontend araçları.",
       "descriptionFullstack": "Kullanıcı arayüzünden sunucu tarafı işlemlerine kadar, uçtan uca web uygulamaları geliştirmek için kullandığım araçlar.",

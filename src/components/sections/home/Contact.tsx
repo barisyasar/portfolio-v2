@@ -1,4 +1,7 @@
+import { Link } from '@/i18n/routing';
+import { ChevronRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
+import { Button } from '../../ui/button';
 import {
   Card,
   CardDescription,
@@ -6,9 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from '../../ui/card';
-import { Link } from '@/i18n/routing';
-import { Button } from '../../ui/button';
-import { ChevronRight } from 'lucide-react';
 
 async function Contact() {
   const t = await getTranslations('HomePage.contact');

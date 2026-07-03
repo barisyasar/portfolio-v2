@@ -1,3 +1,4 @@
+import AwsEc2Icon from '@/components/icons/aws-ec2-icon';
 import NodeIcon from '@/components/icons/node-icon';
 import TailwindIcon from '@/components/icons/tailwind-icon';
 import { Link } from '@/i18n/routing';
@@ -6,7 +7,6 @@ import { getTranslations } from 'next-intl/server';
 import {
   FramerMotionIcon,
   NextIcon,
-  PaypalIcon,
   ReactIcon,
   SassIcon,
   StripeIcon,
@@ -24,7 +24,7 @@ import {
 async function Experiences() {
   const t = await getTranslations('HomePage.experiences');
   return (
-    <Card className="section">
+    <Card className="section" id="experiences">
       <div className="mx-auto max-w-screen-md space-y-5">
         <CardHeader>
           <CardTitle>
@@ -44,9 +44,9 @@ async function Experiences() {
             </CardHeader>
 
             <CardFooter className="gap-3">
-              <StripeIcon />
-              <PaypalIcon />
               <NodeIcon />
+              <AwsEc2Icon />
+              <StripeIcon />
             </CardFooter>
           </Card>
 
@@ -78,10 +78,9 @@ async function Experiences() {
           </Card>
         </CardContent>
         <CardFooter className="flex-col items-start gap-2">
-          <p className="text-muted-foreground">{t('servicesText')}</p>
           <Button asChild>
-            <Link href="/services" prefetch={false}>
-              {t('services')}{' '}
+            <Link href="/about" prefetch={false}>
+              {t('learnMore')}{' '}
               <ChevronRight className="animate-bounce-horizontal" />
             </Link>
           </Button>

@@ -1,4 +1,3 @@
-import Experiences from '@/components/sections/home/Experinces';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -82,7 +81,7 @@ async function About(props: { params: Params }) {
             <CardTitle>
               <h1 className="xs:text-3xl lg:text-4xl">Barış YAŞAR</h1>
             </CardTitle>
-            <CardDescription>{t('lifelongLearner')}</CardDescription>
+            <CardDescription>{t('webEnthusiast')}</CardDescription>
           </CardHeader>
           <CardContent
             className="mt-3"
@@ -129,7 +128,6 @@ async function About(props: { params: Params }) {
           </CardFooter>
         </div>
       </Card>
-      <Experiences />
     </main>
   );
 }

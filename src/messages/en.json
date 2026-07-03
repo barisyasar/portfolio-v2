@@ -32,8 +32,7 @@
       "webpToApplication": "That takes users from a web page to a mobile application. After registering, users can log in to the application and start using the service.",
       "ecommerceTitle": "E-commerce",
       "ecommerceText": "E-commerce webapplication for a global company that sells products to the USA, UK, Germany, France, Italy, Spain, and other countries.",
-      "servicesText": "I provide professional services on these fields. Further details you can look my services.",
-      "services": "Services"
+      "learnMore": "Learn more"
     },
     "contact": {
       "title": "Do you like what you've seen so far?",
@@ -48,7 +47,6 @@
   "AboutPage": {
     "recap": {
       "webEnthusiast": "Web Enthusiast",
-      "lifelongLearner": "Lifelong Learner",
       "summary": "<p>As a graduate of the Computer Engineering program at <strong>Ted University</strong>, I have focused my career on full-stack development. During my education, I completed two long-term internships; the first was at <strong>Altima</strong>, and the second was at <strong>Osi</strong>. Following my internships, I worked at <strong>Osi</strong> as a <strong>full-stack developer</strong> for over 2 years, contributing to significant experiences during that time.</p> <p>I have worked 1 and a half year at <strong>Oak Technology</strong> as a <strong>frontend developer</strong>. Nowadays I am working as a freelancer.</p>",
       "title2": "My Software Journey",
       "description2": "<p>Throughout my career in software development, I have taken on significant responsibilities in <strong>frontend</strong>, <strong>backend</strong>, and <strong>seo</strong>. With the experience gained from these projects, I have developed <strong>user-friendly websites</strong> and <strong>high-performance applications</strong>. I closely follow <strong>modern software technologies</strong> and implement the latest and best solutions in all my projects.</p> <p>My goal is to create <strong>high-quality and sustainable</strong> projects that best meet my clients' needs. I continue to grow and learn with each new project.</p>",
@@ -56,7 +54,7 @@
       "services": "Services"
     },
     "metadata": {
-      "title": "Who is Baris YASAR?",
+      "title": "About Baris YASAR",
       "description": "Learn more about my journey, skills, and experience as a Full Stack Developer with expertise in modern web technologies."
     }
   },
@@ -73,8 +71,8 @@
       "backendDevelopmentDescription": "<p>I develop <strong>secure and scalable backend systems</strong> using Node.js and Express. My experience includes implementing <strong>payment integrations</strong>, <strong>user authentication</strong>, and building <strong>RESTful APIs</strong> that can handle high traffic loads.</p>",
       "seo": "SEO",
       "seoDescription": "<p>I optimize websites using industry-leading tools like <strong>Semrush</strong> and <strong>Ahrefs</strong> to improve search rankings. My SEO strategies focus on <strong>technical optimization</strong>, <strong>content quality</strong>, and <strong>performance metrics</strong> to drive organic traffic growth.</p>",
-      "visitContact": "Ready to bring your ideas to life? Let's discuss your project.",
-      "contact": "Contact"
+      "visitProjects": "Check out the projects in which I've used these tools.",
+      "projects": "Projects"
     },
     "techStack": {
       "title": "Tech Stack",

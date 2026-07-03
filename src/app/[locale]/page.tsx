@@ -1,7 +1,6 @@
 import Contact from '@/components/sections/home/Contact';
 import Experinces from '@/components/sections/home/Experinces';
 import Hero from '@/components/sections/home/Hero';
-import Recap from '@/components/sections/home/Recap';
 import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -47,7 +46,6 @@ export default async function Home({ params }: { params: Params }) {
   return (
     <main className="container">
       <Hero />
-      <Recap />
       <Experinces />
       <Contact />
     </main>

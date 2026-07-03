@@ -9,8 +9,8 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Link } from '@/i18n/routing';
-import { ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { ChevronRight } from 'lucide-react';
 
 import { getTranslations } from 'next-intl/server';
 
@@ -47,14 +47,10 @@ async function TechStack({
           />
         </CardContent>
         <CardFooter className="flex-col items-start gap-2">
-          <p className="text-muted-foreground">{t('visitContact')}</p>
-          <Button
-            asChild
-            className="shadow-[0_0px_10px] shadow-primary"
-            size="lg"
-          >
-            <Link href="/contact" prefetch={false}>
-              {t('contact')}{' '}
+          <p className="text-muted-foreground">{t('visitProjects')}</p>
+          <Button asChild size="lg">
+            <Link href="/projects" prefetch={false}>
+              {t('projects')}{' '}
               <ChevronRight className="animate-bounce-horizontal" />
             </Link>
           </Button>
