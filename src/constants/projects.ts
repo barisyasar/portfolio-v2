@@ -71,7 +71,7 @@ export const PROJECTS: Project[] = [
       },
       {
         name: 'web',
-        url: 'https://no4.barisyasar.com',
+        url: 'https://traininghouseno4.com',
       },
       {
         name: 'instagram',

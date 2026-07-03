@@ -17,24 +17,31 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations('ServicesFullStackDevelopment.metadata');
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+
+  const isEnglish = locale === 'en';
+  const currentPath = isEnglish
+    ? '/services/full-stack-development'
+    : '/hizmetler/full-stack-development';
+
   return {
     title: t('title'),
     description: t('description'),
-    alternates: {
-      canonical:
-        locale === 'en'
-          ? '/services/full-stack-development'
-          : '/hizmetler/full-stack-development',
 
+    metadataBase: new URL(baseUrl),
+
+    alternates: {
+      canonical: `/${locale}${currentPath}`, // ← Düzeltilmiş
       languages: {
-        en: '/en/services/full-stack-development',
-        tr: '/tr/hizmetler/full-stack-development',
+        en: `${baseUrl}/en/services/full-stack-development`,
+        tr: `${baseUrl}/tr/hizmetler/full-stack-development`,
       },
     },
+
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: '/services/full-stack-development',
+      url: `/${locale}${currentPath}`, // ← Düzeltilmiş
       locale: locale === 'tr' ? 'tr_TR' : 'en_US',
     },
   };

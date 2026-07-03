@@ -149,13 +149,13 @@ export const ALL_TECHS = [
     categories: ['fu llstack', 'backend'],
   },
   {
-    name: 'MongoDB',
-    icon: MongoDBIcon,
+    name: 'PostgreSQL',
+    icon: PostgresqlIcon,
     categories: ['backend'],
   },
   {
-    name: 'PostgreSQL',
-    icon: PostgresqlIcon,
+    name: 'MongoDB',
+    icon: MongoDBIcon,
     categories: ['backend'],
   },
   {

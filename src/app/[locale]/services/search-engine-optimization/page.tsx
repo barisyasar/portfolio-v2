@@ -1,10 +1,10 @@
 import { AhrefsIcon, SemrushIcon, SEOIcon, SeoIcon } from '@/components/Icons';
-import ServiceDetailDescription from '@/components/sections/services/ServiceDetailDescription';
 import ServicesMarquee from '@/components/sections/services/OtherServices';
+import ServiceDetailDescription from '@/components/sections/services/ServiceDetailDescription';
 import TechStack from '@/components/sections/services/TechStack';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Metadata } from 'next';
 import { ServicesBeamInner } from '@/components/ServicesBeamInner';
+import { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type Params = Promise<{ locale: string }>;
 
@@ -16,24 +16,31 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations('ServicesSEO.metadata');
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+
+  const isEnglish = locale === 'en';
+  const currentPath = isEnglish
+    ? '/services/search-engine-optimization'
+    : '/hizmetler/arama-motoru-optimizasyonu';
+
   return {
     title: t('title'),
     description: t('description'),
-    alternates: {
-      canonical:
-        locale === 'en'
-          ? '/services/search-engine-optimization'
-          : '/hizmetler/arama-motoru-optimizasyonu',
 
+    metadataBase: new URL(baseUrl),
+
+    alternates: {
+      canonical: `/${locale}${currentPath}`, // ← Düzeltilmiş
       languages: {
-        en: '/en/services/search-engine-optimization',
-        tr: '/tr/hizmetler/search-engine-optimization',
+        en: `${baseUrl}/en/services/search-engine-optimization`,
+        tr: `${baseUrl}/tr/hizmetler/arama-motoru-optimizasyonu`, // ← Burası yanlıştı!
       },
     },
+
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: '/services/search-engine-optimization',
+      url: `/${locale}${currentPath}`, // ← Düzeltilmiş
       locale: locale === 'tr' ? 'tr_TR' : 'en_US',
     },
   };

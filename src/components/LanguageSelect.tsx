@@ -15,30 +15,29 @@ import { useTransition } from 'react';
 
 export default function LanguageSelect() {
   const t = useTranslations('languages');
-  const local = useLocale();
+  const currentLocale = useLocale();
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
-
   const pathname = usePathname();
   const params = useParams();
 
   function onSelectChange(nextLocale: string) {
-    startTransition(() =>
+    startTransition(() => {
       router.replace(
-        // @ts-expect-error -- TypeScript will validate that only known `params`
+        // @ts-expect-error
         { pathname, params },
         { locale: nextLocale as Locale },
-      ),
-    );
+      );
+    });
   }
 
   return (
     <Select
-      defaultValue={local}
+      value={currentLocale} // defaultValue yerine value kullan (daha stabil)
       onValueChange={onSelectChange}
       disabled={isPending}
     >
-      <SelectTrigger className="w-28 capitalize" name="language-select">
+      <SelectTrigger className="w-28 capitalize">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>

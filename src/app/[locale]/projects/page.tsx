@@ -13,20 +13,29 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations('ProjectsPage.metadata');
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+
+  const isEnglish = locale === 'en';
+  const currentPath = isEnglish ? '/projects' : '/projeler';
+
   return {
     title: t('title'),
     description: t('description'),
+
+    metadataBase: new URL(baseUrl),
+
     alternates: {
-      canonical: locale === 'en' ? '/projects' : '/projeler',
+      canonical: `/${locale}${currentPath}`, // ← Düzeltilmiş
       languages: {
-        en: '/en/projects',
-        tr: '/tr/projeler',
+        en: `${baseUrl}/en/projects`,
+        tr: `${baseUrl}/tr/projeler`,
       },
     },
+
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: '/projects',
+      url: `/${locale}${currentPath}`, // ← Düzeltilmiş
       locale: locale === 'tr' ? 'tr_TR' : 'en_US',
     },
   };

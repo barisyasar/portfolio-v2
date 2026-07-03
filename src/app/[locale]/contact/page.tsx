@@ -1,4 +1,5 @@
 import { ContactForm } from '@/components/contact-form';
+import SocialMedia from '@/components/SocialMedia';
 import {
   Card,
   CardContent,
@@ -6,11 +7,10 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { MapPin } from 'lucide-react';
+import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { ReCaptchaProvider } from 'next-recaptcha-v3';
-import { Metadata } from 'next';
-import SocialMedia from '@/components/SocialMedia';
-import { MapPin } from 'lucide-react';
 
 type Params = Promise<{ locale: string }>;
 
@@ -20,26 +20,36 @@ export async function generateMetadata({
   params: Params;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations('ContactPage.metadata');
+  const t = await getTranslations('ContactPage.metadata'); // namespace eksik olabilir
+
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+
+  const isEnglish = locale === 'en';
+  const currentPath = isEnglish ? '/contact' : '/iletisim';
 
   return {
     title: t('title'),
     description: t('description'),
+
+    metadataBase: new URL(baseUrl),
+
     alternates: {
-      canonical: locale === 'en' ? '/contact' : '/iletisim',
+      canonical: `/${locale}${currentPath}`, // ← Düzeltildi
       languages: {
-        en: '/en/contact',
-        tr: '/tr/iletisim',
+        en: `${baseUrl}/en/contact`,
+        tr: `${baseUrl}/tr/iletisim`,
       },
     },
+
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: '/contact',
+      url: `/${locale}${currentPath}`, // ← Düzeltildi
       locale: locale === 'tr' ? 'tr_TR' : 'en_US',
     },
   };
 }
+
 async function Contact({ params }: { params: Params }) {
   const { locale } = await params;
   setRequestLocale(locale);

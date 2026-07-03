@@ -29,8 +29,8 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string; locale: string }>;
 }): Promise<Metadata> {
+  const { slug, locale } = await params;
   const t = await getTranslations('ProjectDetail');
-  const { slug } = await params;
 
   const project = PROJECTS.find((p) => p.slug === slug);
   if (!project) {
@@ -44,13 +44,31 @@ export async function generateMetadata({
     project.metadata?.translations || project.translations,
   );
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+
+  const isEnglish = locale === 'en';
+  const currentPath = isEnglish ? `/projects/${slug}` : `/projeler/${slug}`;
+
   return {
     title: `${t('Projects')} - ${translation?.title || project.slug}`,
     description: translation?.description ?? '',
+
+    metadataBase: new URL(baseUrl),
+
+    alternates: {
+      canonical: `/${locale}${currentPath.replace(`/${locale}`, '')}`, // daha güvenli
+      languages: {
+        en: `${baseUrl}/en/projects/${slug}`,
+        tr: `${baseUrl}/tr/projeler/${slug}`,
+      },
+    },
+
     openGraph: {
       title: translation?.title,
       description: translation?.description,
-      images: project.logo ? [`/projects/${project.logo}`] : [],
+      url: `/${locale}${currentPath.replace(`/${locale}`, '')}`, // OG için
+      images: project.logo ? [`${baseUrl}/projects/${project.logo}`] : [],
+      locale: locale === 'tr' ? 'tr_TR' : 'en_US',
     },
   };
 }

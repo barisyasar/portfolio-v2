@@ -19,24 +19,31 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations('ServicesBackendDevelopment.metadata');
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+
+  const isEnglish = locale === 'en';
+  const currentPath = isEnglish
+    ? '/services/backend-development'
+    : '/hizmetler/backend-development';
+
   return {
     title: t('title'),
     description: t('description'),
-    alternates: {
-      canonical:
-        locale === 'en'
-          ? '/services/backend-development'
-          : '/hizmetler/backend-development',
 
+    metadataBase: new URL(baseUrl),
+
+    alternates: {
+      canonical: `/${locale}${currentPath}`, // ← Düzeltilmiş
       languages: {
-        en: '/en/services/backend-development',
-        tr: '/tr/hizmetler/backend-development',
+        en: `${baseUrl}/en/services/backend-development`,
+        tr: `${baseUrl}/tr/hizmetler/backend-development`,
       },
     },
+
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: '/services/backend-development',
+      url: `/${locale}${currentPath}`, // ← Düzeltilmiş
       locale: locale === 'tr' ? 'tr_TR' : 'en_US',
     },
   };

@@ -26,23 +26,30 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'AboutPage.metadata' });
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+
+  const currentPath = locale === 'en' ? '/about' : '/hakkimda';
+
   return {
     title: {
       absolute: t('title'),
     },
     description: t('description'),
 
+    metadataBase: new URL(baseUrl),
+
     alternates: {
-      canonical: locale === 'en' ? '/about' : '/hakkimda',
+      canonical: `/${locale}${currentPath === '/about' ? '/about' : '/hakkimda'}`,
       languages: {
-        en: '/en/about',
-        tr: '/tr/hakkimda',
+        en: `${baseUrl}/en/about`,
+        tr: `${baseUrl}/tr/hakkimda`,
       },
     },
+
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: '/about',
+      url: `/${locale}${locale === 'en' ? '/about' : '/hakkimda'}`, // ← Düzelttik
       locale: locale === 'tr' ? 'tr_TR' : 'en_US',
     },
   };

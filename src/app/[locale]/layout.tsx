@@ -39,21 +39,25 @@ export async function generateMetadata({
   const locale = (await params).locale;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+
   return {
     title: t('defaultTitle'),
     description: t('defaultDescription'),
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL! + '/' + locale),
+    metadataBase: new URL(baseUrl),
+
     alternates: {
-      canonical: '/',
+      canonical: `/${locale}`,
       languages: {
-        en: '/en',
-        tr: '/tr',
+        en: `${baseUrl}/en`,
+        tr: `${baseUrl}/tr`,
       },
     },
+
     openGraph: {
       type: 'website',
       locale: locale === 'tr' ? 'tr_TR' : 'en_US',
-      url: process.env.NEXT_PUBLIC_SITE_URL,
+      url: `/${locale}`,
       title: t('defaultTitle'),
       description: t('defaultDescription'),
       images: [
@@ -65,12 +69,14 @@ export async function generateMetadata({
         },
       ],
     },
+
     twitter: {
       card: 'summary_large_image',
       title: t('defaultTitle'),
       description: t('defaultDescription'),
       images: ['/og-image.jpg'],
     },
+
     robots: {
       index: true,
       follow: true,
