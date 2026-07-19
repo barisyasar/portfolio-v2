@@ -71,8 +71,8 @@
       "backendDevelopmentDescription": "<p>I develop <strong>secure and scalable backend systems</strong> using Node.js and Express. My experience includes implementing <strong>payment integrations</strong>, <strong>user authentication</strong>, and building <strong>RESTful APIs</strong> that can handle high traffic loads.</p>",
       "seo": "SEO",
       "seoDescription": "<p>I optimize websites using industry-leading tools like <strong>Semrush</strong> and <strong>Ahrefs</strong> to improve search rankings. My SEO strategies focus on <strong>technical optimization</strong>, <strong>content quality</strong>, and <strong>performance metrics</strong> to drive organic traffic growth.</p>",
-      "visitProjects": "Check out the projects in which I've used these tools.",
-      "projects": "Projects"
+      "visitContact": "Let's talk about your projects.",
+      "contact": "Contact"
     },
     "techStack": {
       "title": "Tech Stack",
@@ -82,8 +82,8 @@
       "frontend": "Frontend",
       "backend": "Backend",
       "other": "Other",
-      "visitContact": "Are you ready to start your project? Let's talk about it.",
-      "contact": "Contact",
+      "visitProjects": "Check out my projects",
+      "projects": "Projects",
       "descriptionSeo": "Essential SEO tools and technologies I use to optimize websites for better search engine visibility and performance.",
       "descriptionFrontend": "Modern frontend tools and frameworks I utilize to create responsive, user-friendly, and interactive web interfaces.",
       "descriptionFullstack": "Complete technology stack I employ to develop end-to-end web applications, from user interface to server-side operations.",
